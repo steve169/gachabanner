@@ -18,6 +18,9 @@
  *   weapons  optional list of featured weapons / support cards (strings or {en, zh})
  *   note     optional free text
  *
+ * GAMES entries for games split by server set server: "CN" | "EN" | "JP" (EN = Global/NA);
+ * the Server filter only applies to those.
+ *
  * Element keys (avatar colour): pyro, hydro, electro, cryo, anemo, geo, dendro,
  * physical, fire, ice, lightning, wind, quantum, imaginary, ether, spectro.
  */
@@ -32,15 +35,19 @@ window.GAMES = {
   nte:      { name: { en: "Neverness to Everness", zh: "异环" },                  glyph: "环", icon: "assets/icons/nte.webp", color: "#c77dff", short: "NTE" },
   gfl2:     { name: { en: "Girls' Frontline 2",   zh: "少女前线2：追放" },        glyph: "追", icon: "assets/icons/gfl2.webp", color: "#ef4f5f", short: "GFL2" },
   exedra:   { name: { en: "Madoka Magica Exedra", zh: "魔法少女小圆 Exedra" },    glyph: "魔", icon: "assets/icons/exedra.webp", color: "#ff8fc8", short: "MMX" },
-  uma:      { name: { en: "Uma Musume (JP)",      zh: "赛马娘（日服）" },         glyph: "马", icon: "assets/icons/uma.webp", color: "#7ddc6a", short: "UMA" },
-  uma_gl:   { name: { en: "Uma Musume (Global)",  zh: "赛马娘（国际服）" },       glyph: "马", icon: "assets/icons/uma_gl.webp", color: "#a8e86b", short: "UMA-GL" },
+  uma:      { name: { en: "Uma Musume (JP)",      zh: "赛马娘（日服）" }, server: "JP",         glyph: "马", icon: "assets/icons/uma.webp", color: "#7ddc6a", short: "UMA" },
+  uma_gl:   { name: { en: "Uma Musume (Global)",  zh: "赛马娘（国际服）" }, server: "EN",       glyph: "马", icon: "assets/icons/uma_gl.webp", color: "#a8e86b", short: "UMA-GL" },
   bluearchive: { name: { en: "Blue Archive (Global)", zh: "蔚蓝档案（国际服）" }, glyph: "蔚", icon: "assets/icons/bluearchive.webp", color: "#38c2f2", short: "BA" },
-  fgo_jp:   { name: { en: "FGO (JP)",             zh: "FGO（日服）" },             glyph: "冠", icon: "assets/icons/fgo_jp.webp", color: "#d9b44a", short: "FGO-JP" },
-  fgo_cn:   { name: { en: "FGO (CN)",             zh: "FGO（国服）" },             glyph: "冠", icon: "assets/icons/fgo_cn.webp", color: "#e8c15a", short: "FGO-CN" },
-  fgo_na:   { name: { en: "FGO (NA)",             zh: "FGO（美服）" },             glyph: "冠", icon: "assets/icons/fgo_na.webp", color: "#c7a23c", short: "FGO-NA" },
-  gbp_jp:   { name: { en: "BanG Dream! GBP (JP)", zh: "梦想协奏曲！少女乐团派对！（日服）" }, glyph: "邦", icon: "assets/icons/gbp_jp.webp", color: "#ff3377", short: "GBP-JP" },
-  gbp_en:   { name: { en: "BanG Dream! GBP (EN)", zh: "梦想协奏曲！少女乐团派对！（国际服）" }, glyph: "邦", icon: "assets/icons/gbp_en.webp", color: "#ff5c93", short: "GBP-EN" },
-  gbp_cn:   { name: { en: "BanG Dream! GBP (CN)", zh: "梦想协奏曲！少女乐团派对！（国服）" }, glyph: "邦", icon: "assets/icons/gbp_cn.webp", color: "#ff7aa8", short: "GBP-CN" },
+  fgo_jp:   { name: { en: "FGO (JP)",             zh: "FGO（日服）" }, server: "JP",             glyph: "冠", icon: "assets/icons/fgo_jp.webp", color: "#d9b44a", short: "FGO-JP" },
+  fgo_cn:   { name: { en: "FGO (CN)",             zh: "FGO（国服）" }, server: "CN",             glyph: "冠", icon: "assets/icons/fgo_cn.webp", color: "#e8c15a", short: "FGO-CN" },
+  fgo_na:   { name: { en: "FGO (NA)",             zh: "FGO（美服）" }, server: "EN",             glyph: "冠", icon: "assets/icons/fgo_na.webp", color: "#c7a23c", short: "FGO-NA" },
+  gbp_jp:   { name: { en: "BanG Dream! GBP (JP)", zh: "梦想协奏曲！少女乐团派对！（日服）" }, server: "JP", glyph: "邦", icon: "assets/icons/gbp_jp.webp", color: "#ff3377", short: "GBP-JP" },
+  gbp_en:   { name: { en: "BanG Dream! GBP (EN)", zh: "梦想协奏曲！少女乐团派对！（国际服）" }, server: "EN", glyph: "邦", icon: "assets/icons/gbp_en.webp", color: "#ff5c93", short: "GBP-EN" },
+  gbp_cn:   { name: { en: "BanG Dream! GBP (CN)", zh: "梦想协奏曲！少女乐团派对！（国服）" }, server: "CN", glyph: "邦", icon: "assets/icons/gbp_cn.webp", color: "#ff7aa8", short: "GBP-CN" },
+  arknights_en: { name: { en: "Arknights (EN)", zh: "明日方舟（国际服）" }, server: "EN", glyph: "舟", icon: "assets/icons/arknights_en.webp", color: "#4cc3d9", short: "AK-EN" },
+  arknights_cn: { name: { en: "Arknights (CN)", zh: "明日方舟（国服）" }, server: "CN", glyph: "舟", icon: "assets/icons/arknights_cn.webp", color: "#6fd4e6", short: "AK-CN" },
+  azurlane_en: { name: { en: "Azur Lane (EN)", zh: "碧蓝航线（国际服）" }, server: "EN", glyph: "碧", icon: "assets/icons/azurlane_en.webp", color: "#5b8cff", short: "AL-EN" },
+  azurlane_cn: { name: { en: "Azur Lane (CN)", zh: "碧蓝航线（国服）" }, server: "CN", glyph: "碧", icon: "assets/icons/azurlane_cn.webp", color: "#7aa6ff", short: "AL-CN" },
   ournotes: { name: { en: "BanG Dream! Our Notes", zh: "BanG Dream! Our Notes" },  glyph: "音", icon: "assets/icons/ournotes.webp", color: "#7aa2ff", short: "BDON" },
 };
 
@@ -517,6 +524,201 @@ window.BANNERS = [
     game: "gbp_cn", label: { en: "Birthday", zh: "生日卡池" },
     start: "2026-11-21", end: "2026-11-24", status: "confirmed",
     featured: [{ name: "Tomori Takamatsu", zh: "高松灯", img: "gbp/2100" }],
+  },
+
+  /* ───────────── Arknights (EN / CN) — from the Arknights Terra Wiki and official notices ───────────── */
+  {
+    game: "arknights_cn", label: {"en": "Limited (Celebration): Cinders of Snow", "zh": "限定寻访·庆典「将雪投火」"},
+    start: "2026-11-01", end: "2026-11-15", status: "confirmed",
+    featured: [
+      { name: "Talulah", zh: "塔露拉", img: "arknights/talulah", isNew: true },
+      { name: "Toska", zh: "冻河", img: "arknights/toska", isNew: true },
+      { name: "SilverAsh the Reignfrost", zh: "凛御银灰", img: "arknights/silverash-the-reignfrost" },
+      { name: "Exusiai the New Covenant", zh: "新约能天使", img: "arknights/exusiai-the-new-covenant" },
+      { name: "Lappland the Decadenza", zh: "荒芜拉普兰德", img: "arknights/lappland-the-decadenza" },
+      { name: "Olga", zh: "奥尔佳", img: "arknights/olga", isNew: true },
+    ],
+    note: {"en": "Talulah (limited) + Toska share 70% of 6★; free Talulah at 300 pulls", "zh": "塔露拉[限定]与冻河占6★出率70%；累计300抽赠送塔露拉"},
+  },
+  {
+    game: "arknights_cn", label: {"en": "Stronghold Headhunting 01", "zh": "卫戍寻访01"},
+    start: "2026-11-08", end: "2026-12-02", status: "confirmed",
+    featured: [
+      { name: "Młynar", zh: "玛恩纳", img: "arknights/mlynar" },
+      { name: "Stainless", zh: "白铁", img: "arknights/stainless" },
+      { name: "Ulpianus", zh: "乌尔比安", img: "arknights/ulpianus" },
+      { name: "Mon3tr", zh: "Mon3tr", img: "arknights/mon3tr" },
+      { name: "Thorns the Lodestar", zh: "引星棘刺", img: "arknights/thorns-the-lodestar" },
+      { name: "Vulpisfoglia", zh: "忍冬", img: "arknights/vulpisfoglia" },
+      { name: "Degenbrecher", zh: "锏", img: "arknights/degenbrecher" },
+      { name: "Mantra", zh: "真言", img: "arknights/mantra" },
+      { name: "Logos", zh: "逻各斯", img: "arknights/logos" },
+      { name: "Blaze the Igniting Spark", zh: "烛煌", img: "arknights/blaze-the-igniting-spark" },
+    ],
+    note: {"en": "Tied to Stronghold Protocol season. 6★ pulls only from these 10 operators (2% 6★ rate).", "zh": "配合「卫戍协议」；6★仅出现以上10名干员。"},
+  },
+  {
+    game: "arknights_cn", label: {"en": "Joint Operation (Selected Operators)", "zh": "联合行动·特选干员定向寻访"},
+    start: "2026-11-15", end: "2026-11-29", status: "confirmed",
+    featured: [
+      { name: "Lin", zh: "林", img: "arknights/lin" },
+      { name: "Ch'en the Dawnstreak", zh: "赤刃明霄陈", img: "arknights/chen-the-dawnstreak" },
+      { name: "Closure", zh: "可露希尔", img: "arknights/closure" },
+      { name: "Reed the Flame Shadow", zh: "焰影苇草", img: "arknights/reed-the-flame-shadow" },
+      { name: "Wulfenite", zh: "钼铅", img: "arknights/wulfenite" },
+      { name: "Pedro", zh: "佩德洛", img: "arknights/pedro" },
+      { name: "Vendela", zh: "刺玫", img: "arknights/vendela" },
+      { name: "Fang the Fire-Sharpened", zh: "历阵锐枪芬", img: "arknights/fang-the-fire-sharpened" },
+      { name: "Nowell", zh: "诺威尔", img: "arknights/nowell" },
+      { name: "Poncirus", zh: "青枳", img: "arknights/poncirus" },
+    ],
+    note: {"en": "2026 Thank-You Celebration Part 2. 6★/5★ pulls only from these operators.", "zh": "2026感谢庆典Part 2；6★/5★仅出现以上干员。"},
+  },
+  {
+    game: "arknights_en", label: {"en": "Orienteering Headhunting #7", "zh": "定向寻访 #7"},
+    start: "2026-10-28", end: "2026-11-11", status: "confirmed",
+    featured: [
+      { name: "Leizi the Thunderbringer", zh: "司霆惊蛰", img: "arknights/leizi-the-thunderbringer" },
+      { name: "Pramanix the Prerita", zh: "圣聆初雪", img: "arknights/pramanix-the-prerita" },
+      { name: "Typhon", zh: "提丰", img: "arknights/typhon" },
+      { name: "Logos", zh: "逻各斯", img: "arknights/logos" },
+      { name: "Thorns the Lodestar", zh: "引星棘刺", img: "arknights/thorns-the-lodestar" },
+      { name: "Penance", zh: "斥罪", img: "arknights/penance" },
+      { name: "Perfumer the Distilled", zh: "撷英调香师", img: "arknights/perfumer-the-distilled" },
+      { name: "Bobbing", zh: "波卜", img: "arknights/bobbing" },
+      { name: "Aroma", zh: "阿罗玛", img: "arknights/aroma" },
+      { name: "Alanna", zh: "阿兰娜", img: "arknights/alanna" },
+      { name: "Mitm", zh: "渡桥", img: "arknights/mitm" },
+      { name: "Santalla", zh: "寒檀", img: "arknights/santalla" },
+    ],
+    note: {"en": "Player locks 3 of these 6★ and 3 of these 5★; only chosen 6★ can drop.", "zh": "玩家从中自选3名6★与3名5★。"},
+  },
+  {
+    game: "arknights_en", label: {"en": "Standard Headhunting #178", "zh": "标准寻访 #178"},
+    start: "2026-10-23", end: "2026-11-06", status: "confirmed",
+    featured: [
+      { name: "Ines", zh: "伊内丝", img: "arknights/ines" },
+      { name: "Zuo Le", zh: "左乐", img: "arknights/zuo-le" },
+      { name: "Proviso", zh: "但书", img: "arknights/proviso" },
+      { name: "Record Keeper", zh: "录武官", img: "arknights/record-keeper" },
+      { name: "Spuria", zh: "空构", img: "arknights/spuria" },
+    ],
+    note: {"en": "Standard pool rotation.", "zh": "常驻标准寻访轮换。"},
+  },
+  {
+    game: "arknights_en", label: {"en": "Kernel Headhunting #64", "zh": "中坚寻访 #64"},
+    start: "2026-11-03", end: "2026-11-17", status: "confirmed",
+    featured: [
+      { name: "Eunectes", zh: "森蚺", img: "arknights/eunectes" },
+      { name: "Saileach", zh: "琴柳", img: "arknights/saileach" },
+      { name: "Ashlock", zh: "灰毫", img: "arknights/ashlock" },
+      { name: "Franka", zh: "芙兰卡", img: "arknights/franka" },
+      { name: "Whisperain", zh: "絮雨", img: "arknights/whisperain" },
+    ],
+    note: {"en": "Kernel pool rotation.", "zh": "中坚寻访轮换。"},
+  },
+  {
+    game: "arknights_en", label: {"en": "Standard Headhunting #179", "zh": "标准寻访 #179"},
+    start: "2026-11-06", end: "2026-11-20", status: "confirmed",
+    featured: [
+      { name: "Pozëmka", zh: "鸿雪", img: "arknights/pozemka" },
+      { name: "Viviana", zh: "薇薇安娜", img: "arknights/viviana" },
+      { name: "Lunacub", zh: "子月", img: "arknights/lunacub" },
+      { name: "Poncirus", zh: "青枳", img: "arknights/poncirus" },
+      { name: "Taraxacum", zh: "风絮", img: "arknights/taraxacum" },
+    ],
+    note: {"en": "Standard pool rotation.", "zh": "常驻标准寻访轮换。"},
+  },
+  {
+    game: "arknights_en", label: {"en": "Limited (Collab): Hunters of the Umbral Wilds", "zh": "限定寻访「泡影苍霆」联动（怪物猎人）"},
+    start: "2026-11-16", end: "2026-11-30", status: "confirmed",
+    featured: [
+      { name: "Violet Mizutsune Orchid", zh: "焰狐龙梓兰", img: "arknights/violet-mizutsune-orchid", isNew: true },
+      { name: "Zinogre S Catapult", zh: "雷狼龙S空爆", img: "arknights/zinogre-s-catapult", isNew: true },
+    ],
+    note: {"en": "Monster Hunter collab #2, with SideStory Thunder in the Azure Dream.", "zh": "《怪物猎人》第二次联动，配合SideStory「泡影苍霆」。"},
+  },
+  {
+    game: "arknights_en", label: {"en": "Limited (Collab rerun): Sharpened by Flame", "zh": "联动复刻寻访（怪物猎人 第一期）"},
+    start: "2026-11-30", end: "2026-12-14", status: "projected",
+    featured: [
+      { name: "Kirin R Yato", zh: "麒麟R夜刀", img: "arknights/kirin-r-yato" },
+      { name: "Rathalos S Noir Corne", zh: "火龙S黑角", img: "arknights/rathalos-s-noir-corne" },
+    ],
+    note: {"en": "Projected from CN (2026-06-15) + ~168-day Global offset.", "zh": "按国服日期+约168天推算。"},
+  },
+  {
+    game: "arknights_en", label: {"en": "Joint Operation 22", "zh": "联合行动 22"},
+    start: "2026-12-11", end: "2026-12-25", status: "projected",
+    featured: [
+      { name: "Ines", zh: "伊内丝", img: "arknights/ines" },
+      { name: "Ho'olheyak", zh: "霍尔海雅", img: "arknights/hoolheyak" },
+      { name: "Nasti", zh: "娜斯提", img: "arknights/nasti" },
+      { name: "Lemuen", zh: "蕾缪安", img: "arknights/lemuen" },
+      { name: "Ripresa", zh: "复奏", img: "arknights/ripresa" },
+      { name: "Melanite", zh: "玫拉", img: "arknights/melanite" },
+      { name: "Santalla", zh: "寒檀", img: "arknights/santalla" },
+      { name: "Snow Hunter", zh: "雪猎", img: "arknights/snow-hunter" },
+      { name: "Gracebearer", zh: "聆音", img: "arknights/gracebearer" },
+      { name: "Firewhistle", zh: "火哨", img: "arknights/firewhistle" },
+    ],
+    note: {"en": "Projected from CN (2026-06-26, with CC#5). Roster may change on Global.", "zh": "按国服推算，阵容可能调整。"},
+  },
+  {
+    game: "arknights_en", label: {"en": "Special Headhunting: Deterministic Chaos", "zh": "限时寻访「Deterministic Chaos」"},
+    start: "2026-12-25", end: "2027-01-08", status: "projected",
+    featured: [
+      { name: "Aphrissa", zh: "谬因", img: "arknights/aphrissa", isNew: true },
+      { name: "Pedro", zh: "佩德洛", img: "arknights/pedro", isNew: true },
+      { name: "Wulfenite", zh: "钼铅", img: "arknights/wulfenite" },
+    ],
+    note: {"en": "Projected from CN (2026-07-10).", "zh": "按国服推算。"},
+  },
+  {
+    game: "arknights_en", label: {"en": "Rerun Headhunting: Dithyramb Unending", "zh": "复刻寻访「Dithyramb Unending」"},
+    start: "2027-01-04", end: "2027-01-18", status: "projected",
+    featured: [
+      { name: "Tragodia", zh: "酒神", img: "arknights/tragodia" },
+      { name: "Tippi", zh: "蒂比", img: "arknights/tippi" },
+      { name: "Alanna", zh: "阿兰娜", img: "arknights/alanna" },
+    ],
+    note: {"en": "Projected from CN (2026-07-20).", "zh": "按国服推算。"},
+  },
+
+  /* ───────────── Azur Lane (EN / CN) — events now release on both servers together ───────────── */
+  {
+    game: "azurlane_en", label: { en: "Event construction", zh: "限时建造" },
+    start: "2026-10-22", end: "2026-11-04", status: "confirmed",
+    featured: [
+      { name: "Merkuriy", zh: "水星号", img: "azurlane/merkuriy", isNew: true },
+      { name: "Selimiye", zh: "塞利米耶号", img: "azurlane/selimiye", isNew: true },
+      { name: "Ormrinn Langi", zh: "长蛇号", img: "azurlane/ormrinn-langi", isNew: true },
+      { name: "Járnbarðinn", zh: "铁角号", img: "azurlane/jarnbardinn", isNew: true },
+    ],
+    note: { en: "Tempesta and the Corridor of Fog", zh: "飓风与雾霭回廊" },
+  },
+  {
+    game: "azurlane_cn", label: { en: "Event construction", zh: "限时建造" },
+    start: "2026-10-22", end: "2026-11-05", status: "confirmed",
+    featured: [
+      { name: "Merkuriy", zh: "水星号", img: "azurlane/merkuriy", isNew: true },
+      { name: "Selimiye", zh: "塞利米耶号", img: "azurlane/selimiye", isNew: true },
+      { name: "Ormrinn Langi", zh: "长蛇号", img: "azurlane/ormrinn-langi", isNew: true },
+      { name: "Járnbarðinn", zh: "铁角号", img: "azurlane/jarnbardinn", isNew: true },
+    ],
+    note: { en: "Tempesta and the Corridor of Fog", zh: "飓风与雾霭回廊" },
+  },
+  {
+    game: "azurlane_en", label: { en: "Event construction", zh: "限时建造" },
+    start: "2026-12-17", end: "2027-01-06", status: "projected",
+    featured: [{ name: "TBA" }],
+    note: { en: "New Year UR event (ships not announced yet)", zh: "新年UR大型活动（舰船待公布）" },
+  },
+  {
+    game: "azurlane_cn", label: { en: "Event construction", zh: "限时建造" },
+    start: "2026-12-17", end: "2027-01-07", status: "projected",
+    featured: [{ name: "TBA" }],
+    note: { en: "New Year UR event (ships not announced yet)", zh: "新年UR大型活动（舰船待公布）" },
   },
 
   /* ───────────── BanG Dream! Our Notes (Global) ───────────── */

@@ -275,3 +275,17 @@ header, nav, section, main, footer { position: relative; z-index: 1; max-width: 
 .live-toggle .caret { font-size: 14px; color: var(--muted); transition: transform .2s; }
 .live-toggle[aria-expanded="true"] .caret { transform: rotate(180deg); }
 .live-grid[hidden] { display: none; }
+
+/* ───── Server + game filter rows ───── */
+.filter-row { display: flex; gap: 10px; align-items: flex-start; }
+.filter-row + .filter-row { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--card-border); }
+.filter-label { flex: none; width: 64px; padding-top: 8px; font-size: 13px; color: var(--muted); }
+.filter-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip-server { padding: 6px 14px; font-weight: 600; --c: #9fb4ff; }
+.chip.server-off { opacity: .25; text-decoration: line-through; }
+@media (max-width: 640px) {
+  .filter-row { flex-direction: column; gap: 6px; }
+  .filter-label { width: auto; padding-top: 0; }
+}
+
+.avatar-more { font-size: 18px; place-items: center; padding: 0; opacity: .85; }
