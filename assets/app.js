@@ -10,6 +10,7 @@
       sub: "Rate-up banners for popular gacha games",
       rangeNote: "key banner dates at a glance",
       showPast: "Show past",
+      games: "Games",
       exportIcs: "⤓ Export .ics",
       all: "All",
       liveNow: "Live now",
@@ -36,6 +37,7 @@
       sub: "二次元手游 · 版本 & 卡池排期",
       rangeNote: "关键节点一览",
       showPast: "显示已结束",
+      games: "游戏筛选",
       exportIcs: "⤓ 导出日历",
       all: "全部",
       liveNow: "正在进行",
@@ -126,6 +128,12 @@
   });
 
   const filtersEl = document.getElementById("game-filters");
+  const filterToggle = document.getElementById("filter-toggle");
+  filterToggle.onclick = () => {
+    const open = filtersEl.hidden;
+    filtersEl.hidden = !open;
+    filterToggle.setAttribute("aria-expanded", open);
+  };
   const allChip = document.createElement("button");
   allChip.className = "chip chip-all"; allChip.type = "button";
   allChip.onclick = () => {
@@ -180,11 +188,11 @@
     const names = b.featured.map((f) =>
       `<b class="${f.isNew ? "" : "rerun"}" title="${esc(f.isNew ? t.isNew : t.rerun)}${f.note ? " — " + esc(tx(f.note)) : ""}">${esc(unitName(f))}</b>`
     ).join('<span class="sep">·</span>');
-    const avatars = b.featured.slice(0, 3).map((f, i) => {
+    const avatars = b.featured.map((f) => {
       const e = ELEMENTS[f.element] || g.color;
       const initial = f.name === "TBA" ? "?" : [...unitName(f)][0];
       const pic = f.img ? `<img src="assets/characters/${esc(f.img)}.webp" alt="" loading="lazy" onerror="this.remove()">` : "";
-      return `<div class="avatar${i > 0 ? " small" : ""}${f.img ? " has-img" : ""}" style="--e:${e}" title="${esc(unitName(f))}">${esc(initial)}${pic}</div>`;
+      return `<div class="avatar${f.img ? " has-img" : ""}" style="--e:${e}" title="${esc(unitName(f))}">${esc(initial)}${pic}</div>`;
     }).join("");
     const weapons = (b.weapons || []).map(tx).filter(Boolean);
 
@@ -221,6 +229,10 @@
       .map((k) => `<span><span class="status s-${k}">${t.status[k]}</span> ${t.legend[k]}</span>`).join("");
     document.getElementById("foot-text").textContent = t.foot(window.LAST_UPDATED || "");
 
+    const total = Object.keys(GAMES).length;
+    document.getElementById("filter-count").textContent = `${state.games.size}/${total}`;
+    document.getElementById("selected-icons").innerHTML = Object.keys(GAMES)
+      .filter((k) => state.games.has(k)).map((k) => iconHtml(GAMES[k])).join("");
     allChip.textContent = t.all;
     allChip.setAttribute("aria-pressed", state.games.size === Object.keys(GAMES).length);
     filtersEl.querySelectorAll(".chip[data-game]").forEach((c) => {
