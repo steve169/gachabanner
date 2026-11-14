@@ -51,6 +51,7 @@ window.GAMES = {
   pjsk_jp:  { name: { en: "Project Sekai (JP)", zh: "世界计划 缤纷舞台！（日服）" }, server: "JP", glyph: "世", icon: "assets/icons/pjsk_jp.webp", color: "#33ccbb", short: "PJSK-JP" },
   pjsk_en:  { name: { en: "Project Sekai (EN)", zh: "世界计划 缤纷舞台！（国际服）" }, server: "EN", glyph: "世", icon: "assets/icons/pjsk_en.webp", color: "#5fd9cb", short: "PJSK-EN" },
   r1999:    { name: { en: "Reverse: 1999 (Global)", zh: "重返未来：1999（国际服）" }, glyph: "返", icon: "assets/icons/r1999_en.webp", color: "#c9a46b", short: "R1999" },
+  holodori: { name: { en: "hololive Dreams", zh: "hololive Dreams" }, glyph: "ホ", icon: "assets/icons/holodori.webp", color: "#4fc3f7", short: "HOLODORI" },
   azurlane_en: { name: { en: "Azur Lane (EN)", zh: "碧蓝航线（国际服）" }, server: "EN", glyph: "碧", icon: "assets/icons/azurlane_en.webp", color: "#5b8cff", short: "AL-EN" },
   azurlane_cn: { name: { en: "Azur Lane (CN)", zh: "碧蓝航线（国服）" }, server: "CN", glyph: "碧", icon: "assets/icons/azurlane_cn.webp", color: "#7aa6ff", short: "AL-CN" },
   ournotes: { name: { en: "BanG Dream! Our Notes", zh: "BanG Dream! Our Notes" },  glyph: "音", icon: "assets/icons/ournotes.webp", color: "#7aa2ff", short: "BDON" },
@@ -388,7 +389,7 @@ window.BANNERS = [
   {
     game: "fgo_cn", label: { en: "Road to Finale #7", zh: "Road to 终章 第7章篇纪念" },
     start: "2026-11-10", end: "2026-11-17", status: "confirmed",
-    featured: [{ name: "Tezcatlipoca", zh: "特斯卡特利波卡", img: "fgo/tezcatlipoca" }, { name: "Nitocris", zh: "尼托克丽丝" }],
+    featured: [{ name: "Tezcatlipoca", zh: "特斯卡特利波卡", img: "fgo/tezcatlipoca" }, { name: "Nitocris (Alter)", zh: "尼托克丽丝〔Alter〕", img: "fgo/nitocris-alter" }],
   },
   {
     game: "fgo_cn", label: { en: "Road to Finale", zh: "Road to 终章 奏章Ⅰ篇纪念" },
@@ -966,6 +967,30 @@ window.BANNERS = [
       { name: "Drake", zh: "德雷克", img: "r1999/drake", isNew: true },
     ],
     note: {"en": "Projected from the CN 4.0 schedule", "zh": "据国服4.0推算"},
+  },
+
+  /* ───────────── hololive Dreams — from Game8 (JP) ───────────── */
+  {
+    game: "holodori", label: { en: "Limited", zh: "限定卡池" },
+    start: "2026-11-06", end: "2026-11-14", status: "confirmed",
+    featured: [
+      { name: "Ayunda Risu", img: "holodori/ayunda-risu", isNew: true },
+      { name: "Moona Hoshinova", img: "holodori/moona-hoshinova", isNew: true },
+      { name: "Airani Iofifteen", img: "holodori/airani-iofifteen", isNew: true },
+    ],
+    note: { en: "Cozy Chill Time (AREA15 pajamas)", zh: "ぬくもりのチルタイム（AREA15 睡衣）" },
+  },
+  {
+    game: "holodori", label: { en: "Limited", zh: "限定卡池" },
+    start: "2026-11-14", end: "2026-11-26", status: "confirmed",
+    featured: [
+      { name: "IRyS", img: "holodori/irys", isNew: true },
+      { name: "Usada Pekora", zh: "兔田佩克拉", img: "holodori/usada-pekora", isNew: true },
+      { name: "Roboco", zh: "萝卜子", img: "holodori/roboco-san", isNew: true },
+      { name: "Momosuzu Nene", zh: "桃铃音音", img: "holodori/momosuzu-nene", isNew: true },
+      { name: "Pavolia Reine", img: "holodori/pavolia-reine", isNew: true },
+    ],
+    note: { en: "Autumn Outing (autumn outfits)", zh: "うららかな秋におでかけ（秋装）" },
   },
 
   /* ───────────── Azur Lane (EN / CN) — events now release on both servers together ───────────── */

@@ -105,5 +105,8 @@ window.ECONOMY = {
   azurlane: {
     unsupported: { en: "Azur Lane builds use Wisdom Cubes (2 per limited build), which come from weeklies, the login calendar and commissions rather than a fixed daily amount, so there's no daily estimate.", zh: "碧蓝航线建造消耗心智魔方（限时建造每次2个），魔方主要来自周常、签到日历和委托，没有固定的每日数量，因此不做每日估算。" },
   },
+  holodori: {
+    unsupported: { en: "A pull costs 250 Red Diamonds, but daily diamond income isn't documented reliably yet, so there's no daily estimate.", zh: "单抽消耗250红钻，但每日钻石收入暂无可靠资料，因此不做每日估算。" },
+  },
   // BanG Dream! Our Notes: daily star amounts not documented yet.
 };
