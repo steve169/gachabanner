@@ -253,7 +253,7 @@
   }
 
   /* ── details panel: countdown + daily income ── */
-  const fmtNum = (x, dp = 3) => {
+  const fmtNum = (x, dp = 2) => {
     const v = Math.round(x * 10 ** dp) / 10 ** dp;
     return v.toLocaleString(state.lang === "zh" ? "zh-CN" : "en-US", { maximumFractionDigits: dp });
   };
