@@ -46,6 +46,8 @@ window.GAMES = {
   gbp_cn:   { name: { en: "BanG Dream! GBP (CN)", zh: "梦想协奏曲！少女乐团派对！（国服）" }, server: "CN", glyph: "邦", icon: "assets/icons/gbp_cn.webp", color: "#ff7aa8", short: "GBP-CN" },
   arknights_en: { name: { en: "Arknights (EN)", zh: "明日方舟（国际服）" }, server: "EN", glyph: "舟", icon: "assets/icons/arknights_en.webp", color: "#4cc3d9", short: "AK-EN" },
   arknights_cn: { name: { en: "Arknights (CN)", zh: "明日方舟（国服）" }, server: "CN", glyph: "舟", icon: "assets/icons/arknights_cn.webp", color: "#6fd4e6", short: "AK-CN" },
+  pcr_jp:   { name: { en: "Princess Connect! Re:Dive (JP)", zh: "公主连结Re:Dive（日服）" }, server: "JP", glyph: "公", icon: "assets/icons/pcr_jp.webp", color: "#f59ac0", short: "PCR-JP" },
+  pcr_cn:   { name: { en: "Princess Connect! Re:Dive (CN)", zh: "公主连结Re:Dive（国服）" }, server: "CN", glyph: "公", icon: "assets/icons/pcr_cn.webp", color: "#f7b2cf", short: "PCR-CN" },
   azurlane_en: { name: { en: "Azur Lane (EN)", zh: "碧蓝航线（国际服）" }, server: "EN", glyph: "碧", icon: "assets/icons/azurlane_en.webp", color: "#5b8cff", short: "AL-EN" },
   azurlane_cn: { name: { en: "Azur Lane (CN)", zh: "碧蓝航线（国服）" }, server: "CN", glyph: "碧", icon: "assets/icons/azurlane_cn.webp", color: "#7aa6ff", short: "AL-CN" },
   ournotes: { name: { en: "BanG Dream! Our Notes", zh: "BanG Dream! Our Notes" },  glyph: "音", icon: "assets/icons/ournotes.webp", color: "#7aa2ff", short: "BDON" },
@@ -683,6 +685,44 @@ window.BANNERS = [
       { name: "Alanna", zh: "阿兰娜", img: "arknights/alanna" },
     ],
     note: {"en": "Projected from CN (2026-07-20).", "zh": "按国服推算。"},
+  },
+
+  /* ───────────── Princess Connect! Re:Dive (JP / CN) ───────────── */
+  {
+    game: "pcr_jp", label: { en: "Pick-up", zh: "UP卡池" },
+    start: "2026-10-31", end: "2026-11-30", status: "confirmed",
+    featured: [{ name: "Almond Eye", zh: "杏目", img: "pcr/almond-eye", isNew: true }],
+    note: { en: "Uma Musume collab (limited)", zh: "赛马娘联动（限定）" },
+  },
+  {
+    game: "pcr_jp", label: { en: "Pick-up", zh: "UP卡池" },
+    start: "2026-11-10", end: "2026-11-30", status: "confirmed",
+    featured: [{ name: "Lucky Lilac", zh: "旺紫丁", img: "pcr/lucky-lilac", isNew: true }],
+    note: { en: "Uma Musume collab (limited)", zh: "赛马娘联动（限定）" },
+  },
+  {
+    game: "pcr_jp", label: { en: "Pick-up", zh: "UP卡池" },
+    start: "2026-11-16", end: "2026-11-30", status: "projected",
+    featured: [{ name: "Daring Tact", zh: "谋勇兼备", isNew: true }],
+    note: { en: "Uma Musume collab (limited); start date estimated", zh: "赛马娘联动（限定），开始日期为预估" },
+  },
+  {
+    game: "pcr_cn", label: { en: "Princess Fes", zh: "公主庆典" },
+    start: "2026-10-30", end: "2026-11-06", status: "projected",
+    featured: [{ name: "Arachne", zh: "阿拉克涅", img: "pcr/arachne", isNew: true }],
+    note: { en: "Limited; end date estimated", zh: "期间限定，结束日期为预估" },
+  },
+  {
+    game: "pcr_cn", label: { en: "Pick-up", zh: "精选扭蛋" },
+    start: "2026-11-02", end: "2026-11-12", status: "projected",
+    featured: [{ name: "Kasumi (Sister)", zh: "香澄（修女）", img: "pcr/kasumi-sister", isNew: true }],
+    note: { en: "Limited; end date estimated", zh: "期间限定，结束日期为预估" },
+  },
+  {
+    game: "pcr_cn", label: { en: "Pick-up", zh: "精选扭蛋" },
+    start: "2026-11-13", end: "2026-11-27", status: "projected",
+    featured: [{ name: "Nana", zh: "纳娜", img: "pcr/nana", isNew: true }],
+    note: { en: "New character; end date estimated", zh: "新角色，结束日期为预估" },
   },
 
   /* ───────────── Azur Lane (EN / CN) — events now release on both servers together ───────────── */
