@@ -289,3 +289,27 @@ header, nav, section, main, footer { position: relative; z-index: 1; max-width: 
 }
 
 .avatar-more { font-size: 18px; place-items: center; padding: 0; opacity: .85; }
+
+/* ───── Expandable details (countdown + income) ───── */
+.card[data-id] { cursor: pointer; flex-wrap: wrap; }
+.card[data-id]:focus-visible { outline: 2px solid var(--c); outline-offset: 2px; }
+.card.open { border-color: color-mix(in srgb, var(--c) 55%, transparent); }
+.details {
+  flex: 1 1 100%; position: relative; z-index: 1; cursor: default;
+  margin-top: 8px; padding: 14px 16px; border-radius: 12px;
+  background: rgba(7, 11, 29, .55); border: 1px solid var(--card-border);
+}
+.details .cd { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; }
+.cd-lbl { color: var(--muted); font-size: 13px; }
+.cd-val { font-size: 22px; font-weight: 800; color: var(--gold); font-variant-numeric: tabular-nums; }
+.econ-title { margin-top: 12px; font-weight: 600; font-size: 14px; }
+.econ-head { margin-top: 4px; color: var(--muted); font-size: 12px; }
+.econ { width: 100%; margin-top: 8px; border-collapse: collapse; font-size: 14px; }
+.econ th, .econ td { text-align: left; padding: 7px 8px; border-top: 1px solid var(--card-border); vertical-align: baseline; }
+.econ th { font-weight: 600; }
+.econ th small { display: block; font-weight: 400; color: var(--muted); font-size: 11px; }
+.econ td:last-child { text-align: right; color: var(--gold); font-weight: 700; white-space: nowrap; }
+.econ tr.total th, .econ tr.total td { border-top: 2px solid var(--card-border); }
+.details .muted { color: var(--muted); font-size: 13px; margin: 8px 0 0; }
+.details .small { font-size: 11px; }
+.live-grid .card.open .weapons, .live-grid .card.open .meta .note { display: initial; }
