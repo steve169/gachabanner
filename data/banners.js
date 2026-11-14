@@ -44,6 +44,8 @@ window.GAMES = {
   gbp_jp:   { name: { en: "BanG Dream! GBP (JP)", zh: "梦想协奏曲！少女乐团派对！（日服）" }, server: "JP", glyph: "邦", icon: "assets/icons/gbp_jp.webp", color: "#ff3377", short: "GBP-JP" },
   gbp_en:   { name: { en: "BanG Dream! GBP (EN)", zh: "梦想协奏曲！少女乐团派对！（国际服）" }, server: "EN", glyph: "邦", icon: "assets/icons/gbp_en.webp", color: "#ff5c93", short: "GBP-EN" },
   gbp_cn:   { name: { en: "BanG Dream! GBP (CN)", zh: "梦想协奏曲！少女乐团派对！（国服）" }, server: "CN", glyph: "邦", icon: "assets/icons/gbp_cn.webp", color: "#ff7aa8", short: "GBP-CN" },
+  azurlane_en: { name: { en: "Azur Lane (EN)", zh: "碧蓝航线（国际服）" }, server: "EN", glyph: "碧", icon: "assets/icons/azurlane_en.webp", color: "#5b8cff", short: "AL-EN" },
+  azurlane_cn: { name: { en: "Azur Lane (CN)", zh: "碧蓝航线（国服）" }, server: "CN", glyph: "碧", icon: "assets/icons/azurlane_cn.webp", color: "#7aa6ff", short: "AL-CN" },
   ournotes: { name: { en: "BanG Dream! Our Notes", zh: "BanG Dream! Our Notes" },  glyph: "音", icon: "assets/icons/ournotes.webp", color: "#7aa2ff", short: "BDON" },
 };
 
@@ -520,6 +522,42 @@ window.BANNERS = [
     game: "gbp_cn", label: { en: "Birthday", zh: "生日卡池" },
     start: "2026-11-21", end: "2026-11-24", status: "confirmed",
     featured: [{ name: "Tomori Takamatsu", zh: "高松灯", img: "gbp/2100" }],
+  },
+
+  /* ───────────── Azur Lane (EN / CN) — events now release on both servers together ───────────── */
+  {
+    game: "azurlane_en", label: { en: "Event construction", zh: "限时建造" },
+    start: "2026-10-22", end: "2026-11-04", status: "confirmed",
+    featured: [
+      { name: "Merkuriy", zh: "水星号", img: "azurlane/merkuriy", isNew: true },
+      { name: "Selimiye", zh: "塞利米耶号", img: "azurlane/selimiye", isNew: true },
+      { name: "Ormrinn Langi", zh: "长蛇号", img: "azurlane/ormrinn-langi", isNew: true },
+      { name: "Járnbarðinn", zh: "铁角号", img: "azurlane/jarnbardinn", isNew: true },
+    ],
+    note: { en: "Tempesta and the Corridor of Fog", zh: "飓风与雾霭回廊" },
+  },
+  {
+    game: "azurlane_cn", label: { en: "Event construction", zh: "限时建造" },
+    start: "2026-10-22", end: "2026-11-05", status: "confirmed",
+    featured: [
+      { name: "Merkuriy", zh: "水星号", img: "azurlane/merkuriy", isNew: true },
+      { name: "Selimiye", zh: "塞利米耶号", img: "azurlane/selimiye", isNew: true },
+      { name: "Ormrinn Langi", zh: "长蛇号", img: "azurlane/ormrinn-langi", isNew: true },
+      { name: "Járnbarðinn", zh: "铁角号", img: "azurlane/jarnbardinn", isNew: true },
+    ],
+    note: { en: "Tempesta and the Corridor of Fog", zh: "飓风与雾霭回廊" },
+  },
+  {
+    game: "azurlane_en", label: { en: "Event construction", zh: "限时建造" },
+    start: "2026-12-17", end: "2027-01-06", status: "projected",
+    featured: [{ name: "TBA" }],
+    note: { en: "New Year UR event (ships not announced yet)", zh: "新年UR大型活动（舰船待公布）" },
+  },
+  {
+    game: "azurlane_cn", label: { en: "Event construction", zh: "限时建造" },
+    start: "2026-12-17", end: "2027-01-07", status: "projected",
+    featured: [{ name: "TBA" }],
+    note: { en: "New Year UR event (ships not announced yet)", zh: "新年UR大型活动（舰船待公布）" },
   },
 
   /* ───────────── BanG Dream! Our Notes (Global) ───────────── */
