@@ -128,6 +128,11 @@
   });
 
   const filtersEl = document.getElementById("game-filters");
+  const liveGrid = document.getElementById("live-grid");
+  const liveToggle = document.getElementById("live-toggle");
+  const setLiveOpen = (open) => { liveGrid.hidden = !open; liveToggle.setAttribute("aria-expanded", open); };
+  setLiveOpen(store.get("liveOpen", false));
+  liveToggle.onclick = () => { const open = liveGrid.hidden; setLiveOpen(open); store.set("liveOpen", open); };
   const filterToggle = document.getElementById("filter-toggle");
   filterToggle.onclick = () => {
     const open = filtersEl.hidden;
@@ -245,7 +250,10 @@
 
     const live = visible.filter((b) => timing(b).live).sort((a, b) => a.end.localeCompare(b.end));
     document.getElementById("live-section").hidden = live.length === 0;
-    document.getElementById("live-grid").innerHTML = live.map((b) => card(b, { showProgress: true })).join("");
+    liveGrid.innerHTML = live.map((b) => card(b, { showProgress: true })).join("");
+    document.getElementById("live-count").textContent = live.length;
+    const liveGames = [...new Set(live.map((b) => b.game))];
+    document.getElementById("live-icons").innerHTML = liveGames.map((k) => iconHtml(GAMES[k])).join("");
 
     const list = visible.filter((b) => state.showPast || parse(b.end) >= today);
     const byDay = new Map();

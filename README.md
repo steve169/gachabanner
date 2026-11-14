@@ -2,7 +2,7 @@
 
 Contains the rate ups of the future banners in selected gacha games.
 
-A static site (GitHub Pages) showing a rate-up calendar for **Genshin Impact**, **Honkai: Star Rail**, **Zenless Zone Zero**, **Wuthering Waves**, **Arknights: Endfield**, **Neverness to Everness**, **Girls' Frontline 2: Exilium** (Global), **Madoka Magica Magia Exedra** and **Uma Musume** (JP server).
+A static site (GitHub Pages) showing a rate-up calendar for **Genshin Impact**, **Honkai: Star Rail**, **Zenless Zone Zero**, **Wuthering Waves**, **Arknights: Endfield**, **Neverness to Everness**, **Girls' Frontline 2: Exilium** (Global), **Madoka Magica Magia Exedra**, **Uma Musume** (JP and Global), **Blue Archive** (Global), **Fate/Grand Order** (JP, CN and NA), **BanG Dream! Girls Band Party** (JP, EN and CN) and **BanG Dream! Our Notes**.
 
 **Live site:** https://steve169.github.io/gachabanner/
 
@@ -30,7 +30,8 @@ All data lives in [`data/banners.js`](data/banners.js). Add or edit an entry and
 ## Images
 - `assets/icons/<game>.webp` — official App Store app icons (128×128).
 - `assets/characters/<game>/<name>.webp` — character portraits (160×200) cropped from the community wikis
-  (Genshin / HSR / ZZZ / WuWa / NTE / Uma Musume / Madoka fandom wikis, endfield.wiki.gg).
+  (Genshin / HSR / ZZZ / WuWa / NTE / Madoka fandom wikis, endfield.wiki.gg), the official GFL2 sites, GameTora (Uma Musume),
+  Atlas Academy (FGO), SchaleDB (Blue Archive) and Bestdori (Girls Band Party).
 - Point a banner unit at one with `img: "hsr/acheron"`. Units without an image fall back to a coloured letter tile.
 - All game icons and character art © their respective owners.
 

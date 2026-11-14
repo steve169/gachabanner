@@ -260,3 +260,18 @@ header, nav, section, main, footer { position: relative; z-index: 1; max-width: 
   .card .body { flex: 1 1 calc(100% - 60px); }
   .card .avatars { width: 100%; padding-left: 52px; flex-wrap: wrap; }
 }
+
+/* ───── Collapsible "Live now" ───── */
+.live h2 { flex-wrap: wrap; }
+.live-toggle {
+  display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+  font: inherit; color: inherit; background: none; border: 0; padding: 0;
+}
+.live-toggle:hover .caret { color: var(--text); }
+.live-count {
+  font-size: 13px; font-weight: 600; color: #4ade80; padding: 1px 8px; border-radius: 999px;
+  border: 1px solid rgba(74, 222, 128, .4);
+}
+.live-toggle .caret { font-size: 14px; color: var(--muted); transition: transform .2s; }
+.live-toggle[aria-expanded="true"] .caret { transform: rotate(180deg); }
+.live-grid[hidden] { display: none; }
