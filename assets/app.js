@@ -22,7 +22,7 @@
       ended: (s, e) => `${s} – ${e} · ended`,
       status: { confirmed: "Confirmed", projected: "Projected", leak: "Leak" },
       legend: { confirmed: "officially announced", projected: "estimated from the usual cycle", leak: "based on leaks, may change" },
-      foot: (u) => `Dates are approximate server dates; check in-game for exact times. Last updated ${u}. Fan-made, not affiliated with any publisher.`,
+      foot: (u) => `Dates are approximate server dates; check in-game for exact times. Last updated ${u}. Fan-made, not affiliated with any publisher; game icons and character art © their respective owners.`,
       empty: "No upcoming banners for the selected games.",
       monthHead: (d) => `<span class="m-big">${MONTH_SHORT[d.getMonth()]}</span> <small>${MONTH_LONG[d.getMonth()].toUpperCase()} · ${d.getFullYear()}</small>`,
       weekday: (d) => ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"][d.getDay()],
@@ -48,7 +48,7 @@
       ended: (s, e) => `${s} – ${e} · 已结束`,
       status: { confirmed: "已确认", projected: "预测", leak: "爆料" },
       legend: { confirmed: "官方已公布", projected: "按常规周期推算", leak: "来自爆料，可能变动" },
-      foot: (u) => `日期为大致的服务器日期，具体时间请以游戏内公告为准。最后更新：${u}。粉丝自制，与各游戏厂商无关。`,
+      foot: (u) => `日期为大致的服务器日期，具体时间请以游戏内公告为准。最后更新：${u}。粉丝自制，与各游戏厂商无关；游戏图标及角色立绘版权归各自所有者。`,
       empty: "所选游戏暂无即将开启的卡池。",
       monthHead: (d) => `<span class="m-big">${d.getMonth() + 1}月</span> <small>${MONTH_SHORT[d.getMonth()].toUpperCase()} · ${d.getFullYear()}</small>`,
       weekday: (d) => ["周日", "周一", "周二", "周三", "周四", "周五", "周六"][d.getDay()],
@@ -93,7 +93,8 @@
     showPast: store.get("showPast", false),
   };
   // Games added after a viewer saved their filter should show up for them too.
-  const knownGames = store.get("knownGames", null);
+  // (Visitors from the first release saved filters before knownGames existed; that release had these three.)
+  const knownGames = store.get("knownGames", Array.isArray(savedGames) ? ["genshin", "hsr", "zzz"] : null);
   if (Array.isArray(knownGames)) for (const g of Object.keys(GAMES)) if (!knownGames.includes(g)) state.games.add(g);
   store.set("knownGames", Object.keys(GAMES));
   if (state.games.size === 0) Object.keys(GAMES).forEach((g) => state.games.add(g));
@@ -152,6 +153,10 @@
   pastBox.onchange = () => { state.showPast = pastBox.checked; store.set("showPast", state.showPast); render(); };
 
   /* ── card ── */
+  // App icon with the glyph underneath as a fallback if the image is missing.
+  const iconHtml = (g, extra = "") =>
+    `<span class="icon${extra}" title="${esc(tx(g.name))}">${esc(g.glyph)}${g.icon ? `<img src="${esc(g.icon)}" alt="" onerror="this.remove()">` : ""}</span>`;
+
   function pillText(b) {
     if (b.label) return tx(b.label);
     return [b.version, b.phase ? T().phase(b.phase) : ""].filter(Boolean).join(" ");
@@ -178,13 +183,14 @@
     const avatars = b.featured.slice(0, 3).map((f, i) => {
       const e = ELEMENTS[f.element] || g.color;
       const initial = f.name === "TBA" ? "?" : [...unitName(f)][0];
-      return `<div class="avatar${i > 0 ? " small" : ""}" style="--e:${e}" title="${esc(unitName(f))}">${esc(initial)}</div>`;
+      const pic = f.img ? `<img src="assets/characters/${esc(f.img)}.webp" alt="" loading="lazy" onerror="this.remove()">` : "";
+      return `<div class="avatar${i > 0 ? " small" : ""}${f.img ? " has-img" : ""}" style="--e:${e}" title="${esc(unitName(f))}">${esc(initial)}${pic}</div>`;
     }).join("");
     const weapons = (b.weapons || []).map(tx).filter(Boolean);
 
     return `
       <article class="card" style="--c:${g.color}">
-        <div class="icon" title="${esc(tx(g.name))}">${esc(g.glyph)}</div>
+        ${iconHtml(g)}
         <div class="body">
           <div class="title">
             ${hasNew ? '<span class="new-badge">NEW</span>' : ""}
@@ -219,7 +225,7 @@
     allChip.setAttribute("aria-pressed", state.games.size === Object.keys(GAMES).length);
     filtersEl.querySelectorAll(".chip[data-game]").forEach((c) => {
       const g = GAMES[c.dataset.game];
-      c.innerHTML = `<span class="icon">${esc(g.glyph)}</span>${esc(tx(g.name))}`;
+      c.innerHTML = `${iconHtml(g)}${esc(tx(g.name))}`;
       c.setAttribute("aria-pressed", state.games.has(c.dataset.game));
     });
 

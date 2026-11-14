@@ -27,6 +27,17 @@ All data lives in [`data/banners.js`](data/banners.js). Add or edit an entry and
 }
 ```
 
+## Images
+- `assets/icons/<game>.webp` — official App Store app icons (128×128).
+- `assets/characters/<game>/<name>.webp` — character portraits (160×200) cropped from the community wikis
+  (Genshin / HSR / ZZZ / WuWa / NTE / Uma Musume / Madoka fandom wikis, endfield.wiki.gg).
+- Point a banner unit at one with `img: "hsr/acheron"`. Units without an image fall back to a coloured letter tile.
+- All game icons and character art © their respective owners.
+
+## Caching
+When you change `assets/app.js`, `assets/style.css` or `data/banners.js`, bump the `?v=` value on their links in
+`index.html` so returning visitors don't get a mix of old and new files.
+
 ## Running locally
 Open `index.html` in a browser, or `python3 -m http.server` and visit http://localhost:8000.
 
