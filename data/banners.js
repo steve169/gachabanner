@@ -33,6 +33,14 @@ window.GAMES = {
   gfl2:     { name: { en: "Girls' Frontline 2",   zh: "少女前线2：追放" },        glyph: "追", icon: "assets/icons/gfl2.webp", color: "#ef4f5f", short: "GFL2" },
   exedra:   { name: { en: "Madoka Magica Exedra", zh: "魔法少女小圆 Exedra" },    glyph: "魔", icon: "assets/icons/exedra.webp", color: "#ff8fc8", short: "MMX" },
   uma:      { name: { en: "Uma Musume (JP)",      zh: "赛马娘（日服）" },         glyph: "马", icon: "assets/icons/uma.webp", color: "#7ddc6a", short: "UMA" },
+  uma_gl:   { name: { en: "Uma Musume (Global)",  zh: "赛马娘（国际服）" },       glyph: "马", icon: "assets/icons/uma_gl.webp", color: "#a8e86b", short: "UMA-GL" },
+  bluearchive: { name: { en: "Blue Archive (Global)", zh: "蔚蓝档案（国际服）" }, glyph: "蔚", icon: "assets/icons/bluearchive.webp", color: "#38c2f2", short: "BA" },
+  fgo_jp:   { name: { en: "FGO (JP)",             zh: "FGO（日服）" },             glyph: "冠", icon: "assets/icons/fgo_jp.webp", color: "#d9b44a", short: "FGO-JP" },
+  fgo_cn:   { name: { en: "FGO (CN)",             zh: "FGO（国服）" },             glyph: "冠", icon: "assets/icons/fgo_cn.webp", color: "#e8c15a", short: "FGO-CN" },
+  fgo_na:   { name: { en: "FGO (NA)",             zh: "FGO（美服）" },             glyph: "冠", icon: "assets/icons/fgo_na.webp", color: "#c7a23c", short: "FGO-NA" },
+  gbp_jp:   { name: { en: "BanG Dream! GBP (JP)", zh: "BanG Dream! 少女乐团派对（日服）" }, glyph: "邦", icon: "assets/icons/gbp_jp.webp", color: "#ff3377", short: "GBP-JP" },
+  gbp_en:   { name: { en: "BanG Dream! GBP (EN)", zh: "BanG Dream! 少女乐团派对（国际服）" }, glyph: "邦", icon: "assets/icons/gbp_en.webp", color: "#ff5c93", short: "GBP-EN" },
+  ournotes: { name: { en: "BanG Dream! Our Notes", zh: "BanG Dream! Our Notes" },  glyph: "音", icon: "assets/icons/ournotes.webp", color: "#7aa2ff", short: "BDON" },
 };
 
 const NEW_VERSION = { en: "New version launch", zh: "新版本上线" };
@@ -256,6 +264,239 @@ window.BANNERS = [
     start: "2026-11-19", end: "2026-11-30", status: "projected",
     featured: [{ name: "TBA" }],
     note: { en: "Next pick-up, details not yet announced", zh: "下一期卡池，详情待公布" },
+  },
+  /* ───────────── Uma Musume (Global server) ───────────── */
+  {
+    game: "uma_gl", label: { en: "Pick-up", zh: "UP卡池" },
+    start: "2026-11-05", end: "2026-11-15", status: "confirmed",
+    featured: [{ name: "Daitaku Helios", zh: "大拓太阳神", img: "uma/daitaku-helios", isNew: true }],
+    weapons: ["K.S. Miracle", "Aston Machan"],
+  },
+  {
+    game: "uma_gl", label: { en: "Pick-up", zh: "UP卡池" },
+    start: "2026-11-09", end: "2026-11-23", status: "confirmed",
+    featured: [
+      { name: "Ines Fujin (Valentine)", img: "uma/ines-fujin-valentine", isNew: true },
+      { name: "Mejiro Ryan (Valentine)", zh: "目白赖恩（情人节）", img: "uma/mejiro-ryan-valentine", isNew: true },
+    ],
+    weapons: ["SSR Biko Pegasus", "SSR Marvelous Sunday"],
+  },
+  {
+    game: "uma_gl", label: { en: "Pick-up", zh: "UP卡池" },
+    start: "2026-11-21", end: "2026-12-02", status: "projected",
+    featured: [{ name: "Shinko Windy", zh: "新光风", img: "uma/shinko-windy", isNew: true }],
+    weapons: ["SSR Nishino Flower", "SSR Maruzensky"],
+    note: { en: "2nd Anniversary Part 1", zh: "二周年庆典 第1弹" },
+  },
+
+  /* ───────────── Blue Archive (Global server) ───────────── */
+  {
+    game: "bluearchive", label: { en: "Pick-Up", zh: "招募UP" },
+    start: "2026-11-10", end: "2026-11-17", status: "confirmed",
+    featured: [
+      { name: "Makoto (Swimsuit)", zh: "真琴（泳装）", img: "ba/makoto-swimsuit", isNew: true },
+      { name: "Satsuki (Swimsuit)", zh: "皋月（泳装）", img: "ba/satsuki-swimsuit", isNew: true },
+    ],
+    note: { en: "5th Anniversary", zh: "五周年" },
+  },
+  {
+    game: "bluearchive", label: { en: "Fes", zh: "Fes招募" },
+    start: "2026-11-17", end: "2026-11-24", status: "projected",
+    featured: [
+      { name: "Iroha (Swimsuit)", zh: "伊吕波（泳装）", img: "ba/iroha-swimsuit", isNew: true },
+      { name: "Ibuki (Swimsuit)", zh: "伊吹（泳装）", img: "ba/ibuki-swimsuit", isNew: true },
+      { name: "Rio", zh: "莉音", img: "ba/rio" },
+      { name: "Neru (School)", zh: "妮露（制服）", img: "ba/neru-school" },
+    ],
+    note: { en: "5th Anniversary", zh: "五周年" },
+  },
+  {
+    game: "bluearchive", label: { en: "Pick-Up", zh: "招募UP" },
+    start: "2026-11-24", end: "2026-12-08", status: "projected",
+    featured: [
+      { name: "Sena (Casual)", zh: "濑名（便服）", img: "ba/sena-casual" },
+      { name: "Juri (Part-Timer)", zh: "朱莉（打工）", img: "ba/juri-part-timer" },
+      { name: "Nagusa", zh: "名草", img: "ba/nagusa" },
+      { name: "Niya", zh: "尼娅", img: "ba/niya" },
+    ],
+    note: RERUNS,
+  },
+
+  /* ───────────── Fate/Grand Order (JP) ───────────── */
+  {
+    game: "fgo_jp", label: { en: "GUDAGUDA prerelease", zh: "唠唠叨叨开幕前夕" },
+    start: "2026-11-04", end: "2026-11-18", status: "confirmed",
+    featured: [
+      { name: "Kondo Isami", zh: "近藤勇", img: "fgo/kondo" },
+      { name: "Hijikata Toshizo", zh: "土方岁三", img: "fgo/hijikata" },
+      { name: "Okita Souji", zh: "冲田总司", img: "fgo/okita" },
+    ],
+    note: { en: "Daily rotating pick-ups", zh: "每日替换" },
+  },
+  {
+    game: "fgo_jp", label: { en: "100M Downloads", zh: "全世界1亿下载纪念" },
+    start: "2026-11-07", end: "2026-11-21", status: "confirmed",
+    featured: [{ name: "Merlin", zh: "梅林", img: "fgo/merlin" }],
+    note: { en: "42 servants across 21 banners", zh: "21个卡池共42骑" },
+  },
+  {
+    game: "fgo_jp", label: { en: "GUDAGUDA Midwinter Swimsuit", zh: "严冬泳装特辑 唠唠叨叨" },
+    start: "2026-11-11", end: "2026-12-02", status: "confirmed",
+    featured: [
+      { name: "Himiko & Iyo", zh: "卑弥呼＆壹与", img: "fgo/himiko-iyo", isNew: true },
+      { name: "Saika Magoichi (Rider)", zh: "杂贺孙一(Rider)", img: "fgo/saika-rider", isNew: true },
+    ],
+    note: { en: "New event", zh: "新活动" },
+  },
+  {
+    game: "fgo_jp", label: { en: "GUDAGUDA Pick-up 2", zh: "唠唠叨叨 推荐召唤2" },
+    start: "2026-11-13", end: "2026-12-02", status: "confirmed",
+    featured: [
+      { name: "Takasugi Shinsaku", zh: "高杉晋作", img: "fgo/takasugi" },
+      { name: "Okita Souji (Alter) (Saber)", zh: "冲田总司〔Alter〕(Saber)", img: "fgo/okita-alter-saber" },
+      { name: "Okita J. Souji", zh: "冲田·J·总司", img: "fgo/okita-j" },
+      { name: "Saito Hajime", zh: "斋藤一", img: "fgo/saito" },
+    ],
+    note: { en: "Daily rotating pick-ups", zh: "每日替换" },
+  },
+
+  /* ───────────── Fate/Grand Order (CN) ───────────── */
+  {
+    game: "fgo_cn", label: { en: "Grand Duel: Archer", zh: "冠位戴冠战：Archer" },
+    start: "2026-11-05", end: "2026-11-21", status: "confirmed",
+    featured: [{ name: "Archer-class servants", zh: "Archer职阶从者" }],
+  },
+  {
+    game: "fgo_cn", label: { en: "100M Downloads", zh: "全世界1亿下载纪念" },
+    start: "2026-11-07", end: "2026-11-21", status: "confirmed",
+    featured: [{ name: "Merlin", zh: "梅林", img: "fgo/merlin" }],
+    note: { en: "Many servants across several banners", zh: "多个卡池" },
+  },
+  {
+    game: "fgo_cn", label: { en: "Road to Finale #7", zh: "Road to 终章 第7章篇纪念" },
+    start: "2026-11-10", end: "2026-11-17", status: "confirmed",
+    featured: [{ name: "Tezcatlipoca", zh: "特斯卡特利波卡", img: "fgo/tezcatlipoca" }, { name: "Nitocris", zh: "尼托克丽丝" }],
+  },
+  {
+    game: "fgo_cn", label: { en: "Road to Finale", zh: "Road to 终章 奏章Ⅰ篇纪念" },
+    start: "2026-11-17", end: "2026-11-24", status: "confirmed",
+    featured: [{ name: "Medusa (Saber)", zh: "美杜莎(Saber)", img: "fgo/medusa-saber" }, { name: "Duryodhana", zh: "难敌", img: "fgo/duryodhana" }],
+  },
+  {
+    game: "fgo_cn", label: { en: "Grand Duel: Rider & Assassin", zh: "冠位戴冠战：Rider＆Assassin" },
+    start: "2026-11-21", end: "2026-11-28", status: "projected",
+    featured: [{ name: "Rider & Assassin servants", zh: "Rider/Assassin职阶从者" }],
+  },
+  {
+    game: "fgo_cn", label: { en: "Road to Finale #8", zh: "Road to 终章 第8次发布纪念" },
+    start: "2026-11-24", end: "2026-12-01", status: "projected",
+    featured: [
+      { name: "The Count of Monte Cristo", zh: "岩窟王 基督山", img: "fgo/monte-cristo" },
+      { name: "Alessandro di Cagliostro", zh: "亚历山德罗·迪·卡利奥斯特罗", img: "fgo/cagliostro" },
+    ],
+  },
+  {
+    game: "fgo_cn", label: { en: "Grand Duel: Caster", zh: "冠位戴冠战：Caster" },
+    start: "2026-11-24", end: "2026-12-10", status: "projected",
+    featured: [{ name: "Caster-class servants", zh: "Caster职阶从者" }],
+  },
+  {
+    game: "fgo_cn", label: { en: "Road to Finale #9", zh: "Road to 终章 第9次发布纪念" },
+    start: "2026-12-01", end: "2026-12-08", status: "projected",
+    featured: [{ name: "BB Dubai", zh: "BB迪拜", img: "fgo/bb-dubai" }, { name: "Tenochtitlan", zh: "特诺奇蒂特兰", img: "fgo/tenochtitlan" }],
+  },
+  {
+    game: "fgo_cn", label: { en: "Road to Finale #10", zh: "Road to 终章 第10次发布纪念" },
+    start: "2026-12-08", end: "2026-12-15", status: "projected",
+    featured: [{ name: "Lilith", zh: "莉莉丝", img: "fgo/lilith" }, { name: "Martha (Ruler)", zh: "玛尔达(Ruler)", img: "fgo/martha-ruler" }],
+  },
+  {
+    game: "fgo_cn", label: { en: "Part 2 Final Chapter", zh: "「第2部 终章」开幕！" },
+    start: "2026-12-10", end: "2026-12-20", status: "projected",
+    featured: [{ name: "TBA" }],
+    note: { en: "Finale launch pick-ups", zh: "英灵极点推荐召唤" },
+  },
+
+  /* ───────────── Fate/Grand Order (NA) ───────────── */
+  {
+    game: "fgo_na", label: { en: "Mystery House Crafters prerelease", zh: "Mystery House Crafters 开幕前夕" },
+    start: "2026-11-05", end: "2026-11-14", status: "confirmed",
+    featured: [{ name: "Ishtar", zh: "伊什塔尔", img: "fgo/ishtar" }, { name: "Ozymandias", zh: "奥斯曼狄斯", img: "fgo/ozymandias" }],
+    note: { en: "Daily rotating pick-ups", zh: "每日替换" },
+  },
+  {
+    game: "fgo_na", label: { en: "100M Downloads", zh: "全世界1亿下载纪念" },
+    start: "2026-11-07", end: "2026-11-20", status: "confirmed",
+    featured: [{ name: "Merlin", zh: "梅林", img: "fgo/merlin" }],
+    note: { en: "42 servants across 21 banners", zh: "21个卡池共42骑" },
+  },
+  {
+    game: "fgo_na", label: { en: "Mystery House Crafters", zh: "Mystery House Crafters" },
+    start: "2026-11-13", end: "2026-12-03", status: "confirmed",
+    featured: [{ name: "Tutankhamun", zh: "图坦卡蒙", img: "fgo/tutankhamun", isNew: true }],
+    note: { en: "New event", zh: "新活动" },
+  },
+  /* ───────────── BanG Dream! Girls Band Party (JP) — data from bestdori.com ───────────── */
+  {
+    game: "gbp_jp", label: { en: "Collab Part 1", zh: "联动卡池 Part1" },
+    start: "2026-11-06", end: "2026-11-18", status: "confirmed",
+    featured: [
+      { name: "Yukina Minato", zh: "凑友希那", img: "gbp/2525", isNew: true },
+      { name: "Sayo Hikawa", zh: "冰川纱夜", img: "gbp/2526", isNew: true },
+    ],
+    note: { en: "Magical Girl Witch Trials collab (limited)", zh: "魔法少女的魔女审判 联动（限定）" },
+  },
+  {
+    game: "gbp_jp", label: { en: "Event gacha", zh: "活动卡池" },
+    start: "2026-11-10", end: "2026-11-19", status: "confirmed",
+    featured: [
+      { name: "Rokka Asahi", zh: "朝日六花", img: "gbp/2554", isNew: true },
+      { name: "Rei Wakana", zh: "和奏瑞依", img: "gbp/2555", isNew: true },
+      { name: "Chiyu Tamade", zh: "珠手知由", img: "gbp/2558" },
+    ],
+  },
+
+  /* ───────────── BanG Dream! Girls Band Party (EN) — data from bestdori.com ───────────── */
+  {
+    game: "gbp_en", label: { en: "Limited", zh: "限定卡池" },
+    start: "2026-11-06", end: "2026-11-14", status: "confirmed",
+    featured: [
+      { name: "Eve Wakamiya", zh: "若宫伊芙", img: "gbp/2010", isNew: true },
+      { name: "Kanon Matsubara", zh: "松原花音", img: "gbp/2011", isNew: true },
+      { name: "Tsukushi Futaba", zh: "二叶筑紫", img: "gbp/2014" },
+    ],
+  },
+  {
+    game: "gbp_en", label: { en: "Event gacha", zh: "活动卡池" },
+    start: "2026-11-11", end: "2026-11-19", status: "confirmed",
+    featured: [
+      { name: "Kanon Matsubara", zh: "松原花音", img: "gbp/2408", isNew: true },
+      { name: "Misaki Okusawa (Michelle)", zh: "米歇尔", img: "gbp/2409", isNew: true },
+      { name: "Hagumi Kitazawa", zh: "北泽育美", img: "gbp/2412" },
+    ],
+  },
+  {
+    game: "gbp_en", label: { en: "Birthday", zh: "生日卡池" },
+    start: "2026-11-19", end: "2026-11-26", status: "confirmed",
+    featured: [{ name: "Rui Yashio", zh: "八潮瑠唯", img: "gbp/1991" }],
+  },
+  {
+    game: "gbp_en", label: { en: "Birthday", zh: "生日卡池" },
+    start: "2026-11-22", end: "2026-11-29", status: "confirmed",
+    featured: [{ name: "Tomori Takamatsu", zh: "高松灯", img: "gbp/2100" }],
+  },
+
+  /* ───────────── BanG Dream! Our Notes (Global) ───────────── */
+  {
+    game: "ournotes", label: { en: "Halloween limited", zh: "万圣节限定" },
+    start: "2026-10-28", end: "2026-11-07", status: "confirmed",
+    featured: [{ name: "Taki Shiina", zh: "椎名立希", isNew: true }, { name: "Uika Misumi", zh: "三角初华", isNew: true }],
+  },
+  {
+    game: "ournotes", label: { en: "Mugendai MewType anniversary", zh: "梦限大MewType 周年" },
+    start: "2026-11-18", end: "2026-11-20", status: "projected",
+    featured: [{ name: "TBA" }],
+    note: { en: "Anniversary campaign; gacha lineup not announced yet", zh: "周年活动，卡池阵容尚未公布" },
   },
 ];
 
