@@ -12,7 +12,7 @@ A static site (GitHub Pages) showing a rate-up calendar for **Genshin Impact**, 
 - Game filters and a "show past" toggle (remembered per browser)
 - Status tags: Confirmed / Projected / Leak
 - Export the visible games' banners to an `.ics` calendar file
-
+ 
 ## Updating banners
 All data lives in [`data/banners.js`](data/banners.js). Add or edit an entry and push — no build step.
 
