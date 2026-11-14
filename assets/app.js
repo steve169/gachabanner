@@ -223,12 +223,14 @@
     const names = b.featured.map((f) =>
       `<b class="${f.isNew ? "" : "rerun"}" title="${esc(f.isNew ? t.isNew : t.rerun)}${f.note ? " — " + esc(tx(f.note)) : ""}">${esc(unitName(f))}</b>`
     ).join('<span class="sep">·</span>');
-    const avatars = b.featured.map((f) => {
+    const MAX_AVATARS = 5;
+    const extra = b.featured.length - MAX_AVATARS;
+    const avatars = b.featured.slice(0, extra > 0 ? MAX_AVATARS - 1 : MAX_AVATARS).map((f) => {
       const e = ELEMENTS[f.element] || g.color;
       const initial = f.name === "TBA" ? "?" : [...unitName(f)][0];
       const pic = f.img ? `<img src="assets/characters/${esc(f.img)}.webp" alt="" loading="lazy" onerror="this.remove()">` : "";
       return `<div class="avatar${f.img ? " has-img" : ""}" style="--e:${e}" title="${esc(unitName(f))}">${esc(initial)}${pic}</div>`;
-    }).join("");
+    }).join("") + (extra > 0 ? `<div class="avatar avatar-more" style="--e:${g.color}" title="${esc(b.featured.slice(MAX_AVATARS - 1).map(unitName).join(", "))}">+${extra + 1}</div>` : "");
     const weapons = (b.weapons || []).map(tx).filter(Boolean);
 
     return `

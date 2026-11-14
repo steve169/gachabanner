@@ -287,3 +287,5 @@ header, nav, section, main, footer { position: relative; z-index: 1; max-width: 
   .filter-row { flex-direction: column; gap: 6px; }
   .filter-label { width: auto; padding-top: 0; }
 }
+
+.avatar-more { font-size: 18px; place-items: center; padding: 0; opacity: .85; }
