@@ -109,10 +109,10 @@ header, nav, section, main, footer { position: relative; z-index: 1; max-width: 
 .day-label .num { font-size: 38px; font-weight: 800; line-height: 1; }
 .day-label .wd { color: var(--muted); font-size: 12px; letter-spacing: .1em; margin-top: 4px; }
 .day.today .day-label .num { color: var(--gold); }
-.day.today .day-label .wd::after { content: " · TODAY"; color: var(--gold); }
+.day.today .day-label .wd em { font-style: normal; color: var(--gold); }
 .day.past { opacity: .5; }
 
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 14px; }
 
 /* ───── Card ───── */
 .card {
@@ -188,7 +188,7 @@ header, nav, section, main, footer { position: relative; z-index: 1; max-width: 
 /* ───── Footer ───── */
 .foot { margin-top: 40px; color: var(--muted); font-size: 13px; text-align: center; line-height: 1.8; }
 .legend { display: flex; flex-wrap: wrap; gap: 6px 10px; justify-content: center; align-items: center; }
-.legend .status { margin-left: 10px; }
+.legend > span { margin: 0 8px; }
 .foot code { color: var(--accent); }
 
 @media (max-width: 640px) {
@@ -205,4 +205,32 @@ header, nav, section, main, footer { position: relative; z-index: 1; max-width: 
 }
 
 /* Live cards are narrower: drop the portrait stack so text has room */
-.live-grid .avatars { display: none; }
+.live-grid .avatars, .live-grid .weapons, .live-grid .meta .note { display: none; }
+
+/* ───── Language bar (top-left) ───── */
+.lang-bar {
+  position: absolute; top: 14px; left: 16px; z-index: 6;
+  display: flex; align-items: center; gap: 2px; padding: 3px;
+  border-radius: 999px; border: 1px solid var(--card-border);
+  background: rgba(13, 20, 48, .75); backdrop-filter: blur(8px);
+}
+.lang-bar .globe { font-size: 13px; padding: 0 4px 0 8px; opacity: .8; }
+.lang-bar button {
+  font: inherit; font-size: 13px; color: var(--muted); cursor: pointer;
+  padding: 4px 12px; border-radius: 999px; border: 0; background: transparent;
+}
+.lang-bar button:hover { color: var(--text); }
+.lang-bar button[aria-pressed="true"] { color: #0b1030; background: linear-gradient(90deg, #cfe0ff, #a99cff); font-weight: 600; }
+
+.chip-all { padding: 6px 14px; font-weight: 600; }
+.month h2 .m-big { font-size: inherit; }
+
+@media (max-width: 640px) {
+  .lang-bar { top: 10px; left: 10px; }
+  .hero { padding-top: 56px; }
+  .toolbar > * { min-width: 0; }
+  .chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 16px; }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip { flex: none; }
+  .toolbar { flex-direction: column; flex-wrap: nowrap; align-items: stretch; }
+}

@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gacha Banner Calendar</title>
-  <meta name="description" content="Rate-up banner calendar for Genshin Impact, Honkai: Star Rail and Zenless Zone Zero." />
+  <meta name="description" content="Rate-up banner calendar for Genshin Impact, Honkai: Star Rail, Zenless Zone Zero, Wuthering Waves, Arknights: Endfield, Neverness to Everness, Girls' Frontline 2, Madoka Magica Exedra and Uma Musume (JP)." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet" />
@@ -14,36 +14,37 @@
 <body>
   <div class="stars" aria-hidden="true"></div>
 
+  <div class="lang-bar" id="lang-bar" role="group" aria-label="Language / 语言">
+    <span class="globe" aria-hidden="true">🌐</span>
+    <button type="button" data-lang="en">English</button>
+    <button type="button" data-lang="zh">简体中文</button>
+  </div>
+
   <header class="hero">
-    <div class="eyebrow">GACHA BANNER CALENDAR</div>
-    <h1>Rate-Up Calendar</h1>
-    <p class="sub">Genshin Impact &nbsp;·&nbsp; Honkai: Star Rail &nbsp;·&nbsp; Zenless Zone Zero</p>
-    <p class="range"><span id="range-text"></span><span class="range-note">key banner dates at a glance</span></p>
+    <div class="eyebrow" data-i18n="eyebrow"></div>
+    <h1 data-i18n="title"></h1>
+    <p class="sub" data-i18n="sub"></p>
+    <p class="range"><span id="range-text"></span><span class="range-note" data-i18n="rangeNote"></span></p>
   </header>
 
   <nav class="toolbar" aria-label="Filters">
     <div class="chips" id="game-filters"></div>
     <div class="toolbar-right">
-      <label class="toggle"><input type="checkbox" id="show-past" /> Show past</label>
-      <button class="btn" id="ics-btn" type="button">⤓ Export .ics</button>
+      <label class="toggle"><input type="checkbox" id="show-past" /> <span data-i18n="showPast"></span></label>
+      <button class="btn" id="ics-btn" type="button" data-i18n="exportIcs"></button>
     </div>
   </nav>
 
   <section class="live" id="live-section" aria-labelledby="live-title">
-    <h2 id="live-title"><span class="pulse"></span>Live now</h2>
+    <h2 id="live-title"><span class="pulse"></span><span data-i18n="liveNow"></span></h2>
     <div class="live-grid" id="live-grid"></div>
   </section>
 
   <main id="calendar"></main>
 
   <footer class="foot">
-    <div class="legend">
-      <span class="status s-confirmed">Confirmed</span> officially announced
-      <span class="status s-projected">Projected</span> estimated from the 6-week cycle
-      <span class="status s-leak">Leak</span> based on leaks, may change
-    </div>
-    <p>Dates are approximate server dates; check in-game for exact times. Last updated <span id="updated"></span>.
-      Fan-made, not affiliated with HoYoverse. Data lives in <code>data/banners.js</code>.</p>
+    <div class="legend" id="legend"></div>
+    <p><span id="foot-text"></span> <code>data/banners.js</code></p>
   </footer>
 
   <script src="data/banners.js"></script>
