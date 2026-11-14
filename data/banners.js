@@ -208,7 +208,7 @@ window.BANNERS = [
   {
     game: "gfl2", label: { en: "Targeted Procurement", zh: "限定采购" },
     start: "2026-10-29", end: "2026-11-18", status: "confirmed",
-    featured: [{ name: "Faelynn" }, { name: "Groza" }, { name: "Colphne", zh: "克罗丽科" }],
+    featured: [{ name: "Faelynn", img: "gfl2/faelynn" }, { name: "Groza", img: "gfl2/groza" }, { name: "Colphne", zh: "寇尔芙", img: "gfl2/colphne" }],
   },
   {
     game: "gfl2", label: { en: "2nd Anniversary", zh: "二周年" },
