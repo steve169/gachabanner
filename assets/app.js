@@ -11,6 +11,9 @@
       rangeNote: "key banner dates at a glance",
       showPast: "Show past",
       games: "Games",
+      server: "Server",
+      gameLabel: "Games",
+      serverNames: { CN: "CN", EN: "EN / Global", JP: "JP" },
       exportIcs: "⤓ Export .ics",
       all: "All",
       liveNow: "Live now",
@@ -38,6 +41,9 @@
       rangeNote: "关键节点一览",
       showPast: "显示已结束",
       games: "游戏筛选",
+      server: "服务器",
+      gameLabel: "游戏",
+      serverNames: { CN: "国服", EN: "国际服", JP: "日服" },
       exportIcs: "⤓ 导出日历",
       all: "全部",
       liveNow: "正在进行",
@@ -87,13 +93,17 @@
   };
 
   /* ── state ── */
+  // Games split by server carry `server` in GAMES; the server filter only affects those.
+  const SERVERS = ["CN", "EN", "JP"];
   const defaultLang = (navigator.language || "en").toLowerCase().startsWith("zh") ? "zh" : "en";
   const savedGames = store.get("games", null);
   const state = {
     lang: I18N[store.get("lang", defaultLang)] ? store.get("lang", defaultLang) : "en",
     games: new Set(Array.isArray(savedGames) ? savedGames.filter((g) => GAMES[g]) : Object.keys(GAMES)),
     showPast: store.get("showPast", false),
+    servers: new Set((store.get("servers", null) || SERVERS).filter((x) => SERVERS.includes(x))),
   };
+  if (state.servers.size === 0) SERVERS.forEach((x) => state.servers.add(x));
   // Games added after a viewer saved their filter should show up for them too.
   // (Visitors from the first release saved filters before knownGames existed; that release had these three.)
   const knownGames = store.get("knownGames", Array.isArray(savedGames) ? ["genshin", "hsr", "zzz"] : null);
@@ -103,6 +113,7 @@
 
   const T = () => I18N[state.lang];
   const tx = (v) => (v == null ? "" : typeof v === "string" ? v : v[state.lang] ?? v.en ?? "");
+  const shown = (key) => state.games.has(key) && (!GAMES[key].server || state.servers.has(GAMES[key].server));
   const unitName = (f) => (f.name === "TBA" ? T().tba : state.lang === "zh" && f.zh ? f.zh : f.name);
 
   /* ── stars ── */
@@ -139,6 +150,25 @@
     filtersEl.hidden = !open;
     filterToggle.setAttribute("aria-expanded", open);
   };
+  const mkRow = (cls) => {
+    const row = document.createElement("div"); row.className = `filter-row ${cls}`;
+    const lbl = document.createElement("span"); lbl.className = "filter-label"; row.appendChild(lbl);
+    const chips = document.createElement("div"); chips.className = "filter-chips"; row.appendChild(chips);
+    filtersEl.appendChild(row); return chips;
+  };
+  const serverChips = mkRow("server-row");
+  const gameChips = mkRow("game-row");
+  for (const sv of SERVERS) {
+    const b = document.createElement("button");
+    b.className = "chip chip-server"; b.type = "button"; b.dataset.server = sv;
+    b.onclick = () => {
+      state.servers.has(sv) ? state.servers.delete(sv) : state.servers.add(sv);
+      if (state.servers.size === 0) state.servers.add(sv);
+      store.set("servers", [...state.servers]);
+      render();
+    };
+    serverChips.appendChild(b);
+  }
   const allChip = document.createElement("button");
   allChip.className = "chip chip-all"; allChip.type = "button";
   allChip.onclick = () => {
@@ -147,7 +177,7 @@
     store.set("games", [...state.games]);
     render();
   };
-  filtersEl.appendChild(allChip);
+  gameChips.appendChild(allChip);
   for (const [key, g] of Object.entries(GAMES)) {
     const b = document.createElement("button");
     b.className = "chip"; b.type = "button"; b.dataset.game = key;
@@ -158,7 +188,7 @@
       store.set("games", [...state.games]);
       render();
     };
-    filtersEl.appendChild(b);
+    gameChips.appendChild(b);
   }
 
   const pastBox = document.getElementById("show-past");
@@ -235,18 +265,27 @@
     document.getElementById("foot-text").textContent = t.foot(window.LAST_UPDATED || "");
 
     const total = Object.keys(GAMES).length;
-    document.getElementById("filter-count").textContent = `${state.games.size}/${total}`;
+    const shownKeys = Object.keys(GAMES).filter(shown);
+    document.getElementById("filter-count").textContent = `${shownKeys.length}/${total}`;
+    filtersEl.querySelector(".server-row .filter-label").textContent = t.server;
+    filtersEl.querySelector(".game-row .filter-label").textContent = t.gameLabel;
+    filtersEl.querySelectorAll(".chip-server").forEach((c) => {
+      c.textContent = t.serverNames[c.dataset.server];
+      c.setAttribute("aria-pressed", state.servers.has(c.dataset.server));
+    });
     document.getElementById("selected-icons").innerHTML = Object.keys(GAMES)
-      .filter((k) => state.games.has(k)).map((k) => iconHtml(GAMES[k])).join("");
+      .filter(shown).map((k) => iconHtml(GAMES[k])).join("");
     allChip.textContent = t.all;
     allChip.setAttribute("aria-pressed", state.games.size === Object.keys(GAMES).length);
     filtersEl.querySelectorAll(".chip[data-game]").forEach((c) => {
       const g = GAMES[c.dataset.game];
       c.innerHTML = `${iconHtml(g)}${esc(tx(g.name))}`;
       c.setAttribute("aria-pressed", state.games.has(c.dataset.game));
+      const sv = GAMES[c.dataset.game].server;
+      c.classList.toggle("server-off", !!sv && !state.servers.has(sv));
     });
 
-    const visible = BANNERS.filter((b) => state.games.has(b.game));
+    const visible = BANNERS.filter((b) => shown(b.game));
 
     const live = visible.filter((b) => timing(b).live).sort((a, b) => a.end.localeCompare(b.end));
     document.getElementById("live-section").hidden = live.length === 0;
@@ -287,7 +326,7 @@
     const next = (s) => { const d = parse(s); d.setDate(d.getDate() + 1); return `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, "0")}${String(d.getDate()).padStart(2, "0")}`; };
     const icsEsc = (s) => String(s).replace(/[\\;,]/g, (c) => "\\" + c);
     const lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//gachabanner//EN", "CALSCALE:GREGORIAN"];
-    BANNERS.filter((b) => state.games.has(b.game)).forEach((b, i) => {
+    BANNERS.filter((b) => shown(b.game)).forEach((b, i) => {
       const g = GAMES[b.game];
       lines.push(
         "BEGIN:VEVENT",
