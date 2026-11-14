@@ -234,3 +234,17 @@ header, nav, section, main, footer { position: relative; z-index: 1; max-width: 
   .chip { flex: none; }
   .toolbar { flex-direction: column; flex-wrap: nowrap; align-items: stretch; }
 }
+
+/* ───── Real images (app icons, character art) ───── */
+.icon, .avatar { position: relative; overflow: hidden; }
+.icon img, .avatar img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: inherit;
+}
+.avatar img { object-position: top center; }
+.avatar.has-img { text-shadow: none; }
+.avatar.has-img::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.18), inset 0 -18px 18px -12px color-mix(in srgb, var(--e) 60%, transparent);
+}
+.avatar { width: 64px; height: 80px; }
+@media (max-width: 640px) { .avatar { width: 48px; height: 60px; } }
