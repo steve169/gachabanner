@@ -2,7 +2,7 @@
 
 Contains the rate ups of the future banners in selected gacha games.
 
-A static site (GitHub Pages) showing a rate-up calendar for **Genshin Impact**, **Honkai: Star Rail**, **Zenless Zone Zero**, **Wuthering Waves**, **Arknights: Endfield**, **Neverness to Everness**, **Girls' Frontline 2: Exilium** (Global), **Madoka Magica Magia Exedra**, **Uma Musume** (JP and Global), **Blue Archive** (Global), **Fate/Grand Order** (JP, CN and NA), **BanG Dream! Girls Band Party** (JP, EN and CN) and **BanG Dream! Our Notes**.
+A static site (GitHub Pages) showing a rate-up calendar for **Genshin Impact**, **Honkai: Star Rail**, **Zenless Zone Zero**, **Wuthering Waves**, **Arknights: Endfield**, **Neverness to Everness**, **Girls' Frontline 2: Exilium** (Global), **Madoka Magica Magia Exedra**, **Uma Musume** (JP and Global), **Blue Archive** (Global), **Fate/Grand Order** (JP, CN and NA), **Arknights** (EN and CN), **Azur Lane** (EN and CN), **Princess Connect! Re:Dive** (JP and CN), **Project Sekai** (JP and EN), **Reverse: 1999** (Global), **BanG Dream! Girls Band Party** (JP, EN and CN) and **BanG Dream! Our Notes**.
 
 **Live site:** https://steve169.github.io/gachabanner/
 
@@ -10,8 +10,10 @@ A static site (GitHub Pages) showing a rate-up calendar for **Genshin Impact**, 
 - Month / day timeline of banner phases with featured 5★ units (new vs. rerun)
 - "Live now" section with time-left progress bars
 - English / Simplified Chinese language switch (top left)
+- Server filter (CN / EN-Global / JP) for games that run on several servers
 - Game filters and a "show past" toggle (remembered per browser)
 - Status tags: Confirmed / Projected / Leak
+- Click a banner for a live countdown and how much premium currency / how many pulls dailies give before it starts or ends, with and without the monthly pass (numbers in `data/economy.js`)
 - Export the visible games' banners to an `.ics` calendar file
  
 ## Updating banners
