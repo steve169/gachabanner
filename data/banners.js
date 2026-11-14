@@ -48,6 +48,8 @@ window.GAMES = {
   arknights_cn: { name: { en: "Arknights (CN)", zh: "明日方舟（国服）" }, server: "CN", glyph: "舟", icon: "assets/icons/arknights_cn.webp", color: "#6fd4e6", short: "AK-CN" },
   pcr_jp:   { name: { en: "Princess Connect! Re:Dive (JP)", zh: "公主连结Re:Dive（日服）" }, server: "JP", glyph: "公", icon: "assets/icons/pcr_jp.webp", color: "#f59ac0", short: "PCR-JP" },
   pcr_cn:   { name: { en: "Princess Connect! Re:Dive (CN)", zh: "公主连结Re:Dive（国服）" }, server: "CN", glyph: "公", icon: "assets/icons/pcr_cn.webp", color: "#f7b2cf", short: "PCR-CN" },
+  pjsk_jp:  { name: { en: "Project Sekai (JP)", zh: "世界计划 缤纷舞台！（日服）" }, server: "JP", glyph: "世", icon: "assets/icons/pjsk_jp.webp", color: "#33ccbb", short: "PJSK-JP" },
+  pjsk_en:  { name: { en: "Project Sekai (EN)", zh: "世界计划 缤纷舞台！（国际服）" }, server: "EN", glyph: "世", icon: "assets/icons/pjsk_en.webp", color: "#5fd9cb", short: "PJSK-EN" },
   azurlane_en: { name: { en: "Azur Lane (EN)", zh: "碧蓝航线（国际服）" }, server: "EN", glyph: "碧", icon: "assets/icons/azurlane_en.webp", color: "#5b8cff", short: "AL-EN" },
   azurlane_cn: { name: { en: "Azur Lane (CN)", zh: "碧蓝航线（国服）" }, server: "CN", glyph: "碧", icon: "assets/icons/azurlane_cn.webp", color: "#7aa6ff", short: "AL-CN" },
   ournotes: { name: { en: "BanG Dream! Our Notes", zh: "BanG Dream! Our Notes" },  glyph: "音", icon: "assets/icons/ournotes.webp", color: "#7aa2ff", short: "BDON" },
@@ -723,6 +725,148 @@ window.BANNERS = [
     start: "2026-11-13", end: "2026-11-27", status: "projected",
     featured: [{ name: "Nana", zh: "纳娜", img: "pcr/nana", isNew: true }],
     note: { en: "New character; end date estimated", zh: "新角色，结束日期为预估" },
+  },
+
+  /* ───────────── Project Sekai (JP / EN) — from the Sekai-World master data ───────────── */
+  {
+    game: "pjsk_jp", label: {"en": "Event Pick-Up", "zh": "活动招募"},
+    start: "2026-10-31", end: "2026-11-11", status: "confirmed",
+    featured: [
+      { name: "Kanade Yoisaki", zh: "宵崎奏", img: "pjsk/1489", isNew: true },
+      { name: "Mafuyu Asahina", zh: "朝比奈真冬", img: "pjsk/1490", isNew: true },
+      { name: "Luka Megurine", zh: "巡音流歌", img: "pjsk/1491", isNew: true },
+    ],
+    note: {"en": "Lit in the Dark", "zh": "Lit in the Dark"},
+  },
+  {
+    game: "pjsk_jp", label: {"en": "Birthday", "zh": "生日招募"},
+    start: "2026-11-01", end: "2026-11-07", status: "confirmed",
+    featured: [
+      { name: "MEIKO", zh: "MEIKO", img: "pjsk/1494", isNew: true },
+    ],
+    note: {"en": "MEIKO Happy Anniversary 2026", "zh": "MEIKO 周年纪念 2026"},
+  },
+  {
+    game: "pjsk_jp", label: {"en": "Birthday", "zh": "生日招募"},
+    start: "2026-11-08", end: "2026-11-14", status: "confirmed",
+    featured: [
+      { name: "Akito Shinonome", zh: "东云彰人", img: "pjsk/1495", isNew: true },
+    ],
+    note: {"en": "Akito Shinonome Happy Birthday 2026", "zh": "东云彰人 生日 2026"},
+  },
+  {
+    game: "pjsk_jp", label: {"en": "Event Pick-Up", "zh": "活动招募"},
+    start: "2026-11-11", end: "2026-11-20", status: "confirmed",
+    featured: [
+      { name: "Shizuku Hinomori", zh: "日野森雫", img: "pjsk/1496", isNew: true },
+      { name: "Airi Momoi", zh: "桃井爱莉", img: "pjsk/1497", isNew: true },
+      { name: "Rin Kagamine", zh: "镜音铃", img: "pjsk/1498", isNew: true },
+    ],
+    note: {"en": "Captivate YOU!", "zh": "Captivate YOU!"},
+  },
+  {
+    game: "pjsk_jp", label: {"en": "Limited Rerun", "zh": "限定复刻招募"},
+    start: "2026-11-12", end: "2026-11-21", status: "confirmed",
+    featured: [
+      { name: "Ena Shinonome", zh: "东云绘名", img: "pjsk/1272" },
+      { name: "Kanade Yoisaki", zh: "宵崎奏", img: "pjsk/1273" },
+      { name: "KAITO", zh: "KAITO", img: "pjsk/1274" },
+    ],
+    note: {"en": "Hues of the Self (limited cards)", "zh": "Hues of the Self（期间限定卡）"},
+  },
+  {
+    game: "pjsk_jp", label: {"en": "Limited Rerun", "zh": "限定复刻招募"},
+    start: "2026-11-12", end: "2026-11-21", status: "confirmed",
+    featured: [
+      { name: "Saki Tenma", zh: "天马咲希", img: "pjsk/1127" },
+      { name: "Emu Otori", zh: "凤笑梦", img: "pjsk/1128" },
+      { name: "Rin Kagamine", zh: "镜音铃", img: "pjsk/1129" },
+    ],
+    note: {"en": "Eternal Combat Guardians (limited cards)", "zh": "果てなき護るための戦い（期间限定卡）"},
+  },
+  {
+    game: "pjsk_en", label: {"en": "Limited", "zh": "限定招募"},
+    start: "2026-10-31", end: "2026-11-10", status: "confirmed",
+    featured: [
+      { name: "Ena Shinonome", zh: "东云绘名", img: "pjsk/1272", isNew: true },
+      { name: "Kanade Yoisaki", zh: "宵崎奏", img: "pjsk/1273", isNew: true },
+      { name: "KAITO", zh: "KAITO", img: "pjsk/1274", isNew: true },
+    ],
+    note: {"en": "Hues of the Self (limited cards)", "zh": "Hues of the Self（期间限定卡）"},
+  },
+  {
+    game: "pjsk_en", label: {"en": "Birthday", "zh": "生日招募"},
+    start: "2026-11-01", end: "2026-11-08", status: "confirmed",
+    featured: [
+      { name: "MEIKO", zh: "MEIKO", img: "pjsk/1277", isNew: true },
+    ],
+    note: {"en": "MEIKO Happy Anniversary 2026", "zh": "MEIKO 周年纪念 2026"},
+  },
+  {
+    game: "pjsk_en", label: {"en": "Limited Rerun", "zh": "限定复刻招募"},
+    start: "2026-11-05", end: "2026-11-14", status: "confirmed",
+    featured: [
+      { name: "Saki Tenma", zh: "天马咲希", img: "pjsk/1022" },
+      { name: "Ichika Hoshino", zh: "星乃一歌", img: "pjsk/1023" },
+      { name: "Honami Mochizuki", zh: "望月穗波", img: "pjsk/1024" },
+    ],
+    note: {"en": "Musical Street Corner (limited cards)", "zh": "Musical Street Corner（期间限定卡）"},
+  },
+  {
+    game: "pjsk_en", label: {"en": "Birthday", "zh": "生日招募"},
+    start: "2026-11-08", end: "2026-11-15", status: "confirmed",
+    featured: [
+      { name: "Akito Shinonome", zh: "东云彰人", img: "pjsk/1278", isNew: true },
+    ],
+    note: {"en": "Akito Shinonome Happy Birthday 2026", "zh": "东云彰人 生日 2026"},
+  },
+  {
+    game: "pjsk_en", label: {"en": "Event Pick-Up", "zh": "活动招募"},
+    start: "2026-11-10", end: "2026-11-20", status: "confirmed",
+    featured: [
+      { name: "Nene Kusanagi", zh: "草薙宁宁", img: "pjsk/1279", isNew: true },
+      { name: "Emu Otori", zh: "凤笑梦", img: "pjsk/1280", isNew: true },
+      { name: "Rin Kagamine", zh: "镜音铃", img: "pjsk/1281", isNew: true },
+    ],
+    note: {"en": "Get My Bright Wings", "zh": "Get My Bright Wings"},
+  },
+  {
+    game: "pjsk_en", label: {"en": "Limited Rerun", "zh": "限定复刻招募"},
+    start: "2026-11-14", end: "2026-11-23", status: "confirmed",
+    featured: [
+      { name: "An Shiraishi", zh: "白石杏", img: "pjsk/915" },
+      { name: "Kohane Azusawa", zh: "小豆泽心羽", img: "pjsk/916" },
+      { name: "Toya Aoyagi", zh: "青柳冬弥", img: "pjsk/917" },
+    ],
+    note: {"en": "Eternal Bout (limited cards)", "zh": "Eternal Bout（期间限定卡）"},
+  },
+  {
+    game: "pjsk_en", label: {"en": "Event Pick-Up", "zh": "活动招募"},
+    start: "2026-11-20", end: "2026-11-30", status: "confirmed",
+    featured: [
+      { name: "Akito Shinonome", zh: "东云彰人", img: "pjsk/1284", isNew: true },
+      { name: "Kohane Azusawa", zh: "小豆泽心羽", img: "pjsk/1285", isNew: true },
+      { name: "An Shiraishi", zh: "白石杏", img: "pjsk/1286", isNew: true },
+    ],
+    note: {"en": "Good to Go!", "zh": "Good to Go!"},
+  },
+  {
+    game: "pjsk_en", label: {"en": "Limited", "zh": "限定招募"},
+    start: "2026-11-30", end: "2026-12-10", status: "confirmed",
+    featured: [
+      { name: "Saki Tenma", zh: "天马咲希", img: "pjsk/1289", isNew: true },
+      { name: "Ichika Hoshino", zh: "星乃一歌", img: "pjsk/1290", isNew: true },
+      { name: "Honami Mochizuki", zh: "望月穗波", img: "pjsk/1291", isNew: true },
+    ],
+    note: {"en": "Longing Star Chasers (limited cards)", "zh": "Longing Star Chasers（期间限定卡）"},
+  },
+  {
+    game: "pjsk_en", label: {"en": "Birthday", "zh": "生日招募"},
+    start: "2026-12-02", end: "2026-12-09", status: "confirmed",
+    featured: [
+      { name: "Shizuku Hinomori", zh: "日野森雫", img: "pjsk/1294", isNew: true },
+    ],
+    note: {"en": "Shizuku Hinomori Happy Birthday 2026", "zh": "日野森雫 生日 2026"},
   },
 
   /* ───────────── Azur Lane (EN / CN) — events now release on both servers together ───────────── */
