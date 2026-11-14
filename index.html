@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/style.css?v=20261114e" />
+  <link rel="stylesheet" href="assets/style.css?v=20261114f" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
 </head>
 <body>
@@ -43,8 +43,13 @@
   </nav>
 
   <section class="live" id="live-section" aria-labelledby="live-title">
-    <h2 id="live-title"><span class="pulse"></span><span data-i18n="liveNow"></span></h2>
-    <div class="live-grid" id="live-grid"></div>
+    <h2 id="live-title">
+      <button class="live-toggle" id="live-toggle" type="button" aria-expanded="false" aria-controls="live-grid">
+        <span class="pulse"></span><span data-i18n="liveNow"></span> <span class="live-count" id="live-count"></span><span class="caret" aria-hidden="true">▾</span>
+      </button>
+      <span class="selected-icons live-icons" id="live-icons" aria-hidden="true"></span>
+    </h2>
+    <div class="live-grid" id="live-grid" hidden></div>
   </section>
 
   <main id="calendar"></main>
@@ -54,7 +59,7 @@
     <p><span id="foot-text"></span> <code>data/banners.js</code></p>
   </footer>
 
-  <script src="data/banners.js?v=20261114e"></script>
-  <script src="assets/app.js?v=20261114e"></script>
+  <script src="data/banners.js?v=20261114f"></script>
+  <script src="assets/app.js?v=20261114f"></script>
 </body>
 </html>

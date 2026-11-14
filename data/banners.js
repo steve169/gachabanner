@@ -38,8 +38,9 @@ window.GAMES = {
   fgo_jp:   { name: { en: "FGO (JP)",             zh: "FGO（日服）" },             glyph: "冠", icon: "assets/icons/fgo_jp.webp", color: "#d9b44a", short: "FGO-JP" },
   fgo_cn:   { name: { en: "FGO (CN)",             zh: "FGO（国服）" },             glyph: "冠", icon: "assets/icons/fgo_cn.webp", color: "#e8c15a", short: "FGO-CN" },
   fgo_na:   { name: { en: "FGO (NA)",             zh: "FGO（美服）" },             glyph: "冠", icon: "assets/icons/fgo_na.webp", color: "#c7a23c", short: "FGO-NA" },
-  gbp_jp:   { name: { en: "BanG Dream! GBP (JP)", zh: "BanG Dream! 少女乐团派对（日服）" }, glyph: "邦", icon: "assets/icons/gbp_jp.webp", color: "#ff3377", short: "GBP-JP" },
-  gbp_en:   { name: { en: "BanG Dream! GBP (EN)", zh: "BanG Dream! 少女乐团派对（国际服）" }, glyph: "邦", icon: "assets/icons/gbp_en.webp", color: "#ff5c93", short: "GBP-EN" },
+  gbp_jp:   { name: { en: "BanG Dream! GBP (JP)", zh: "梦想协奏曲！少女乐团派对！（日服）" }, glyph: "邦", icon: "assets/icons/gbp_jp.webp", color: "#ff3377", short: "GBP-JP" },
+  gbp_en:   { name: { en: "BanG Dream! GBP (EN)", zh: "梦想协奏曲！少女乐团派对！（国际服）" }, glyph: "邦", icon: "assets/icons/gbp_en.webp", color: "#ff5c93", short: "GBP-EN" },
+  gbp_cn:   { name: { en: "BanG Dream! GBP (CN)", zh: "梦想协奏曲！少女乐团派对！（国服）" }, glyph: "邦", icon: "assets/icons/gbp_cn.webp", color: "#ff7aa8", short: "GBP-CN" },
   ournotes: { name: { en: "BanG Dream! Our Notes", zh: "BanG Dream! Our Notes" },  glyph: "音", icon: "assets/icons/ournotes.webp", color: "#7aa2ff", short: "BDON" },
 };
 
@@ -483,6 +484,38 @@ window.BANNERS = [
   {
     game: "gbp_en", label: { en: "Birthday", zh: "生日卡池" },
     start: "2026-11-22", end: "2026-11-29", status: "confirmed",
+    featured: [{ name: "Tomori Takamatsu", zh: "高松灯", img: "gbp/2100" }],
+  },
+
+  /* ───────────── BanG Dream! Girls Band Party (CN) — data from bestdori.com ───────────── */
+  {
+    game: "gbp_cn", label: { en: "Dream Festival", zh: "Dream Festival 招募" },
+    start: "2026-11-13", end: "2026-11-17", status: "confirmed",
+    featured: [
+      { name: "Kanon Matsubara", zh: "松原花音", img: "gbp/2445" },
+      { name: "Tsukushi Futaba", zh: "二叶筑紫", img: "gbp/2446" },
+      { name: "Rokka Asahi", zh: "朝日六花", img: "gbp/2440" },
+      { name: "Chiyu Tamade", zh: "珠手知由", img: "gbp/2441" },
+    ],
+    note: { en: "7.5th Anniversary", zh: "7.5周年纪念" },
+  },
+  {
+    game: "gbp_cn", label: { en: "Event gacha", zh: "活动卡池" },
+    start: "2026-11-17", end: "2026-11-24", status: "confirmed",
+    featured: [
+      { name: "Rokka Asahi", zh: "朝日六花", img: "gbp/2440" },
+      { name: "Chiyu Tamade", zh: "珠手知由", img: "gbp/2441" },
+      { name: "Reona Nyubara", zh: "鳰原令王那", img: "gbp/2444" },
+    ],
+  },
+  {
+    game: "gbp_cn", label: { en: "Birthday", zh: "生日卡池" },
+    start: "2026-11-18", end: "2026-11-21", status: "confirmed",
+    featured: [{ name: "Rui Yashio", zh: "八潮瑠唯", img: "gbp/1991" }],
+  },
+  {
+    game: "gbp_cn", label: { en: "Birthday", zh: "生日卡池" },
+    start: "2026-11-21", end: "2026-11-24", status: "confirmed",
     featured: [{ name: "Tomori Takamatsu", zh: "高松灯", img: "gbp/2100" }],
   },
 
