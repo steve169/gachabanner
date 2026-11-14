@@ -39,11 +39,11 @@
       timeLeft: "Time left",
       startsIn: "Starts in",
       endedLbl: "This banner has ended.",
-      earnEnd: (n) => `Earnable from dailies before it ends (${n} ${n === 1 ? "day" : "days"})`,
-      earnStart: (n) => `Earnable from dailies before it starts (${n} ${n === 1 ? "day" : "days"})`,
+      earnEnd: (n) => `Earnable from dailies before it ends (${n} ${n === 1 ? "day" : "days"}, including today)`,
+      earnStart: (n) => `Earnable from dailies before it starts (${n} ${n === 1 ? "day" : "days"}, including today)`,
       without: (p) => `Without ${p}`,
       with: (p) => `With ${p}`,
-      pulls: "pulls",
+      pulls: (n) => (Math.abs(n - 1) < 1e-9 ? "pull" : "pulls"),
       perPull: (n, c) => `${n} ${c} = 1 pull`,
       perDay: (n) => `${n}/day`,
       noEcon: "Daily income data isn't available for this game yet.",
@@ -85,11 +85,11 @@
       timeLeft: "剩余时间",
       startsIn: "距离开始",
       endedLbl: "该卡池已结束。",
-      earnEnd: (n) => `卡池结束前每日任务可获得（${n} 天）`,
-      earnStart: (n) => `卡池开始前每日任务可获得（${n} 天）`,
+      earnEnd: (n) => `卡池结束前每日任务可获得（${n} 天，含今天）`,
+      earnStart: (n) => `卡池开始前每日任务可获得（${n} 天，含今天）`,
       without: (p) => `无${p}`,
       with: (p) => `有${p}`,
-      pulls: "抽",
+      pulls: () => "抽",
       perPull: (n, c) => `${n} ${c} = 1 抽`,
       perDay: (n) => `每日 ${n}`,
       noEcon: "暂无该游戏的每日资源数据。",
@@ -277,28 +277,34 @@
   function details(b) {
     const t = T(), g = GAMES[b.game], tg = targetOf(b);
     if (tg.kind === "past") return `<div class="details"><p>${esc(t.endedLbl)}</p></div>`;
-    const days = tg.kind === "end" ? Math.round((parse(b.end) - today) / DAY) : Math.round((parse(b.start) - today) / DAY);
+    // Daily resets you can still use, counting today: today … end day (ongoing) or today … the day before start (upcoming).
+    const days = tg.kind === "end" ? Math.round((parse(b.end) - today) / DAY) + 1 : Math.round((parse(b.start) - today) / DAY);
     let econ = `<p class="muted">${esc(t.noEcon)}</p>`;
-    const e = econFor(b.game);
-    if (e && e.fgo) {
+    let e = econFor(b.game);
+    if (e && e.unsupported) {
+      econ = `<p class="muted">${esc(tx(e.unsupported))}</p>`;
+    } else if (e && e.fgo) {
       const sv = (e.servers || {})[g.server || "JP"];
       if (sv) {
-        const sqDay = (sv.weeklySQ + (sv.weeklyFragments || 0) / 7) / 7, tkDay = (sv.weeklyTickets || 0) / 7;
+        const sqDay = (sv.weeklySQ + (sv.weeklyFragments || 0) / 7) / 7 + (sv.per50SQ || 0) / 50, tkDay = (sv.weeklyTickets || 0) / 7;
         const sq = sqDay * days, tk = tkDay * days;
         econ = `<div class="econ-head">${esc(t.fgoHead)} · ${esc(t.perPull(e.perPull, tx(e.currency)))}</div>
           <table class="econ"><tbody>
-            <tr><th>${esc(tx(e.currency))}</th><td>${fmtNum(sq, 2)}</td><td>${fmtNum(sq / e.perPull)} ${esc(t.pulls)}</td></tr>
-            <tr><th>${esc(tx(e.ticket))}</th><td>${fmtNum(tk, 2)}</td><td>${fmtNum(tk)} ${esc(t.pulls)}</td></tr>
-            <tr class="total"><th>${esc(t.totalPulls)}</th><td></td><td>${fmtNum(sq / e.perPull + tk)} ${esc(t.pulls)}</td></tr>
-          </tbody></table>`;
+            <tr><th>${esc(tx(e.currency))}</th><td>${fmtNum(sq, 2)}</td><td>${fmtNum(sq / e.perPull)} ${esc(t.pulls(sq / e.perPull))}</td></tr>
+            <tr><th>${esc(tx(e.ticket))}</th><td>${fmtNum(tk, 2)}</td><td>${fmtNum(tk)} ${esc(t.pulls(tk))}</td></tr>
+            <tr class="total"><th>${esc(t.totalPulls)}</th><td></td><td>${fmtNum(sq / e.perPull + tk)} ${esc(t.pulls(sq / e.perPull + tk))}</td></tr>
+          </tbody></table>${e.note ? `<p class="muted">${esc(tx(e.note))}</p>` : ""}`;
       }
     } else if (e && e.perPull && e.daily != null) {
+      // Values can differ per server: { JP: 50, EN: 75 }.
+      const bySv = (v) => (v && typeof v === "object" ? v[g.server] ?? Object.values(v)[0] : v);
+      e = { ...e, daily: bySv(e.daily), passDaily: bySv(e.passDaily) };
       const cur = tx(e.currency);
       const free = days * e.daily;
-      const rows = [`<tr><th>${esc(e.pass ? t.without(tx(e.pass)) : tx(e.currency))}<small>${esc(t.perDay(e.daily))}</small></th><td>${fmtNum(free, 1)} ${esc(cur)}</td><td>${fmtNum(free / e.perPull)} ${esc(t.pulls)}</td></tr>`];
+      const rows = [`<tr><th>${esc(e.pass ? t.without(tx(e.pass)) : tx(e.currency))}<small>${esc(t.perDay(e.daily))}</small></th><td>${fmtNum(free, 1)} ${esc(cur)}</td><td>${fmtNum(free / e.perPull)} ${esc(t.pulls(free / e.perPull))}</td></tr>`];
       if (e.pass && e.passDaily) {
         const paid = days * (e.daily + e.passDaily);
-        rows.push(`<tr><th>${esc(t.with(tx(e.pass)))}<small>${esc(t.perDay(e.daily + e.passDaily))}</small></th><td>${fmtNum(paid, 1)} ${esc(cur)}</td><td>${fmtNum(paid / e.perPull)} ${esc(t.pulls)}</td></tr>`);
+        rows.push(`<tr><th>${esc(t.with(tx(e.pass)))}<small>${esc(t.perDay(e.daily + e.passDaily))}</small></th><td>${fmtNum(paid, 1)} ${esc(cur)}</td><td>${fmtNum(paid / e.perPull)} ${esc(t.pulls(paid / e.perPull))}</td></tr>`);
       }
       econ = `<div class="econ-head">${esc(t.perPull(e.perPull, cur))}</div><table class="econ"><tbody>${rows.join("")}</tbody></table>${e.note ? `<p class="muted">${esc(tx(e.note))}</p>` : ""}`;
     }

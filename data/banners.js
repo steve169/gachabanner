@@ -50,6 +50,7 @@ window.GAMES = {
   pcr_cn:   { name: { en: "Princess Connect! Re:Dive (CN)", zh: "公主连结Re:Dive（国服）" }, server: "CN", glyph: "公", icon: "assets/icons/pcr_cn.webp", color: "#f7b2cf", short: "PCR-CN" },
   pjsk_jp:  { name: { en: "Project Sekai (JP)", zh: "世界计划 缤纷舞台！（日服）" }, server: "JP", glyph: "世", icon: "assets/icons/pjsk_jp.webp", color: "#33ccbb", short: "PJSK-JP" },
   pjsk_en:  { name: { en: "Project Sekai (EN)", zh: "世界计划 缤纷舞台！（国际服）" }, server: "EN", glyph: "世", icon: "assets/icons/pjsk_en.webp", color: "#5fd9cb", short: "PJSK-EN" },
+  r1999:    { name: { en: "Reverse: 1999 (Global)", zh: "重返未来：1999（国际服）" }, glyph: "返", icon: "assets/icons/r1999_en.webp", color: "#c9a46b", short: "R1999" },
   azurlane_en: { name: { en: "Azur Lane (EN)", zh: "碧蓝航线（国际服）" }, server: "EN", glyph: "碧", icon: "assets/icons/azurlane_en.webp", color: "#5b8cff", short: "AL-EN" },
   azurlane_cn: { name: { en: "Azur Lane (CN)", zh: "碧蓝航线（国服）" }, server: "CN", glyph: "碧", icon: "assets/icons/azurlane_cn.webp", color: "#7aa6ff", short: "AL-CN" },
   ournotes: { name: { en: "BanG Dream! Our Notes", zh: "BanG Dream! Our Notes" },  glyph: "音", icon: "assets/icons/ournotes.webp", color: "#7aa2ff", short: "BDON" },
@@ -867,6 +868,104 @@ window.BANNERS = [
       { name: "Shizuku Hinomori", zh: "日野森雫", img: "pjsk/1294", isNew: true },
     ],
     note: {"en": "Shizuku Hinomori Happy Birthday 2026", "zh": "日野森雫 生日 2026"},
+  },
+
+  /* ───────────── Reverse: 1999 (Global) — from the Reverse: 1999 fandom wiki ───────────── */
+  {
+    game: "r1999", label: {"en": "Version 3.8", "zh": "3.8版本"},
+    start: "2026-10-15", end: "2026-11-04", status: "confirmed",
+    featured: [
+      { name: "Cornerstone", zh: "奠基石", img: "r1999/cornerstone", isNew: true },
+      { name: "Diggers", zh: "挖掘艺术", img: "r1999/diggers" },
+      { name: "Desert Flannel", zh: "沙丝绒", img: "r1999/desert-flannel" },
+    ],
+    note: {"en": "The Future's Foundation", "zh": "奠基石 限时征集"},
+  },
+  {
+    game: "r1999", label: {"en": "Rerun", "zh": "复刻征集"},
+    start: "2026-10-20", end: "2026-11-02", status: "confirmed",
+    featured: [
+      { name: "Aleph", zh: "阿莱夫", img: "r1999/aleph" },
+      { name: "Kanjira", zh: "坎吉拉", img: "r1999/kanjira" },
+      { name: "Loggerhead", zh: "空脑袋", img: "r1999/loggerhead" },
+    ],
+    note: {"en": "The Shattered Product", "zh": "阿莱夫 复刻征集"},
+  },
+  {
+    game: "r1999", label: {"en": "Rerun", "zh": "复刻征集"},
+    start: "2026-11-03", end: "2026-11-16", status: "confirmed",
+    featured: [
+      { name: "Ulrich", zh: "乌尔里希", img: "r1999/ulrich" },
+      { name: "Charlie", zh: "夏利", img: "r1999/charlie" },
+      { name: "Sweetheart", zh: "玛丽莲", img: "r1999/sweetheart" },
+    ],
+    note: {"en": "Cognitive Dynamics", "zh": "乌尔里希 复刻征集"},
+  },
+  {
+    game: "r1999", label: {"en": "Version 3.9", "zh": "3.9版本"},
+    start: "2026-11-05", end: "2026-11-25", status: "confirmed",
+    featured: [
+      { name: "Hedone", zh: "赫多涅", img: "r1999/hedone", isNew: true },
+      { name: "Blonney", zh: "金蜜儿", img: "r1999/blonney" },
+      { name: "Ulu", zh: "和平乌鲁", img: "r1999/ulu" },
+    ],
+    note: {"en": "The Reign of Flames Undying", "zh": "赫多涅 限时征集"},
+  },
+  {
+    game: "r1999", label: {"en": "Rerun", "zh": "复刻征集"},
+    start: "2026-11-17", end: "2026-11-30", status: "projected",
+    featured: [
+      { name: "Brume", zh: "灰调蓝", img: "r1999/brume" },
+      { name: "Horropedia", zh: "恐怖通", img: "r1999/horropedia" },
+      { name: "Name Day", zh: "命名日", img: "r1999/name-day" },
+    ],
+    note: {"en": "The Brilliance Within", "zh": "灰调蓝 复刻征集"},
+  },
+  {
+    game: "r1999", label: {"en": "Version 3.9", "zh": "3.9版本"},
+    start: "2026-11-26", end: "2026-12-16", status: "confirmed",
+    featured: [
+      { name: "Narcissus", zh: "纳西索斯", img: "r1999/narcissus", isNew: true },
+      { name: "Avgust", zh: "阿夫西维", img: "r1999/avgust" },
+      { name: "X", zh: "X", img: "r1999/x" },
+    ],
+    note: {"en": "Lend an Ear to the Pond", "zh": "纳西索斯 限时征集"},
+  },
+  {
+    game: "r1999", label: {"en": "Rerun", "zh": "复刻征集"},
+    start: "2026-12-01", end: "2026-12-14", status: "projected",
+    featured: [
+      { name: "Enigma", zh: "哑谜", img: "r1999/enigma" },
+      { name: "Brimley", zh: "宽檐帽", img: "r1999/brimley" },
+      { name: "Balloon Party", zh: "气球派对", img: "r1999/balloon-party" },
+    ],
+    note: {"en": "Deciphering Reality", "zh": "哑谜 复刻征集"},
+  },
+  {
+    game: "r1999", label: {"en": "Rerun", "zh": "复刻征集"},
+    start: "2026-12-15", end: "2026-12-28", status: "projected",
+    featured: [
+      { name: "Flutterpage", zh: "纸信圈儿", img: "r1999/flutterpage" },
+      { name: "Necrologist", zh: "讣告人", img: "r1999/necrologist" },
+      { name: "Satsuki", zh: "五色月", img: "r1999/satsuki" },
+    ],
+    note: {"en": "The Book of Whys", "zh": "纸信圈儿 复刻征集"},
+  },
+  {
+    game: "r1999", label: {"en": "Version 4.0", "zh": "4.0版本"},
+    start: "2026-12-17", end: "2027-01-06", status: "projected",
+    featured: [
+      { name: "Huntsworn Lilya", zh: "狩勋女巫红弩箭", img: "r1999/huntsworn-lilya", isNew: true },
+    ],
+    note: {"en": "Projected from the CN 4.0 schedule", "zh": "据国服4.0推算"},
+  },
+  {
+    game: "r1999", label: {"en": "Version 4.0", "zh": "4.0版本"},
+    start: "2027-01-07", end: "2027-01-27", status: "projected",
+    featured: [
+      { name: "Drake", zh: "德雷克", img: "r1999/drake", isNew: true },
+    ],
+    note: {"en": "Projected from the CN 4.0 schedule", "zh": "据国服4.0推算"},
   },
 
   /* ───────────── Azur Lane (EN / CN) — events now release on both servers together ───────────── */
