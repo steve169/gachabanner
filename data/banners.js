@@ -558,14 +558,6 @@ window.BANNERS = [
     note: {"en": "Tied to Stronghold Protocol season. 6★ pulls only from these 10 operators (2% 6★ rate).", "zh": "配合「卫戍协议」；6★仅出现以上10名干员。"},
   },
   {
-    game: "arknights_cn", label: {"en": "Vanguard Selection (pick-your-rate-up)", "zh": "中坚甄选"},
-    start: "2026-11-12", end: "2026-11-26", status: "confirmed",
-    featured: [
-      { name: "Your pick", zh: "自选" },
-    ],
-    note: {"en": "Pick 2 rate-up 6★ and 3 rate-up 5★ from the Vanguard pool", "zh": "自选2名6★、3名5★提升出率"},
-  },
-  {
     game: "arknights_cn", label: {"en": "Joint Operation (Selected Operators)", "zh": "联合行动·特选干员定向寻访"},
     start: "2026-11-15", end: "2026-11-29", status: "confirmed",
     featured: [
