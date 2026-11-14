@@ -53,7 +53,7 @@ window.BANNERS = [
   {
     game: "genshin", version: "7.2", phase: 2,
     start: "2026-11-24", end: "2026-12-15", status: "projected",
-    featured: [{ name: "Linnea", img: "genshin/linnea" }, { name: "Zibai", img: "genshin/zibai", zh: "兹白" }],
+    featured: [{ name: "Linnea", zh: "莉奈娅", img: "genshin/linnea" }, { name: "Zibai", img: "genshin/zibai", zh: "兹白" }],
     weapons: ["Lightbearing Moonshard"],
     note: RERUNS,
   },
@@ -61,15 +61,15 @@ window.BANNERS = [
     game: "genshin", version: "7.3", phase: 1,
     start: "2026-12-16", end: "2027-01-05", status: "leak",
     featured: [
-      { name: "Tsaritsa", img: "genshin/tsaritsa", zh: "冰之女皇", isNew: true, element: "cryo" },
-      { name: "Danica", img: "genshin/danica", isNew: true },
+      { name: "Tsaritsa", img: "genshin/tsaritsa", zh: "安娜丝塔夏", isNew: true, element: "cryo" },
+      { name: "Danica", zh: "达妮卡", img: "genshin/danica", isNew: true },
     ],
     note: NEW_VERSION,
   },
   {
     game: "genshin", version: "7.3", phase: 2,
     start: "2027-01-05", end: "2027-01-26", status: "leak",
-    featured: [{ name: "Sandrone", img: "genshin/sandrone", zh: "桑多涅" }, { name: "Lohen", img: "genshin/lohen" }],
+    featured: [{ name: "Sandrone", img: "genshin/sandrone", zh: "桑多涅" }, { name: "Lohen", zh: "洛恩", img: "genshin/lohen" }],
   },
   {
     game: "genshin", version: "7.4", phase: 1,
@@ -119,14 +119,14 @@ window.BANNERS = [
     start: "2026-11-11", end: "2026-12-01", status: "confirmed",
     featured: [
       { name: "Severian", img: "zzz/severian", zh: "赛维里安", isNew: true, element: "wind" },
-      { name: "Norma", img: "zzz/norma" },
+      { name: "Norma", zh: "诺姆", img: "zzz/norma" },
     ],
     weapons: ["Incarcerating Grip", "Chief Sidekick"],
   },
   {
     game: "zzz", version: "3.4", phase: 1,
     start: "2026-12-02", end: "2026-12-22", status: "leak",
-    featured: [{ name: "Sunbringer", img: "zzz/sunbringer", isNew: true }],
+    featured: [{ name: "Sunbringer", zh: "挽昼", img: "zzz/sunbringer", isNew: true }],
     note: NEW_VERSION,
   },
   {
@@ -151,7 +151,7 @@ window.BANNERS = [
     start: "2026-11-12", end: "2026-12-03", status: "confirmed",
     featured: [
       { name: "Lily", img: "wuwa/lily", zh: "莉莉", isNew: true, element: "spectro" },
-      { name: "Sigrika", img: "wuwa/sigrika" },
+      { name: "Sigrika", zh: "西格莉卡", img: "wuwa/sigrika" },
       { name: "Qiuyuan", img: "wuwa/qiuyuan", zh: "仇远" },
     ],
     weapons: ["Lullaby"],
@@ -160,7 +160,7 @@ window.BANNERS = [
   {
     game: "wuwa", version: "3.8", phase: 2,
     start: "2026-12-03", end: "2026-12-21", status: "confirmed",
-    featured: [{ name: "Yangyang: Xuanling", img: "wuwa/yangyang-xuanling" }, { name: "Suisui", img: "wuwa/suisui" }, { name: "Hiyuki", img: "wuwa/hiyuki" }],
+    featured: [{ name: "Yangyang: Xuanling", zh: "秧秧·玄翎", img: "wuwa/yangyang-xuanling" }, { name: "Suisui", zh: "穗穗", img: "wuwa/suisui" }, { name: "Hiyuki", zh: "绯雪", img: "wuwa/hiyuki" }],
     note: RERUNS,
   },
   {
@@ -180,7 +180,7 @@ window.BANNERS = [
   {
     game: "endfield", version: "1.6", phase: 2,
     start: "2026-11-05", end: "2026-11-25", status: "confirmed",
-    featured: [{ name: "Argent Flow", img: "endfield/argent-flow", isNew: true }],
+    featured: [{ name: "Argent Flow", zh: "明河", img: "endfield/argent-flow", isNew: true }],
     weapons: ["Lunar Calling"],
   },
   {
@@ -194,26 +194,26 @@ window.BANNERS = [
   {
     game: "nte", version: "1.5", phase: 1,
     start: "2026-11-11", end: "2026-12-01", status: "confirmed",
-    featured: [{ name: "Elyms", img: "nte/elyms", isNew: true }, { name: "Shinku", img: "nte/shinku" }],
+    featured: [{ name: "Elyms", zh: "曳尔沐", img: "nte/elyms", isNew: true }, { name: "Shinku", zh: "真红", img: "nte/shinku" }],
     weapons: ["Echoes on Hold", "Blushing Mirage"],
     note: NEW_VERSION,
   },
   {
     game: "nte", version: "1.5", phase: 2,
     start: "2026-12-02", end: "2026-12-22", status: "projected",
-    featured: [{ name: "Exe", img: "nte/exe", isNew: true }, { name: "Chaos", img: "nte/chaos" }],
+    featured: [{ name: "Exe", img: "nte/exe", isNew: true }, { name: "Chaos", zh: "卡厄斯", img: "nte/chaos" }],
   },
 
   /* ───────────── Girls' Frontline 2 (Global) ───────────── */
   {
     game: "gfl2", label: { en: "Targeted Procurement", zh: "限定采购" },
     start: "2026-10-29", end: "2026-11-18", status: "confirmed",
-    featured: [{ name: "Faelynn", img: "gfl2/faelynn" }, { name: "Groza", img: "gfl2/groza" }, { name: "Colphne", zh: "寇尔芙", img: "gfl2/colphne" }],
+    featured: [{ name: "Faelynn", zh: "芙铃", img: "gfl2/faelynn" }, { name: "Groza", zh: "OTs-14", img: "gfl2/groza" }, { name: "Colphne", zh: "寇尔芙", img: "gfl2/colphne" }],
   },
   {
     game: "gfl2", label: { en: "2nd Anniversary", zh: "二周年" },
     start: "2026-11-19", end: "2026-12-09", status: "leak",
-    featured: [{ name: "Koleda", isNew: true }],
+    featured: [{ name: "Koleda", zh: "克莱妲", isNew: true }],
     note: { en: "Siege of Iliad, Part 1", zh: "Siege of Iliad 上篇" },
   },
   {
@@ -227,7 +227,7 @@ window.BANNERS = [
   {
     game: "exedra", label: { en: "Limited Kioku", zh: "限定记忆" },
     start: "2026-10-30", end: "2026-11-30", status: "confirmed",
-    featured: [{ name: "Halloween Karin", img: "exedra/karin", zh: "万圣节花梨" }],
+    featured: [{ name: "Halloween Karin", img: "exedra/karin", zh: "万圣节花凛" }],
   },
   {
     game: "exedra", label: { en: "Limited Kioku", zh: "限定记忆" },
@@ -247,7 +247,7 @@ window.BANNERS = [
     start: "2026-11-10", end: "2026-11-19", status: "confirmed",
     featured: [{ name: "Yukino Bijin (new outfit)", img: "uma/yukino-bijin", zh: "雪之美人（新衣装）", isNew: true }],
     weapons: [
-      "SSR No Reason",
+      { en: "SSR No Reason", zh: "SSR 莫名其妙" },
       { en: "SR Stay Gold", zh: "SR 黄金旅程" },
     ],
   },
