@@ -353,3 +353,5 @@ header, nav, section, main, footer { position: relative; z-index: 1; max-width: 
   .version-badge { top: 12px; right: 10px; }
   .live-sort { margin-left: 0; }
 }
+
+.toggle.disabled { opacity: .4; cursor: default; }
