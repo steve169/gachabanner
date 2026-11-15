@@ -4,6 +4,13 @@
  */
 window.CHANGELOG = [
   {
+    version: "1.10", date: "2026-11-15",
+    changes: [
+      { en: "FGO class banners (Grand Duel) show the class emblem; all 14 class icons added.", zh: "FGO职阶卡池（冠位戴冠战）改为显示职阶图标，并补齐14个职阶图标。" },
+      { en: "Girls' Frontline 2 is now split into Global and CN servers; the Global rate-up was corrected from the official update notes.", zh: "少女前线2：追放拆分为国际服与国服；国际服UP角色已按官方更新公告更正。" },
+    ],
+  },
+  {
     version: "1.9", date: "2026-11-15",
     changes: [
       { en: "New \"Only upcoming banners\" option hides banners that have already started.", zh: "新增「仅显示未开始的卡池」选项，隐藏已开始的卡池。" },

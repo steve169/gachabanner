@@ -355,3 +355,8 @@ header, nav, section, main, footer { position: relative; z-index: 1; max-width: 
 }
 
 .toggle.disabled { opacity: .4; cursor: default; }
+
+/* Emblem-style images (FGO class icons) are shown whole on a dark tile. */
+.avatar.is-icon { background: radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--e) 35%, #1a2147), #0b1030 75%); }
+.avatar.is-icon img { object-fit: contain; object-position: center; padding: 6px; }
+.avatar.is-icon.has-img { color: transparent; }
