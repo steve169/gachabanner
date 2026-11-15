@@ -4,6 +4,12 @@
  */
 window.CHANGELOG = [
   {
+    version: "1.9", date: "2026-11-15",
+    changes: [
+      { en: "New \"Only upcoming banners\" option hides banners that have already started.", zh: "新增「仅显示未开始的卡池」选项，隐藏已开始的卡池。" },
+    ],
+  },
+  {
     version: "1.8", date: "2026-11-15",
     changes: [
       { en: "Version badge and this update history.", zh: "新增版本号与更新记录。" },

@@ -12,6 +12,8 @@
       sub: "Rate-up banners for popular gacha games",
       rangeNote: "key banner dates at a glance",
       showPast: "Show past",
+      onlyUpcoming: "Only upcoming banners",
+      emptyUpcoming: "No upcoming banners for the selected games.",
       games: "Games",
       server: "Server",
       gameLabel: "Games",
@@ -63,6 +65,8 @@
       sub: "二次元手游 · 版本 & 卡池排期",
       rangeNote: "关键节点一览",
       showPast: "显示已结束",
+      onlyUpcoming: "仅显示未开始的卡池",
+      emptyUpcoming: "所选游戏暂无未开始的卡池。",
       games: "游戏筛选",
       server: "服务器",
       gameLabel: "游戏",
@@ -145,6 +149,7 @@
     lang: I18N[store.get("lang", defaultLang)] ? store.get("lang", defaultLang) : "en",
     games: new Set(Array.isArray(savedGames) ? savedGames.filter((g) => GAMES[g]) : Object.keys(GAMES)),
     showPast: store.get("showPast", false),
+    onlyUpcoming: store.get("onlyUpcoming", false),
     open: new Set(),
     liveSort: store.get("liveSort", "default") === "ending" ? "ending" : "default",
     servers: new Set((store.get("servers", null) || SERVERS).filter((x) => SERVERS.includes(x))),
@@ -240,6 +245,10 @@
   const pastBox = document.getElementById("show-past");
   pastBox.checked = state.showPast;
   pastBox.onchange = () => { state.showPast = pastBox.checked; store.set("showPast", state.showPast); render(); };
+  // "Only upcoming" hides ongoing and past banners in the calendar; "Show past" doesn't apply while it's on.
+  const upcomingBox = document.getElementById("only-upcoming");
+  upcomingBox.checked = state.onlyUpcoming;
+  upcomingBox.onchange = () => { state.onlyUpcoming = upcomingBox.checked; store.set("onlyUpcoming", state.onlyUpcoming); render(); };
 
   /* ── card ── */
   // App icon with the glyph underneath as a fallback if the image is missing.
@@ -413,7 +422,9 @@
     const liveGames = [...new Set(live.map((b) => b.game))];
     document.getElementById("live-icons").innerHTML = liveGames.map((k) => iconHtml(GAMES[k])).join("");
 
-    const list = visible.filter((b) => state.showPast || parse(b.end) >= today);
+    pastBox.disabled = state.onlyUpcoming;
+    document.getElementById("show-past-label").classList.toggle("disabled", state.onlyUpcoming);
+    const list = visible.filter((b) => (state.onlyUpcoming ? parse(b.start) > today : state.showPast || parse(b.end) >= today));
     const byDay = new Map();
     for (const b of list) {
       if (!byDay.has(b.start)) byDay.set(b.start, []);
@@ -436,7 +447,7 @@
         </div>`;
     }
     if (curMonth) html += "</section>";
-    document.getElementById("calendar").innerHTML = html || `<p class="empty">${esc(t.empty)}</p>`;
+    document.getElementById("calendar").innerHTML = html || `<p class="empty">${esc(state.onlyUpcoming ? t.emptyUpcoming : t.empty)}</p>`;
   }
 
   /* ── version badge + update history ── */
