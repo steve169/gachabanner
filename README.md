@@ -2,7 +2,7 @@
 
 Contains the rate ups of the future banners in selected gacha games.
 
-A static site (GitHub Pages) showing a rate-up calendar for **Genshin Impact**, **Honkai: Star Rail**, **Zenless Zone Zero**, **Wuthering Waves**, **Arknights: Endfield**, **Neverness to Everness**, **Girls' Frontline 2: Exilium** (Global), **Madoka Magica Magia Exedra**, **Uma Musume** (JP and Global), **Blue Archive** (Global), **Fate/Grand Order** (JP, CN and NA), **Arknights** (EN and CN), **Azur Lane** (EN and CN), **Princess Connect! Re:Dive** (JP and CN), **Project Sekai** (JP and EN), **Reverse: 1999** (Global), **hololive Dreams**, **BanG Dream! Girls Band Party** (JP, EN and CN) and **BanG Dream! Our Notes**.
+A static site (GitHub Pages) showing a rate-up calendar for **Genshin Impact**, **Honkai: Star Rail**, **Zenless Zone Zero**, **Wuthering Waves**, **Arknights: Endfield**, **Neverness to Everness**, **Girls' Frontline 2: Exilium** (Global and CN), **Madoka Magica Magia Exedra**, **Uma Musume** (JP and Global), **Blue Archive** (Global), **Fate/Grand Order** (JP, CN and NA), **Arknights** (EN and CN), **Azur Lane** (EN and CN), **Princess Connect! Re:Dive** (JP and CN), **Project Sekai** (JP and EN), **Reverse: 1999** (Global), **hololive Dreams**, **BanG Dream! Girls Band Party** (JP, EN and CN) and **BanG Dream! Our Notes**.
 
 **Live site:** https://steve169.github.io/gachabanner/
 
