@@ -4,6 +4,12 @@
  */
 window.CHANGELOG = [
   {
+    version: "1.12", date: "2026-11-15",
+    changes: [
+      { en: "Uma Musume (JP): Daring Tact limited banner from Nov 16.", zh: "赛马娘（日服）：谋勇兼备限定卡池11月16日开启。" },
+    ],
+  },
+  {
     version: "1.11", date: "2026-11-15",
     changes: [
       { en: "\"Live now\" and the game filter now look like buttons, say what they do (Show all / Choose) and pulse until first used; their icon rows are clickable too.", zh: "「正在进行」和游戏筛选改为更醒目的按钮，显示操作提示（展开全部 / 选择），首次使用前会闪烁提示；旁边的图标行也可点击。" },
