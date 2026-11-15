@@ -13,7 +13,8 @@
  *   start    first day, "YYYY-MM-DD" (approx. server day)
  *   end      last day,  "YYYY-MM-DD"
  *   status   "confirmed" | "projected" | "leak"
- *   featured list of rate-up units: { name, zh?, img?, isNew?, element?, note? }
+ *   featured list of rate-up units: { name, zh?, img?, icon?, isNew?, element?, note? }
+ *              icon = true for emblems (e.g. FGO class icons) shown whole instead of cropped
  *              img = path under assets/characters/ without extension, e.g. "hsr/acheron"
  *   weapons  optional list of featured weapons / support cards (strings or {en, zh})
  *   note     optional free text
@@ -33,7 +34,7 @@ window.GAMES = {
   wuwa:     { name: { en: "Wuthering Waves",      zh: "鸣潮" },                   glyph: "鸣", icon: "assets/icons/wuwa.webp", color: "#3fd0c9", short: "WuWa" },
   endfield: { name: { en: "Arknights: Endfield",  zh: "明日方舟：终末地" },       glyph: "终", icon: "assets/icons/endfield.webp", color: "#e8d36a", short: "AKE" },
   nte:      { name: { en: "Neverness to Everness", zh: "异环" },                  glyph: "环", icon: "assets/icons/nte.webp", color: "#c77dff", short: "NTE" },
-  gfl2:     { name: { en: "Girls' Frontline 2",   zh: "少女前线2：追放" },        glyph: "追", icon: "assets/icons/gfl2.webp", color: "#ef4f5f", short: "GFL2" },
+  gfl2:     { name: { en: "Girls' Frontline 2 (Global)", zh: "少女前线2：追放（国际服）" }, server: "EN", glyph: "追", icon: "assets/icons/gfl2.webp", color: "#ef4f5f", short: "GFL2" },
   exedra:   { name: { en: "Madoka Magica Exedra", zh: "魔法少女小圆 Exedra" },    glyph: "魔", icon: "assets/icons/exedra.webp", color: "#ff8fc8", short: "MMX" },
   uma:      { name: { en: "Uma Musume (JP)",      zh: "赛马娘（日服）" }, server: "JP",         glyph: "马", icon: "assets/icons/uma.webp", color: "#7ddc6a", short: "UMA" },
   uma_gl:   { name: { en: "Uma Musume (Global)",  zh: "赛马娘（国际服）" }, server: "EN",       glyph: "马", icon: "assets/icons/uma_gl.webp", color: "#a8e86b", short: "UMA-GL" },
@@ -228,9 +229,16 @@ window.BANNERS = [
 
   /* ───────────── Girls' Frontline 2 (Global) ───────────── */
   {
-    game: "gfl2", label: { en: "Targeted Procurement", zh: "限定采购" },
+    game: "gfl2", label: { en: "Targeted Procurement", zh: "定向采购" },
     start: "2026-10-29", end: "2026-11-18", status: "confirmed",
-    featured: [{ name: "Faelynn", zh: "芙铃", img: "gfl2/faelynn" }, { name: "Groza", zh: "OTs-14", img: "gfl2/groza" }, { name: "Colphne", zh: "寇尔芙", img: "gfl2/colphne" }],
+    featured: [
+      { name: "Faelynn", zh: "芙铃", img: "gfl2/faelynn", isNew: true },
+      { name: "Welrod", img: "gfl2/welrod", isNew: true },
+      { name: "Sextans", img: "gfl2/sextans" },
+      { name: "Phaetusa", img: "gfl2/phaetusa" },
+    ],
+    weapons: ["Feral Fang", "Silent Sanction", "Twilight Rose", "Cause and Effect"],
+    note: { en: "Targeted Procurement & Military Upgrade (Update 10/28)", zh: "定向采购与军备提升（10/28更新）" },
   },
   {
     game: "gfl2", label: { en: "2nd Anniversary", zh: "二周年" },
@@ -378,7 +386,7 @@ window.BANNERS = [
   {
     game: "fgo_cn", label: { en: "Grand Duel: Archer", zh: "冠位戴冠战：Archer" },
     start: "2026-11-05", end: "2026-11-21", status: "confirmed",
-    featured: [{ name: "Archer-class servants", zh: "Archer职阶从者" }],
+    featured: [{ name: "Archer-class servants", zh: "Archer职阶从者", img: "fgo-class/archer", icon: true }],
   },
   {
     game: "fgo_cn", label: { en: "100M Downloads", zh: "全世界1亿下载纪念" },
@@ -399,7 +407,10 @@ window.BANNERS = [
   {
     game: "fgo_cn", label: { en: "Grand Duel: Rider & Assassin", zh: "冠位戴冠战：Rider＆Assassin" },
     start: "2026-11-21", end: "2026-11-28", status: "projected",
-    featured: [{ name: "Rider & Assassin servants", zh: "Rider/Assassin职阶从者" }],
+    featured: [
+      { name: "Rider-class servants", zh: "Rider职阶从者", img: "fgo-class/rider", icon: true },
+      { name: "Assassin-class servants", zh: "Assassin职阶从者", img: "fgo-class/assassin", icon: true },
+    ],
   },
   {
     game: "fgo_cn", label: { en: "Road to Finale #8", zh: "Road to 终章 第8次发布纪念" },
@@ -412,7 +423,7 @@ window.BANNERS = [
   {
     game: "fgo_cn", label: { en: "Grand Duel: Caster", zh: "冠位戴冠战：Caster" },
     start: "2026-11-24", end: "2026-12-10", status: "projected",
-    featured: [{ name: "Caster-class servants", zh: "Caster职阶从者" }],
+    featured: [{ name: "Caster-class servants", zh: "Caster职阶从者", img: "fgo-class/caster", icon: true }],
   },
   {
     game: "fgo_cn", label: { en: "Road to Finale #9", zh: "Road to 终章 第9次发布纪念" },
