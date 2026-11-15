@@ -313,3 +313,43 @@ header, nav, section, main, footer { position: relative; z-index: 1; max-width: 
 .details .muted { color: var(--muted); font-size: 13px; margin: 8px 0 0; }
 .details .small { font-size: 11px; }
 .live-grid .card.open .weapons, .live-grid .card.open .meta .note { display: initial; }
+
+/* ───── Version badge + update history ───── */
+.version-badge {
+  position: absolute; top: 14px; right: 16px; z-index: 6;
+  font: inherit; font-size: 12px; color: var(--muted); cursor: pointer;
+  padding: 5px 12px; border-radius: 999px; border: 1px solid var(--card-border);
+  background: rgba(13, 20, 48, .75); backdrop-filter: blur(8px);
+  font-variant-numeric: tabular-nums;
+}
+.version-badge:hover { color: var(--text); border-color: rgba(159, 180, 255, .5); }
+.history {
+  width: min(560px, calc(100vw - 32px)); max-height: min(80vh, 720px); padding: 0;
+  color: var(--text); background: #0d1430; border: 1px solid var(--card-border); border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .5);
+}
+.history::backdrop { background: rgba(3, 6, 18, .6); backdrop-filter: blur(2px); }
+.history-head {
+  position: sticky; top: 0; display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 18px; background: #0d1430; border-bottom: 1px solid var(--card-border);
+}
+.history-head h2 { margin: 0; font-size: 18px; }
+.history-close { font: inherit; color: var(--muted); background: none; border: 0; font-size: 18px; cursor: pointer; }
+.history-close:hover { color: var(--text); }
+#history-list { padding: 4px 18px 18px; }
+.release h3 { margin: 16px 0 6px; font-size: 15px; color: var(--gold); }
+.release h3 small { margin-left: 8px; color: var(--muted); font-weight: 400; font-size: 12px; }
+.release ul { margin: 0; padding-left: 20px; color: #c3c9e8; font-size: 14px; line-height: 1.6; }
+
+/* ───── Live now sort ───── */
+.live-sort { margin-left: auto; display: inline-flex; align-items: center; gap: 2px; padding: 3px;
+  border-radius: 999px; border: 1px solid var(--card-border); background: rgba(13, 20, 48, .6); }
+.live-sort-lbl { font-size: 12px; font-weight: 400; color: var(--muted); padding: 0 6px 0 8px; }
+.live-sort button { font: inherit; font-size: 12px; font-weight: 600; color: var(--muted); cursor: pointer;
+  padding: 4px 10px; border-radius: 999px; border: 0; background: transparent; }
+.live-sort button:hover { color: var(--text); }
+.live-sort button[aria-pressed="true"] { color: #0b1030; background: linear-gradient(90deg, #cfe0ff, #a99cff); }
+@media (max-width: 640px) {
+  .version-badge { top: 12px; right: 10px; }
+  .live-sort { margin-left: 0; }
+}

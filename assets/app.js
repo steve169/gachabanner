@@ -36,6 +36,11 @@
       date: (d) => `${MONTH_SHORT[d.getMonth()]} ${d.getDate()}`,
       tba: "TBA",
       clickHint: "Click for countdown & income",
+      historyTitle: "Update history",
+      versionLbl: (v, d) => `v${v} · ${d}`,
+      sortBy: "Sort",
+      sortDefault: "Default",
+      sortEnding: "Ending soonest",
       timeLeft: "Time left",
       startsIn: "Starts in",
       endedLbl: "This banner has ended.",
@@ -82,6 +87,11 @@
       date: (d) => `${d.getMonth() + 1}月${d.getDate()}日`,
       tba: "待定",
       clickHint: "点击查看倒计时与可获得资源",
+      historyTitle: "更新记录",
+      versionLbl: (v, d) => `v${v} · ${d}`,
+      sortBy: "排序",
+      sortDefault: "默认",
+      sortEnding: "即将结束",
       timeLeft: "剩余时间",
       startsIn: "距离开始",
       endedLbl: "该卡池已结束。",
@@ -136,6 +146,7 @@
     games: new Set(Array.isArray(savedGames) ? savedGames.filter((g) => GAMES[g]) : Object.keys(GAMES)),
     showPast: store.get("showPast", false),
     open: new Set(),
+    liveSort: store.get("liveSort", "default") === "ending" ? "ending" : "default",
     servers: new Set((store.get("servers", null) || SERVERS).filter((x) => SERVERS.includes(x))),
   };
   if (state.servers.size === 0) SERVERS.forEach((x) => state.servers.add(x));
@@ -245,7 +256,8 @@
     const live = s <= today && today <= e;
     if (live) {
       const left = Math.round((e - today) / DAY);
-      const pct = (((today - s) / DAY + 1) / ((e - s) / DAY + 1)) * 100;
+      // Share of the banner still remaining (counting today), so the bar empties as it nears the end.
+      const pct = (((e - today) / DAY + 1) / ((e - s) / DAY + 1)) * 100;
       return { live, text: left === 0 ? t.endsToday : t.endsIn(left, t.date(e)), pct };
     }
     if (today < s) return { live, text: t.upcoming(t.date(s), t.date(e), Math.round((s - today) / DAY)) };
@@ -365,7 +377,8 @@
     langBar.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.lang === state.lang));
     document.getElementById("legend").innerHTML = ["confirmed", "projected", "leak"]
       .map((k) => `<span><span class="status s-${k}">${t.status[k]}</span> ${t.legend[k]}</span>`).join("");
-    document.getElementById("foot-text").textContent = t.foot(window.LAST_UPDATED || "");
+    document.getElementById("foot-text").textContent = t.foot((window.CHANGELOG && window.CHANGELOG[0] && window.CHANGELOG[0].date) || window.LAST_UPDATED || "");
+    renderHistory();
 
     const total = Object.keys(GAMES).length;
     const shownKeys = Object.keys(GAMES).filter(shown);
@@ -390,7 +403,10 @@
 
     const visible = BANNERS.filter((b) => shown(b.game));
 
-    const live = visible.filter((b) => timing(b).live).sort((a, b) => a.end.localeCompare(b.end));
+    // Default keeps calendar order (start date); "ending" puts the soonest-ending banners first.
+    const live = visible.filter((b) => timing(b).live);
+    if (state.liveSort === "ending") live.sort((a, b) => a.end.localeCompare(b.end) || a.id - b.id);
+    document.querySelectorAll("#live-sort button").forEach((x) => x.setAttribute("aria-pressed", x.dataset.sort === state.liveSort));
     document.getElementById("live-section").hidden = live.length === 0;
     liveGrid.innerHTML = live.map((b) => card(b, { showProgress: true })).join("");
     document.getElementById("live-count").textContent = live.length;
@@ -422,6 +438,30 @@
     if (curMonth) html += "</section>";
     document.getElementById("calendar").innerHTML = html || `<p class="empty">${esc(t.empty)}</p>`;
   }
+
+  /* ── version badge + update history ── */
+  const CHANGELOG = window.CHANGELOG || [];
+  const badge = document.getElementById("version-badge");
+  const historyDlg = document.getElementById("history");
+  function renderHistory() {
+    const t = T(), latest = CHANGELOG[0];
+    badge.hidden = !latest;
+    if (!latest) return;
+    badge.textContent = t.versionLbl(latest.version, latest.date);
+    badge.title = t.historyTitle;
+    document.getElementById("history-list").innerHTML = CHANGELOG.map((r) => `
+      <section class="release">
+        <h3>v${esc(r.version)} <small>${esc(r.date)}</small></h3>
+        <ul>${r.changes.map((c) => `<li>${esc(tx(c))}</li>`).join("")}</ul>
+      </section>`).join("");
+  }
+  badge.onclick = () => (historyDlg.showModal ? historyDlg.showModal() : historyDlg.setAttribute("open", ""));
+  document.getElementById("history-close").onclick = () => historyDlg.close();
+  historyDlg.addEventListener("click", (ev) => { if (ev.target === historyDlg) historyDlg.close(); });
+
+  document.querySelectorAll("#live-sort button").forEach((x) => {
+    x.onclick = () => { state.liveSort = x.dataset.sort; store.set("liveSort", state.liveSort); render(); };
+  });
 
   /* ── .ics export ── */
   document.getElementById("ics-btn").onclick = () => {
