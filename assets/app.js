@@ -15,6 +15,8 @@
       onlyUpcoming: "Only upcoming banners",
       emptyUpcoming: "No upcoming banners for the selected games.",
       games: "Games",
+      filterOpen: "Choose", filterClose: "Done",
+      liveOpen: "Show all", liveClose: "Hide",
       server: "Server",
       gameLabel: "Games",
       serverNames: { CN: "CN", EN: "EN / Global", JP: "JP" },
@@ -68,6 +70,8 @@
       onlyUpcoming: "仅显示未开始的卡池",
       emptyUpcoming: "所选游戏暂无未开始的卡池。",
       games: "游戏筛选",
+      filterOpen: "选择", filterClose: "完成",
+      liveOpen: "展开全部", liveClose: "收起",
       server: "服务器",
       gameLabel: "游戏",
       serverNames: { CN: "国服", EN: "国际服", JP: "日服" },
@@ -192,15 +196,28 @@
   const filtersEl = document.getElementById("game-filters");
   const liveGrid = document.getElementById("live-grid");
   const liveToggle = document.getElementById("live-toggle");
-  const setLiveOpen = (open) => { liveGrid.hidden = !open; liveToggle.setAttribute("aria-expanded", open); };
-  setLiveOpen(store.get("liveOpen", false));
-  liveToggle.onclick = () => { const open = liveGrid.hidden; setLiveOpen(open); store.set("liveOpen", open); };
   const filterToggle = document.getElementById("filter-toggle");
+  // Toggle buttons say what clicking does ("Show all" / "Hide"), and pulse until a visitor first uses them.
+  const syncToggleText = () => {
+    const t = T();
+    document.getElementById("live-action").textContent = liveGrid.hidden ? t.liveOpen : t.liveClose;
+    document.getElementById("filter-action").textContent = filtersEl.hidden ? t.filterOpen : t.filterClose;
+  };
+  const markUsed = (btn, key) => { btn.classList.remove("hint"); store.set(key, true); };
+  if (!store.get("usedLive", false)) liveToggle.classList.add("hint");
+  if (!store.get("usedFilter", false)) filterToggle.classList.add("hint");
+  const setLiveOpen = (open) => { liveGrid.hidden = !open; liveToggle.setAttribute("aria-expanded", open); syncToggleText(); };
+  liveToggle.onclick = () => { const open = liveGrid.hidden; setLiveOpen(open); store.set("liveOpen", open); markUsed(liveToggle, "usedLive"); };
   filterToggle.onclick = () => {
     const open = filtersEl.hidden;
     filtersEl.hidden = !open;
     filterToggle.setAttribute("aria-expanded", open);
+    syncToggleText();
+    markUsed(filterToggle, "usedFilter");
   };
+  // The icon rows next to each toggle open it too.
+  document.getElementById("live-icons").onclick = () => liveToggle.click();
+  document.getElementById("selected-icons").onclick = () => filterToggle.click();
   const mkRow = (cls) => {
     const row = document.createElement("div"); row.className = `filter-row ${cls}`;
     const lbl = document.createElement("span"); lbl.className = "filter-label"; row.appendChild(lbl);
@@ -388,6 +405,7 @@
       .map((k) => `<span><span class="status s-${k}">${t.status[k]}</span> ${t.legend[k]}</span>`).join("");
     document.getElementById("foot-text").textContent = t.foot((window.CHANGELOG && window.CHANGELOG[0] && window.CHANGELOG[0].date) || window.LAST_UPDATED || "");
     renderHistory();
+    syncToggleText();
 
     const total = Object.keys(GAMES).length;
     const shownKeys = Object.keys(GAMES).filter(shown);
@@ -519,5 +537,6 @@
     document.querySelectorAll("[data-countdown]").forEach((el) => { el.textContent = countdownText(+el.dataset.countdown - Date.now()); });
   }, 1000);
 
+  setLiveOpen(store.get("liveOpen", false));
   render();
 })();

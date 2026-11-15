@@ -360,3 +360,44 @@ header, nav, section, main, footer { position: relative; z-index: 1; max-width: 
 .avatar.is-icon { background: radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--e) 35%, #1a2147), #0b1030 75%); }
 .avatar.is-icon img { object-fit: contain; object-position: center; padding: 6px; }
 .avatar.is-icon.has-img { color: transparent; }
+
+/* ───── More noticeable toggles (Live now, Games filter) ───── */
+.filter-toggle, .live-toggle {
+  display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+  font: inherit; font-weight: 700; color: var(--text);
+  padding: 8px 14px 8px 12px; border-radius: 999px;
+  border: 1px solid rgba(159, 180, 255, .55);
+  background: linear-gradient(180deg, rgba(60, 80, 170, .45), rgba(30, 40, 100, .45));
+  box-shadow: 0 4px 16px rgba(80, 100, 255, .18), inset 0 1px 0 rgba(255, 255, 255, .12);
+  transition: transform .15s, box-shadow .15s, border-color .15s;
+}
+.filter-toggle:hover, .live-toggle:hover {
+  transform: translateY(-1px); border-color: rgba(190, 205, 255, .9);
+  box-shadow: 0 6px 22px rgba(80, 100, 255, .32), inset 0 1px 0 rgba(255, 255, 255, .18);
+}
+.live-toggle { font-size: 18px; border-color: rgba(74, 222, 128, .55);
+  background: linear-gradient(180deg, rgba(30, 110, 70, .45), rgba(20, 60, 50, .45));
+  box-shadow: 0 4px 16px rgba(74, 222, 128, .15), inset 0 1px 0 rgba(255, 255, 255, .12); }
+.live-toggle:hover { border-color: rgba(120, 240, 170, .9); box-shadow: 0 6px 22px rgba(74, 222, 128, .3); }
+.toggle-ico { width: 16px; height: 16px; color: var(--accent); }
+.toggle-action {
+  font-size: 12px; font-weight: 700; letter-spacing: .02em;
+  padding: 3px 9px; border-radius: 999px; color: #0b1030;
+  background: linear-gradient(90deg, #cfe0ff, #a99cff);
+}
+.live-toggle .toggle-action { background: linear-gradient(90deg, #b8f5cf, #6fe3a2); }
+.filter-toggle .caret, .live-toggle .caret { color: var(--text); font-size: 14px; }
+.hint { animation: hint-ring 2.2s ease-out infinite; }
+@keyframes hint-ring {
+  0% { box-shadow: 0 0 0 0 rgba(159, 180, 255, .55); }
+  70% { box-shadow: 0 0 0 10px rgba(159, 180, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(159, 180, 255, 0); }
+}
+.live-toggle.hint { animation-name: hint-ring-green; }
+@keyframes hint-ring-green {
+  0% { box-shadow: 0 0 0 0 rgba(74, 222, 128, .55); }
+  70% { box-shadow: 0 0 0 10px rgba(74, 222, 128, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+}
+@media (prefers-reduced-motion: reduce) { .hint { animation: none; } }
+#selected-icons, #live-icons { cursor: pointer; }
