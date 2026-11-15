@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/style.css?v=20261114m" />
+  <link rel="stylesheet" href="assets/style.css?v=20261115a" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
 </head>
 <body>
@@ -20,6 +20,15 @@
     <button type="button" data-lang="en">English</button>
     <button type="button" data-lang="zh">简体中文</button>
   </div>
+
+  <button class="version-badge" id="version-badge" type="button" aria-haspopup="dialog"></button>
+  <dialog class="history" id="history" aria-labelledby="history-title">
+    <div class="history-head">
+      <h2 id="history-title" data-i18n="historyTitle"></h2>
+      <button class="history-close" id="history-close" type="button" aria-label="Close">✕</button>
+    </div>
+    <div id="history-list"></div>
+  </dialog>
 
   <header class="hero">
     <div class="eyebrow" data-i18n="eyebrow"></div>
@@ -48,6 +57,11 @@
         <span class="pulse"></span><span data-i18n="liveNow"></span> <span class="live-count" id="live-count"></span><span class="caret" aria-hidden="true">▾</span>
       </button>
       <span class="selected-icons live-icons" id="live-icons" aria-hidden="true"></span>
+      <span class="live-sort" id="live-sort" role="group">
+        <span class="live-sort-lbl" data-i18n="sortBy"></span>
+        <button type="button" data-sort="default" data-i18n="sortDefault"></button>
+        <button type="button" data-sort="ending" data-i18n="sortEnding"></button>
+      </span>
     </h2>
     <div class="live-grid" id="live-grid" hidden></div>
   </section>
@@ -59,8 +73,9 @@
     <p><span id="foot-text"></span> <code>data/banners.js</code></p>
   </footer>
 
-  <script src="data/banners.js?v=20261114m"></script>
-  <script src="data/economy.js?v=20261114m"></script>
-  <script src="assets/app.js?v=20261114m"></script>
+  <script src="data/banners.js?v=20261115a"></script>
+  <script src="data/economy.js?v=20261115a"></script>
+  <script src="data/changelog.js?v=20261115a"></script>
+  <script src="assets/app.js?v=20261115a"></script>
 </body>
 </html>

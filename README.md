@@ -37,6 +37,9 @@ All data lives in [`data/banners.js`](data/banners.js). Add or edit an entry and
 - Point a banner unit at one with `img: "hsr/acheron"`. Units without an image fall back to a coloured letter tile.
 - All game icons and character art © their respective owners.
 
+## Update history
+Add an entry at the top of [`data/changelog.js`](data/changelog.js) for each release; the newest one is shown as the version badge (top right).
+
 ## Caching
 When you change `assets/app.js`, `assets/style.css` or `data/banners.js`, bump the `?v=` value on their links in
 `index.html` so returning visitors don't get a mix of old and new files.
