@@ -322,10 +322,10 @@ window.BANNERS = [
     ],
   },
   {
-    game: "uma", label: { en: "Pick-up", zh: "UP卡池" },
-    start: "2026-11-19", end: "2026-11-30", status: "projected",
-    featured: [{ name: "TBA" }],
-    note: { en: "Next pick-up, details not yet announced", zh: "下一期卡池，详情待公布" },
+    game: "uma", label: { en: "Limited", zh: "限定卡池" },
+    start: "2026-11-16", end: "2026-12-21", status: "confirmed",
+    featured: [{ name: "Daring Tact", zh: "谋勇兼备", img: "uma/daring-tact", isNew: true }],
+    note: { en: "★3 [白光のレガリア] Daring Tact; ★3 rates ×1.5. Select pick-up support gacha Nov 16–30.", zh: "★3［白光のレガリア］谋勇兼备；★3出率1.5倍。自选UP支援卡卡池11月16日–30日。" },
   },
   /* ───────────── Uma Musume (Global server) ───────────── */
   {
