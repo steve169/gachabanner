@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/style.css?v=20261115c" />
+  <link rel="stylesheet" href="assets/style.css?v=20261115d" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
 </head>
 <body>
@@ -40,7 +40,9 @@
   <nav class="toolbar" aria-label="Filters">
     <div class="toolbar-row">
       <button class="btn filter-toggle" id="filter-toggle" type="button" aria-expanded="false" aria-controls="game-filters">
-        <span data-i18n="games"></span> <span class="filter-count" id="filter-count"></span><span class="caret" aria-hidden="true">▾</span>
+        <svg class="toggle-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18l-7 8v5l-4 2v-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        <span data-i18n="games"></span> <span class="filter-count" id="filter-count"></span>
+        <span class="toggle-action" id="filter-action"></span><span class="caret" aria-hidden="true">▾</span>
       </button>
       <div class="selected-icons" id="selected-icons" aria-hidden="true"></div>
       <div class="toolbar-right">
@@ -55,7 +57,8 @@
   <section class="live" id="live-section" aria-labelledby="live-title">
     <h2 id="live-title">
       <button class="live-toggle" id="live-toggle" type="button" aria-expanded="false" aria-controls="live-grid">
-        <span class="pulse"></span><span data-i18n="liveNow"></span> <span class="live-count" id="live-count"></span><span class="caret" aria-hidden="true">▾</span>
+        <span class="pulse"></span><span data-i18n="liveNow"></span> <span class="live-count" id="live-count"></span>
+        <span class="toggle-action" id="live-action"></span><span class="caret" aria-hidden="true">▾</span>
       </button>
       <span class="selected-icons live-icons" id="live-icons" aria-hidden="true"></span>
       <span class="live-sort" id="live-sort" role="group">
@@ -74,10 +77,10 @@
     <p><span id="foot-text"></span> <code>data/banners.js</code></p>
   </footer>
 
-  <script src="data/banners.js?v=20261115c"></script>
-  <script src="data/economy.js?v=20261115c"></script>
-  <script src="data/changelog.js?v=20261115c"></script>
-  <script src="assets/app.js?v=20261115c"></script>
+  <script src="data/banners.js?v=20261115d"></script>
+  <script src="data/economy.js?v=20261115d"></script>
+  <script src="data/changelog.js?v=20261115d"></script>
+  <script src="assets/app.js?v=20261115d"></script>
   <!-- Visitor statistics (GoatCounter) -->
   <script data-goatcounter="https://steve169.goatcounter.com/count"
           async src="https://gc.zgo.at/count.js"></script>
