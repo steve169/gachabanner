@@ -945,7 +945,7 @@ window.BANNERS = [
   /* ───────────── Arknights (EN) ───────────── */
   {
     game: "arknights_en", label: {en: "Standard Headhunting #178", zh: "标准寻访 #178"},
-    start: "2026-10-23", end: "2026-11-06", status: "confirmed",
+    start: "2026-10-23", end: "2026-11-05", status: "confirmed",
     featured: [
       { name: "Ines", zh: "伊内丝", img: "arknights/ines" },
       { name: "Zuo Le", zh: "左乐", img: "arknights/zuo-le" },
@@ -976,7 +976,7 @@ window.BANNERS = [
   },
   {
     game: "arknights_en", label: {en: "Kernel Headhunting #64", zh: "中坚寻访 #64"},
-    start: "2026-11-03", end: "2026-11-17", status: "confirmed",
+    start: "2026-11-03", end: "2026-11-16", status: "confirmed",
     featured: [
       { name: "Eunectes", zh: "森蚺", img: "arknights/eunectes" },
       { name: "Saileach", zh: "琴柳", img: "arknights/saileach" },
@@ -988,7 +988,7 @@ window.BANNERS = [
   },
   {
     game: "arknights_en", label: {en: "Standard Headhunting #179", zh: "标准寻访 #179"},
-    start: "2026-11-06", end: "2026-11-20", status: "confirmed",
+    start: "2026-11-06", end: "2026-11-19", status: "confirmed",
     featured: [
       { name: "Pozëmka", zh: "鸿雪", img: "arknights/pozemka" },
       { name: "Viviana", zh: "薇薇安娜", img: "arknights/viviana" },
@@ -1006,6 +1006,30 @@ window.BANNERS = [
       { name: "Zinogre S Catapult", zh: "雷狼龙S空爆", img: "arknights/zinogre-s-catapult", isNew: true },
     ],
     note: {en: "Monster Hunter collab #2, with SideStory Thunder in the Azure Dream.", zh: "《怪物猎人》第二次联动，配合SideStory「泡影苍霆」。"},
+  },
+  {
+    game: "arknights_en", label: {en: "Kernel Headhunting #65", zh: "中坚寻访 #65"},
+    start: "2026-11-17", end: "2026-12-01", status: "confirmed",
+    featured: [
+      { name: "Mr. Nothing", zh: "乌有", img: "arknights/mr-nothing" },
+      { name: "Phantom", zh: "傀影", img: "arknights/phantom" },
+      { name: "Provence", zh: "普罗旺斯", img: "arknights/provence" },
+      { name: "Sora", zh: "空", img: "arknights/sora" },
+      { name: "Weedy", zh: "温蒂", img: "arknights/weedy" },
+    ],
+    note: {en: "Kernel pool rotation.", zh: "中坚寻访轮换。"},
+  },
+  {
+    game: "arknights_en", label: {en: "Standard Headhunting #180", zh: "标准寻访 #180"},
+    start: "2026-11-20", end: "2026-12-04", status: "confirmed",
+    featured: [
+      { name: "Melanite", zh: "玫拉", img: "arknights/melanite" },
+      { name: "Qiubai", zh: "仇白", img: "arknights/qiubai" },
+      { name: "Sand Reckoner", img: "arknights/sand-reckoner" },
+      { name: "Stainless", zh: "白铁", img: "arknights/stainless" },
+      { name: "Wind Chimes", zh: "铎铃", img: "arknights/wind-chimes" },
+    ],
+    note: {en: "Standard pool rotation.", zh: "常驻标准寻访轮换。"},
   },
   {
     game: "arknights_en", label: {en: "Limited (Collab rerun): Sharpened by Flame", zh: "联动复刻寻访（怪物猎人 第一期）"},
@@ -1102,8 +1126,36 @@ window.BANNERS = [
     ],
     note: {en: "2026 Thank-You Celebration Part 2. 6★/5★ pulls only from these operators.", zh: "2026感谢庆典Part 2；6★/5★仅出现以上干员。"},
   },
+  {
+    game: "arknights_cn", label: {en: "Limited-time Headhunting (new SideStory)", zh: "限时寻访（SideStory「星星不愿入睡」）"},
+    start: "2026-12-08", end: "2026-12-22", status: "projected",
+    featured: [{ name: "TBA" }],
+    note: {en: "SideStory 星星不愿入睡 (Londinium) opens early December with new operators (Dev Newsletter #71); dates estimated.", zh: "制作组通讯#71：SideStory「星星不愿入睡」12月上旬开启，新干员登场；日期为预估。"},
+  },
+  {
+    game: "arknights_cn", label: {en: "Rerun Headhunting: 600 Meters Over The Facts", zh: "复刻寻访「现实之上六百米」"},
+    start: "2026-12-16", end: "2026-12-30", status: "projected",
+    featured: [
+      { name: "Cairn", img: "arknights/cairn" },
+      { name: "Figurino", img: "arknights/figurino" },
+      { name: "Nasti", zh: "娜斯提", img: "arknights/nasti" },
+    ],
+    note: {en: "Rerun with SideStory 未许之地 in mid-December (Dev Newsletter #71); exact dates TBA.", zh: "制作组通讯#71：12月中旬随SideStory「未许之地」复刻；具体日期待公布。"},
+  },
+  {
+    game: "arknights_cn", label: {en: "New Year Special Headhunting", zh: "跨年限时寻访"},
+    start: "2027-01-01", end: "2027-01-15", status: "projected",
+    featured: [{ name: "TBA" }],
+    note: {en: "Projected from the 2026-01-01 Celebration & Hope linkup; New Year events announced for late December.", zh: "按2026年1月1日「庆典&希望」推算；跨年系列活动将于12月下旬开启。"},
+  },
 
   /* ───────────── Princess Connect! Re:Dive (JP) ───────────── */
+  {
+    game: "pcr_jp", label: {en: "Princess Fes", zh: "公主庆典"},
+    start: "2026-10-23", end: "2026-10-31", status: "confirmed",
+    featured: [{ name: "Aglaea", img: "pcr/aglaea", isNew: true }],
+    note: {en: "Limited; ★3 rate doubled", zh: "期间限定；★3出率2倍"},
+  },
   {
     game: "pcr_jp", label: {en: "Pick-up", zh: "UP卡池"},
     start: "2026-10-31", end: "2026-11-30", status: "confirmed",
@@ -1118,17 +1170,41 @@ window.BANNERS = [
   },
   {
     game: "pcr_jp", label: {en: "Pick-up", zh: "UP卡池"},
-    start: "2026-11-16", end: "2026-11-30", status: "projected",
-    featured: [{ name: "Daring Tact", zh: "谋勇兼备", isNew: true }],
-    note: {en: "Uma Musume collab (limited); start date estimated", zh: "赛马娘联动（限定），开始日期为预估"},
+    start: "2026-11-16", end: "2026-11-30", status: "confirmed",
+    featured: [{ name: "Daring Tact", zh: "谋勇兼备", img: "pcr/daring-tact", isNew: true }],
+    note: {en: "Uma Musume collab (limited)", zh: "赛马娘联动（限定）"},
+  },
+  {
+    game: "pcr_jp", label: {en: "Pick-up", zh: "UP卡池"},
+    start: "2026-11-30", end: "2026-12-15", status: "projected",
+    featured: [{ name: "TBA" }],
+    note: {en: "Christmas limited; projected from the yearly cycle (2025: Nov 30 – Dec 15)", zh: "圣诞限定；按往年周期推算"},
+  },
+  {
+    game: "pcr_jp", label: {en: "Pick-up", zh: "UP卡池"},
+    start: "2026-12-15", end: "2026-12-21", status: "projected",
+    featured: [{ name: "TBA" }],
+    note: {en: "Second Christmas limited; projected from the yearly cycle", zh: "第二位圣诞限定；按往年周期推算"},
+  },
+  {
+    game: "pcr_jp", label: {en: "Princess Fes", zh: "公主庆典"},
+    start: "2026-12-31", end: "2027-01-03", status: "projected",
+    featured: [{ name: "TBA" }],
+    note: {en: "Year-end Princess Fes; projected from the yearly cycle", zh: "跨年公主庆典；按往年周期推算"},
+  },
+  {
+    game: "pcr_jp", label: {en: "Pick-up", zh: "UP卡池"},
+    start: "2027-01-03", end: "2027-01-15", status: "projected",
+    featured: [{ name: "TBA" }],
+    note: {en: "New Year limited; projected from the yearly cycle", zh: "新年限定；按往年周期推算"},
   },
 
   /* ───────────── Princess Connect! Re:Dive (CN) ───────────── */
   {
     game: "pcr_cn", label: {en: "Princess Fes", zh: "公主庆典"},
-    start: "2026-10-30", end: "2026-11-06", status: "projected",
+    start: "2026-10-30", end: "2026-11-02", status: "projected",
     featured: [{ name: "Arachne", zh: "阿拉克涅", img: "pcr/arachne", isNew: true }],
-    note: {en: "Limited; end date estimated", zh: "期间限定，结束日期为预估"},
+    note: {en: "Limited; end date estimated from JP (3-day Fes)", zh: "期间限定，结束日期按日服推算"},
   },
   {
     game: "pcr_cn", label: {en: "Pick-up", zh: "精选扭蛋"},
@@ -1138,9 +1214,39 @@ window.BANNERS = [
   },
   {
     game: "pcr_cn", label: {en: "Pick-up", zh: "精选扭蛋"},
-    start: "2026-11-13", end: "2026-11-27", status: "projected",
+    start: "2026-11-13", end: "2026-11-28", status: "projected",
     featured: [{ name: "Nana", zh: "纳娜", img: "pcr/nana", isNew: true }],
     note: {en: "New character; end date estimated", zh: "新角色，结束日期为预估"},
+  },
+  {
+    game: "pcr_cn", label: {en: "Pick-up", zh: "精选扭蛋"},
+    start: "2026-11-29", end: "2026-12-13", status: "projected",
+    featured: [{ name: "Yui (Christmas)", zh: "优衣（圣诞节）", img: "pcr/yui-christmas", isNew: true }],
+    note: {en: "Projected from the JP schedule one year earlier", zh: "按日服一年前的排期推算"},
+  },
+  {
+    game: "pcr_cn", label: {en: "Pick-up", zh: "精选扭蛋"},
+    start: "2026-12-14", end: "2026-12-20", status: "projected",
+    featured: [{ name: "Misora (Christmas)", img: "pcr/misora-christmas", isNew: true }],
+    note: {en: "Projected from the JP schedule one year earlier", zh: "按日服一年前的排期推算"},
+  },
+  {
+    game: "pcr_cn", label: {en: "Princess Fes", zh: "公主庆典"},
+    start: "2026-12-30", end: "2027-01-02", status: "projected",
+    featured: [{ name: "Kokkoro (Kyoudou Youkun)", img: "pcr/kokkoro-kyoudou-youkun", isNew: true }],
+    note: {en: "Projected from the JP schedule one year earlier", zh: "按日服一年前的排期推算"},
+  },
+  {
+    game: "pcr_cn", label: {en: "Pick-up", zh: "精选扭蛋"},
+    start: "2027-01-02", end: "2027-01-13", status: "projected",
+    featured: [{ name: "Shizuru (New Year)", zh: "静流（新年）", img: "pcr/shizuru-new-year", isNew: true }],
+    note: {en: "Projected from the JP schedule one year earlier", zh: "按日服一年前的排期推算"},
+  },
+  {
+    game: "pcr_cn", label: {en: "Pick-up", zh: "精选扭蛋"},
+    start: "2027-01-14", end: "2027-01-29", status: "projected",
+    featured: [{ name: "Rino (New Year)", zh: "璃乃（新年）", img: "pcr/rino-new-year", isNew: true }],
+    note: {en: "Projected from the JP schedule one year earlier", zh: "按日服一年前的排期推算"},
   },
 
   /* ───────────── Project Sekai (JP) ───────────── */
@@ -1319,8 +1425,21 @@ window.BANNERS = [
     note: {en: "The Reign of Flames Undying", zh: "赫多涅 限时征集"},
   },
   {
+    game: "r1999", label: {en: "Special: Ripples on the Water", zh: "特殊征集（3.9自选·6选1）"},
+    start: "2026-11-05", end: "2026-12-16", status: "confirmed",
+    featured: [
+      { name: "Moldir", img: "r1999/moldir" },
+      { name: "Noire", img: "r1999/noire" },
+      { name: "Regulus", zh: "星锑", img: "r1999/regulus" },
+      { name: "Melania", zh: "梅兰妮", img: "r1999/melania" },
+      { name: "Recoleta", img: "r1999/recoleta" },
+      { name: "Hissabeth", img: "r1999/hissabeth" },
+    ],
+    note: {en: "3.9 selector: pick 1 of 6 to rate up", zh: "3.9自选：6选1提升概率"},
+  },
+  {
     game: "r1999", label: {en: "Rerun", zh: "复刻征集"},
-    start: "2026-11-17", end: "2026-11-30", status: "projected",
+    start: "2026-11-17", end: "2026-11-30", status: "confirmed",
     featured: [
       { name: "Brume", zh: "灰调蓝", img: "r1999/brume" },
       { name: "Horropedia", zh: "恐怖通", img: "r1999/horropedia" },
@@ -1347,6 +1466,22 @@ window.BANNERS = [
       { name: "Balloon Party", zh: "气球派对", img: "r1999/balloon-party" },
     ],
     note: {en: "Deciphering Reality", zh: "哑谜 复刻征集"},
+  },
+  {
+    game: "r1999", label: {en: "Special: Boon of the Water", zh: "特殊征集（3.9自选·9选3）"},
+    start: "2026-12-01", end: "2026-12-16", status: "confirmed",
+    featured: [
+      { name: "Ulrich", zh: "乌尔里希", img: "r1999/ulrich" },
+      { name: "Corvus", img: "r1999/corvus" },
+      { name: "Igor", img: "r1999/igor" },
+      { name: "Marsha", img: "r1999/marsha" },
+      { name: "Barcarola", img: "r1999/barcarola" },
+      { name: "Aleph", zh: "阿莱夫", img: "r1999/aleph" },
+      { name: "Lorentz Butterfly", img: "r1999/lorentz-butterfly" },
+      { name: "Charon", img: "r1999/charon" },
+      { name: "Recoleta", img: "r1999/recoleta" },
+    ],
+    note: {en: "3.9 selector: pick 3 of 9 to rate up", zh: "3.9自选：9选3提升概率"},
   },
   {
     game: "r1999", label: {en: "Rerun", zh: "复刻征集"},
@@ -1411,13 +1546,13 @@ window.BANNERS = [
     game: "azurlane_en", label: {en: "Event construction", zh: "限时建造"},
     start: "2026-12-17", end: "2027-01-06", status: "projected",
     featured: [{ name: "TBA" }],
-    note: {en: "New Year UR event (ships not announced yet)", zh: "新年UR大型活动（舰船待公布）"},
+    note: {en: "New Year UR event (projected from last year's Dec 18 – Jan 7 cycle; ships not announced yet)", zh: "新年UR大型活动（按去年周期推算，舰船待公布）"},
   },
 
   /* ───────────── Azur Lane (CN) ───────────── */
   {
     game: "azurlane_cn", label: {en: "Event construction", zh: "限时建造"},
-    start: "2026-10-22", end: "2026-11-05", status: "confirmed",
+    start: "2026-10-22", end: "2026-11-04", status: "confirmed",
     featured: [
       { name: "Merkuriy", zh: "水星号", img: "azurlane/merkuriy", isNew: true },
       { name: "Selimiye", zh: "塞利米耶号", img: "azurlane/selimiye", isNew: true },
@@ -1428,9 +1563,9 @@ window.BANNERS = [
   },
   {
     game: "azurlane_cn", label: {en: "Event construction", zh: "限时建造"},
-    start: "2026-12-17", end: "2027-01-07", status: "projected",
+    start: "2026-12-17", end: "2027-01-06", status: "projected",
     featured: [{ name: "TBA" }],
-    note: {en: "New Year UR event (ships not announced yet)", zh: "新年UR大型活动（舰船待公布）"},
+    note: {en: "New Year UR event (projected from last year's Dec 18 – Jan 7 cycle; ships not announced yet)", zh: "新年UR大型活动（按去年周期推算，舰船待公布）"},
   },
 
   /* ───────────── BanG Dream! Our Notes ───────────── */
