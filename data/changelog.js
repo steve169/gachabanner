@@ -4,6 +4,13 @@
  */
 window.CHANGELOG = [
   {
+    version: "1.13", date: "2026-11-20",
+    changes: [
+      { en: "New \"Today\" button (bottom right) jumps to today's banners; a Today line marks where today begins.", zh: "新增「今天」按钮（右下角），一键跳转到今天的卡池，并用「今天」分隔线标出位置。" },
+      { en: "Banner refresh for every game: dates corrected, newly announced banners added and projections confirmed where official, with 200+ new character images.", zh: "全部游戏卡池更新：修正日期、补充新公布的卡池、确认官方已公布的预测卡池，新增200余张角色图片。" },
+    ],
+  },
+  {
     version: "1.12", date: "2026-11-15",
     changes: [
       { en: "Uma Musume (JP): Daring Tact limited banner from Nov 16.", zh: "赛马娘（日服）：谋勇兼备限定卡池11月16日开启。" },

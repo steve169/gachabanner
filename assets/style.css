@@ -401,3 +401,23 @@ header, nav, section, main, footer { position: relative; z-index: 1; max-width: 
 }
 @media (prefers-reduced-motion: reduce) { .hint { animation: none; } }
 #selected-icons, #live-icons { cursor: pointer; }
+
+/* ───── Jump to today ───── */
+.to-today {
+  position: fixed; right: 20px; bottom: 20px; z-index: 8;
+  display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+  font: inherit; font-weight: 700; font-size: 15px; color: #0b1030;
+  padding: 11px 18px 11px 14px; border-radius: 999px; border: 0;
+  background: linear-gradient(90deg, #ffe08a, #ffc04d);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .45), 0 0 0 1px rgba(255, 255, 255, .25) inset;
+  transition: transform .15s, box-shadow .15s;
+}
+.to-today:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0, 0, 0, .5), 0 0 0 1px rgba(255, 255, 255, .35) inset; }
+.to-today svg { width: 18px; height: 18px; }
+.today-marker { display: flex; align-items: center; gap: 12px; margin: 6px 0 16px; color: var(--gold); font-weight: 700; font-size: 13px; letter-spacing: .08em; scroll-margin-top: 90px; }
+.today-marker::before, .today-marker::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+.today-marker span { padding: 3px 12px; border-radius: 999px; border: 1px solid rgba(255, 209, 102, .5); background: rgba(255, 209, 102, .08); }
+.flash { animation: flash 1.6s ease-out; border-radius: 12px; }
+@keyframes flash { 0% { background: rgba(255, 209, 102, .28); } 100% { background: transparent; } }
+@media (max-width: 640px) { .to-today { right: 14px; bottom: 14px; padding: 10px 14px 10px 12px; font-size: 14px; } }
+@media (prefers-reduced-motion: reduce) { .flash { animation: none; } }
