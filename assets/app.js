@@ -13,6 +13,9 @@
       rangeNote: "key banner dates at a glance",
       showPast: "Show past",
       onlyUpcoming: "Only upcoming banners",
+      jumpToday: "Today",
+      jumpTodayTitle: "Jump to today's banners",
+      todayLine: (d) => `Today · ${d}`,
       emptyUpcoming: "No upcoming banners for the selected games.",
       games: "Games",
       filterOpen: "Choose", filterClose: "Done",
@@ -68,6 +71,9 @@
       rangeNote: "关键节点一览",
       showPast: "显示已结束",
       onlyUpcoming: "仅显示未开始的卡池",
+      jumpToday: "今天",
+      jumpTodayTitle: "跳转到今天的卡池",
+      todayLine: (d) => `今天 · ${d}`,
       emptyUpcoming: "所选游戏暂无未开始的卡池。",
       games: "游戏筛选",
       filterOpen: "选择", filterClose: "完成",
@@ -406,6 +412,8 @@
     document.getElementById("foot-text").textContent = t.foot((window.CHANGELOG && window.CHANGELOG[0] && window.CHANGELOG[0].date) || window.LAST_UPDATED || "");
     renderHistory();
     syncToggleText();
+    document.getElementById("to-today-label").textContent = t.jumpToday;
+    toToday.title = t.jumpTodayTitle;
 
     const total = Object.keys(GAMES).length;
     const shownKeys = Object.keys(GAMES).filter(shown);
@@ -448,7 +456,9 @@
       if (!byDay.has(b.start)) byDay.set(b.start, []);
       byDay.get(b.start).push(b);
     }
-    let html = "", curMonth = "";
+    let html = "", curMonth = "", markerDone = false;
+    // A "Today" line goes before the first day that starts today or later; the Today button jumps to it.
+    const todayLine = () => `<div class="today-marker" id="today-marker"><span>${esc(t.todayLine(t.date(today)))}</span></div>`;
     for (const [day, items] of byDay) {
       const d = parse(day), mKey = day.slice(0, 7);
       if (mKey !== curMonth) {
@@ -457,16 +467,28 @@
         html += `<section class="month"><h2>${t.monthHead(d)}</h2>`;
       }
       const isToday = +d === +today;
+      if (!markerDone && d >= today) { markerDone = true; if (!isToday) html += todayLine(); }
       const isPast = items.every((b) => parse(b.end) < today);
       html += `
-        <div class="day${isToday ? " today" : ""}${isPast ? " past" : ""}">
+        <div class="day${isToday ? " today" : ""}${isPast ? " past" : ""}"${isToday ? ' id="today-marker"' : ""}>
           <div class="day-label"><div class="num">${String(d.getDate()).padStart(2, "0")}</div><div class="wd">${t.weekday(d)}${isToday ? ` · <em>${t.today}</em>` : ""}</div></div>
           <div class="cards">${items.map((b) => card(b)).join("")}</div>
         </div>`;
     }
-    if (curMonth) html += "</section>";
+    if (curMonth) { if (!markerDone) html += todayLine(); html += "</section>"; }
     document.getElementById("calendar").innerHTML = html || `<p class="empty">${esc(state.onlyUpcoming ? t.emptyUpcoming : t.empty)}</p>`;
   }
+
+  /* ── jump to today ── */
+  const toToday = document.getElementById("to-today");
+  toToday.onclick = () => {
+    const el = document.getElementById("today-marker");
+    if (!el) return;
+    const bar = document.querySelector(".toolbar");
+    const offset = (bar && getComputedStyle(bar).position === "sticky" ? bar.offsetHeight : 0) + 12;
+    window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - offset, behavior: "smooth" });
+    el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash");
+  };
 
   /* ── version badge + update history ── */
   const CHANGELOG = window.CHANGELOG || [];
