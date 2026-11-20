@@ -59,7 +59,6 @@ window.GAMES = {
   ournotes: { name: { en: "BanG Dream! Our Notes", zh: "BanG Dream! Our Notes" },  glyph: "音", icon: "assets/icons/ournotes.webp", color: "#7aa2ff", short: "BDON" },
 };
 
-const RERUNS = { en: "Rerun banners", zh: "复刻卡池" };
 
 window.BANNERS = [
   /* ───────────── Genshin Impact ───────────── */
@@ -201,34 +200,56 @@ window.BANNERS = [
 
   /* ───────────── Wuthering Waves ───────────── */
   {
+    game: "wuwa", version: "3.7", phase: 2,
+    start: "2026-10-22", end: "2026-11-11", status: "confirmed",
+    featured: [
+      { name: "Suoming", zh: "锁暝", img: "wuwa/suoming", isNew: true },
+      { name: "Lucilla", zh: "洛瑟菈", img: "wuwa/lucilla" },
+      { name: "Lynae", zh: "琳奈", img: "wuwa/lynae", element: "spectro" },
+    ],
+    weapons: ["Unspoken Rue", "Freeze Frame", "Spectrum Blaster"],
+  },
+  {
     game: "wuwa", version: "3.8", phase: 1,
-    start: "2026-11-12", end: "2026-12-03", status: "confirmed",
+    start: "2026-11-12", end: "2026-12-02", status: "confirmed",
     featured: [
       { name: "Lily", zh: "莉莉", img: "wuwa/lily", isNew: true, element: "spectro" },
       { name: "Sigrika", zh: "西格莉卡", img: "wuwa/sigrika" },
       { name: "Qiuyuan", zh: "仇远", img: "wuwa/qiuyuan" },
     ],
-    weapons: ["Lullaby"],
+    weapons: ["Lullaby", "Emerald Sentence", "Solsworn Ciphers"],
     note: {en: "New version launch", zh: "新版本上线"},
   },
   {
     game: "wuwa", version: "3.8", phase: 2,
-    start: "2026-12-03", end: "2026-12-21", status: "confirmed",
+    start: "2026-12-03", end: "2026-12-20", status: "confirmed",
     featured: [
       { name: "Yangyang: Xuanling", zh: "秧秧·玄翎", img: "wuwa/yangyang-xuanling" },
       { name: "Suisui", zh: "穗穗", img: "wuwa/suisui" },
       { name: "Hiyuki", zh: "绯雪", img: "wuwa/hiyuki" },
     ],
+    weapons: ["Azure Oath", "Frostburn", "Firstlight's Herald"],
     note: {en: "Rerun banners", zh: "复刻卡池"},
   },
   {
     game: "wuwa", version: "3.9", phase: 1,
-    start: "2026-12-22", end: "2027-01-12", status: "projected",
+    start: "2026-12-21", end: "2027-01-10", status: "projected",
     featured: [{ name: "TBA" }],
     note: {en: "New version launch", zh: "新版本上线"},
   },
+  {
+    game: "wuwa", version: "3.9", phase: 2,
+    start: "2027-01-11", end: "2027-01-31", status: "projected",
+    featured: [{ name: "TBA" }],
+  },
 
   /* ───────────── Arknights: Endfield ───────────── */
+  {
+    game: "endfield", version: "1.6", phase: 1,
+    start: "2026-10-15", end: "2026-11-04", status: "confirmed",
+    featured: [{ name: "Si", zh: "祀", img: "endfield/si", isNew: true }],
+    note: {en: "New version launch", zh: "新版本上线"},
+  },
   {
     game: "endfield", version: "1.6",
     start: "2026-10-29", end: "2026-11-19", status: "confirmed",
@@ -237,18 +258,36 @@ window.BANNERS = [
   },
   {
     game: "endfield", version: "1.6", phase: 2,
-    start: "2026-11-05", end: "2026-11-25", status: "confirmed",
+    start: "2026-11-05", end: "2026-11-24", status: "confirmed",
     featured: [{ name: "Argent Flow", zh: "明河", img: "endfield/argent-flow", isNew: true }],
     weapons: ["Lunar Calling"],
+    note: {en: "Chartered Headhunting: The Hearth Fire Beckons the Starry Flow"},
   },
   {
     game: "endfield", version: "1.7", phase: 1,
-    start: "2026-11-25", end: "2026-12-16", status: "projected",
+    start: "2026-11-25", end: "2026-12-15", status: "projected",
     featured: [{ name: "Kay", img: "endfield/kay", isNew: true }],
+    note: {en: "New version launch", zh: "新版本上线"},
+  },
+  {
+    game: "endfield", version: "1.7", phase: 2,
+    start: "2026-12-16", end: "2027-01-05", status: "projected",
+    featured: [{ name: "TBA" }],
+  },
+  {
+    game: "endfield", version: "1.8", phase: 1,
+    start: "2027-01-06", end: "2027-01-26", status: "projected",
+    featured: [{ name: "TBA" }],
     note: {en: "New version launch", zh: "新版本上线"},
   },
 
   /* ───────────── Neverness to Everness ───────────── */
+  {
+    game: "nte", version: "1.4", phase: 2,
+    start: "2026-10-21", end: "2026-11-10", status: "confirmed",
+    featured: [{ name: "Akane Rin", zh: "明音凛", img: "nte/akane-rin", isNew: true }],
+    note: {en: "Dazzling Star", zh: "Dazzling Star"},
+  },
   {
     game: "nte", version: "1.5", phase: 1,
     start: "2026-11-11", end: "2026-12-01", status: "confirmed",
@@ -261,28 +300,29 @@ window.BANNERS = [
   },
   {
     game: "nte", version: "1.5", phase: 2,
-    start: "2026-12-02", end: "2026-12-22", status: "projected",
+    start: "2026-12-02", end: "2026-12-22", status: "confirmed",
     featured: [
       { name: "Exe", img: "nte/exe", isNew: true },
       { name: "Chaos", zh: "卡厄斯", img: "nte/chaos" },
     ],
+    note: {en: "Announced in the 1.5 preview; Chaos is a rerun (Forsaken Path)", zh: "1.5版本前瞻公布；卡厄斯为复刻"},
+  },
+  {
+    game: "nte", version: "1.6", phase: 1,
+    start: "2026-12-23", end: "2027-01-12", status: "projected",
+    featured: [{ name: "TBA" }],
+    note: {en: "New version launch", zh: "新版本上线"},
+  },
+  {
+    game: "nte", version: "1.6", phase: 2,
+    start: "2027-01-13", end: "2027-02-02", status: "projected",
+    featured: [{ name: "TBA" }],
   },
 
   /* ───────────── Girls' Frontline 2 (CN) ───────────── */
   {
     game: "gfl2_cn", label: {en: "Targeted Procurement", zh: "定向采购"},
-    start: "2026-10-13", end: "2026-11-03", status: "confirmed",
-    featured: [
-      { name: "Igla", zh: "针", img: "gfl2/igla", isNew: true },
-      { name: "Eagletta", zh: "伊格蕾塔", img: "gfl2/eagletta" },
-      { name: "Sextans", zh: "六分仪", img: "gfl2/sextans" },
-      { name: "Groza", zh: "OTs-14", img: "gfl2/groza" },
-    ],
-    note: {en: "Silent Synapse Part 2", zh: "静默突触·下篇"},
-  },
-  {
-    game: "gfl2_cn", label: {en: "Targeted Procurement", zh: "定向采购"},
-    start: "2026-11-03", end: "2026-11-24", status: "confirmed",
+    start: "2026-11-03", end: "2026-11-23", status: "confirmed",
     featured: [
       { name: "Destroyer", zh: "破坏者", img: "gfl2/destroyer", isNew: true },
       { name: "Cecilia", zh: "希丽雅", img: "gfl2/cecilia" },
@@ -292,17 +332,23 @@ window.BANNERS = [
     note: {en: "Heat Death Paradox", zh: "热寂悖论"},
   },
   {
+    game: "gfl2_cn", label: {en: "Targeted Procurement", zh: "定向采购"},
+    start: "2026-11-24", end: "2026-12-14", status: "projected",
+    featured: [{ name: "Kuro", zh: "卡萝", img: "gfl2/kuro", isNew: true }],
+    note: {en: "New doll Kuro revealed Nov 18; banner dates estimated (previous banner ends Nov 24 08:59)", zh: "新人形卡萝已于11月18日公布；日期为推测（上期11月24日08:59结束）"},
+  },
+  {
     game: "gfl2_cn", label: {en: "Collab", zh: "联动"},
-    start: "2026-11-24", end: "2026-12-15", status: "projected",
+    start: "2026-12-15", end: "2027-01-04", status: "projected",
     featured: [
       { name: "Rikka Takarada", zh: "宝多六花", img: "gfl2/rikka-takarada", isNew: true },
       { name: "Akane Shinjo", zh: "新条茜", img: "gfl2/akane-shinjo", isNew: true },
     ],
-    note: {en: "SSSS.GRIDMAN collab (announced as coming soon; dates estimated)", zh: "《SSSS.古立特》联动（已公布即将上线，日期为推测）"},
+    note: {en: "SSSS.GRIDMAN collab (characters revealed Nov 12; dates not yet announced, estimated)", zh: "《SSSS.古立特》联动（11月12日公布联动角色，日期未公布，为推测）"},
   },
   {
     game: "gfl2_cn", label: {en: "Targeted Procurement", zh: "定向采购"},
-    start: "2026-12-15", end: "2027-01-05", status: "projected",
+    start: "2027-01-05", end: "2027-01-25", status: "projected",
     featured: [{ name: "TBA" }],
     note: {en: "Estimated from the usual 3-week cycle; dolls not announced", zh: "按三周节奏推测，人形待公布"},
   },
@@ -322,15 +368,26 @@ window.BANNERS = [
   },
   {
     game: "gfl2", label: {en: "2nd Anniversary", zh: "二周年"},
-    start: "2026-11-19", end: "2026-12-09", status: "leak",
-    featured: [{ name: "Koleda", zh: "克莱妲", img: "gfl2/koleda", isNew: true }],
-    note: {en: "Siege of Iliad, Part 1", zh: "Siege of Iliad 上篇"},
+    start: "2026-11-19", end: "2026-12-09", status: "confirmed",
+    featured: [
+      { name: "Koleda", zh: "克莱妲", img: "gfl2/koleda", isNew: true },
+      { name: "Groza", zh: "OTs-14", img: "gfl2/groza" },
+      { name: "Nikketa", zh: "妮基塔", img: "gfl2/nikketa" },
+    ],
+    weapons: ["Chernobog", "Capitoline", "Guardian Silverwing"],
+    note: {en: "Iliad, Part 1 (Update 11/18)", zh: "Iliad 上篇（11/18更新）"},
   },
   {
     game: "gfl2", label: {en: "2nd Anniversary", zh: "二周年"},
     start: "2026-12-10", end: "2026-12-30", status: "leak",
     featured: [{ name: "Asteria", zh: "阿斯缇亚", img: "gfl2/asteria", isNew: true }],
-    note: {en: "Siege of Iliad, Part 2", zh: "Siege of Iliad 下篇"},
+    note: {en: "Iliad, Part 2 (lineup leaked; next update Dec 30)", zh: "Iliad 下篇（阵容为爆料；12月30日更新）"},
+  },
+  {
+    game: "gfl2", label: {en: "Targeted Procurement", zh: "定向采购"},
+    start: "2026-12-31", end: "2027-01-20", status: "projected",
+    featured: [{ name: "TBA" }],
+    note: {en: "Estimated from the 3-week cycle after the Dec 30 update", zh: "按12月30日更新后三周节奏推测"},
   },
 
   /* ───────────── Madoka Magica Exedra ───────────── */
@@ -426,14 +483,36 @@ window.BANNERS = [
 
   /* ───────────── FGO (JP) ───────────── */
   {
+    game: "fgo_jp", label: {en: "Samurai Remnant rerun: Raikou / Ushi Gozen", zh: "复刻 Fate/Samurai Remnant联动 源赖光／丑御前推荐召唤"},
+    start: "2026-10-16", end: "2026-11-04", status: "confirmed",
+    featured: [{ name: "Minamoto-no-Raikou / Ushi Gozen", zh: "源赖光／丑御前", img: "fgo/raikou-ushi-gozen" }],
+  },
+  {
+    game: "fgo_jp", label: {en: "Grand Substitute: Tamamo Aria", zh: "冠位名代战 玉藻Aria推荐召唤"},
+    start: "2026-10-23", end: "2026-11-11", status: "confirmed",
+    featured: [{ name: "Tamamo Aria", img: "fgo/tamamo-aria", isNew: true }],
+    note: {en: "New Rider", zh: "新从者"},
+  },
+  {
+    game: "fgo_jp", label: {en: "FGO THE DRAMALOGUE pick-up", zh: "「FGO THE DRAMALOGUE」公演纪念推荐召唤"},
+    start: "2026-10-30", end: "2026-11-06", status: "confirmed",
+    featured: [
+      { name: "U-Olga Marie", zh: "Ｕ－奥尔加玛丽", img: "fgo/u-olga-marie" },
+      { name: "Tezcatlipoca", zh: "特斯卡特利波卡", img: "fgo/tezcatlipoca" },
+      { name: "Medusa (Saber)", zh: "美杜莎(Saber)", img: "fgo/medusa-saber" },
+    ],
+    note: {en: "29 servants across 14 banners", zh: "14个卡池共29骑"},
+  },
+  {
     game: "fgo_jp", label: {en: "GUDAGUDA prerelease", zh: "唠唠叨叨开幕前夕"},
     start: "2026-11-04", end: "2026-11-18", status: "confirmed",
     featured: [
       { name: "Kondo Isami", zh: "近藤勇", img: "fgo/kondo" },
+      { name: "Kawakami Gensai", zh: "河上彦斋", img: "fgo/kawakami-gensai" },
       { name: "Hijikata Toshizo", zh: "土方岁三", img: "fgo/hijikata" },
       { name: "Okita Souji", zh: "冲田总司", img: "fgo/okita" },
     ],
-    note: {en: "Daily rotating pick-ups", zh: "每日替换"},
+    note: {en: "9 servants across 4 banners", zh: "4个卡池共9骑"},
   },
   {
     game: "fgo_jp", label: {en: "100M Downloads", zh: "全世界1亿下载纪念"},
@@ -445,8 +524,8 @@ window.BANNERS = [
     game: "fgo_jp", label: {en: "GUDAGUDA Midwinter Swimsuit", zh: "严冬泳装特辑 唠唠叨叨"},
     start: "2026-11-11", end: "2026-12-02", status: "confirmed",
     featured: [
-      { name: "Himiko & Iyo", zh: "卑弥呼＆壹与", img: "fgo/himiko-iyo", isNew: true },
-      { name: "Saika Magoichi (Rider)", zh: "杂贺孙一(Rider)", img: "fgo/saika-rider", isNew: true },
+      { name: "Himiko & Iyo", img: "fgo/himiko-iyo", isNew: true },
+      { name: "Saika Magoichi (Rider)", img: "fgo/saika-rider", isNew: true },
     ],
     note: {en: "New event", zh: "新活动"},
   },
@@ -455,14 +534,76 @@ window.BANNERS = [
     start: "2026-11-13", end: "2026-12-02", status: "confirmed",
     featured: [
       { name: "Takasugi Shinsaku", zh: "高杉晋作", img: "fgo/takasugi" },
-      { name: "Okita Souji (Alter) (Saber)", zh: "冲田总司〔Alter〕(Saber)", img: "fgo/okita-alter-saber" },
-      { name: "Okita J. Souji", zh: "冲田·J·总司", img: "fgo/okita-j" },
+      { name: "Okita Souji (Alter) (Saber)", img: "fgo/okita-alter-saber" },
+      { name: "Okita J. Souji", img: "fgo/okita-j" },
       { name: "Saito Hajime", zh: "斋藤一", img: "fgo/saito" },
     ],
     note: {en: "Daily rotating pick-ups", zh: "每日替换"},
   },
+  {
+    game: "fgo_jp", label: {en: "GUDAGUDA: Dynamite Rikyu", zh: "唠唠叨叨 炸药利休推荐召唤"},
+    start: "2026-11-16", end: "2026-12-02", status: "confirmed",
+    featured: [
+      { name: "Dynamite Rikyu", img: "fgo/dynamite-rikyu", isNew: true },
+      { name: "Saika Magoichi (Rider)", img: "fgo/saika-rider", isNew: true },
+    ],
+    note: {en: "New Foreigner", zh: "新从者"},
+  },
+  {
+    game: "fgo_jp", label: {en: "GUDAGUDA Pick-up 4", zh: "唠唠叨叨 推荐召唤4"},
+    start: "2026-11-18", end: "2026-12-02", status: "confirmed",
+    featured: [
+      { name: "Sen-no-Rikyu", zh: "千利休", img: "fgo/sen-no-rikyu" },
+      { name: "Uesugi Kenshin", zh: "上杉谦信", img: "fgo/uesugi-kenshin" },
+      { name: "Takeda Harunobu", zh: "武田晴信", img: "fgo/takeda-harunobu" },
+      { name: "Izumo-no-Okuni", zh: "出云阿国", img: "fgo/izumo-no-okuni" },
+    ],
+    note: {en: "8 servants across 5 banners", zh: "5个卡池共8骑"},
+  },
+  {
+    game: "fgo_jp", label: {en: "Witch on the Holy Night movie", zh: "剧场版「魔法使之夜」公开纪念"},
+    start: "2026-11-20", end: "2026-12-04", status: "confirmed",
+    featured: [
+      { name: "Aozaki Aoko", zh: "苍崎青子", img: "fgo/aozaki-aoko" },
+      { name: "Kuonji Alice", zh: "久远寺有珠", img: "fgo/kuonji-alice" },
+    ],
+  },
+  {
+    game: "fgo_jp", label: {en: "Christmas 2026", zh: "圣诞节2026"},
+    start: "2026-12-09", end: "2026-12-23", status: "projected",
+    featured: [{ name: "TBA" }],
+    note: {en: "Estimated from past Christmas events", zh: "根据往年圣诞活动推测"},
+  },
+  {
+    game: "fgo_jp", label: {en: "New Year 2027", zh: "新年2027"},
+    start: "2027-01-01", end: "2027-01-14", status: "projected",
+    featured: [{ name: "TBA" }],
+    note: {en: "New Year pick-up + Lucky Bag (estimated)", zh: "新年推荐召唤+福袋（推测）"},
+  },
 
   /* ───────────── FGO (CN) ───────────── */
+  {
+    game: "fgo_cn", label: {en: "Final Halloween 2026", zh: "终结·万圣节2026"},
+    start: "2026-10-22", end: "2026-11-13", status: "confirmed",
+    featured: [
+      { name: "Elisabeth Báthory (Lancer)", zh: "伊丽莎白·巴托里", img: "fgo/elisabeth-bathory-lancer", isNew: true },
+    ],
+    note: {en: "New SSR", zh: "新从者"},
+  },
+  {
+    game: "fgo_cn", label: {en: "Road to Finale: Lostbelt 6", zh: "Road to 终章 第6章篇纪念"},
+    start: "2026-11-03", end: "2026-11-09", status: "confirmed",
+    featured: [
+      { name: "Morgan", zh: "摩根", img: "fgo/morgan" },
+      { name: "Tam Lin Gawain", zh: "妖精骑士高文", img: "fgo/tam-lin-gawain" },
+    ],
+  },
+  {
+    game: "fgo_cn", label: {en: "Grand Duel: Lancer & Extra", zh: "冠位戴冠战：Lancer＆Extra"},
+    start: "2026-11-05", end: "2026-11-13", status: "confirmed",
+    featured: [{ name: "Lancer-class servants", zh: "Lancer职阶从者", img: "fgo-class/lancer", icon: true }],
+    note: {en: "Lancer and Extra-class servants", zh: "Lancer及Extra职阶从者"},
+  },
   {
     game: "fgo_cn", label: {en: "Grand Duel: Archer", zh: "冠位戴冠战：Archer"},
     start: "2026-11-05", end: "2026-11-21", status: "confirmed",
@@ -475,16 +616,16 @@ window.BANNERS = [
     note: {en: "Many servants across several banners", zh: "多个卡池"},
   },
   {
-    game: "fgo_cn", label: {en: "Road to Finale #7", zh: "Road to 终章 第7章篇纪念"},
-    start: "2026-11-10", end: "2026-11-17", status: "confirmed",
+    game: "fgo_cn", label: {en: "Road to Finale: Lostbelt 7", zh: "Road to 终章 第7章篇纪念"},
+    start: "2026-11-10", end: "2026-11-16", status: "confirmed",
     featured: [
       { name: "Tezcatlipoca", zh: "特斯卡特利波卡", img: "fgo/tezcatlipoca" },
       { name: "Nitocris (Alter)", zh: "尼托克丽丝〔Alter〕", img: "fgo/nitocris-alter" },
     ],
   },
   {
-    game: "fgo_cn", label: {en: "Road to Finale", zh: "Road to 终章 奏章Ⅰ篇纪念"},
-    start: "2026-11-17", end: "2026-11-24", status: "confirmed",
+    game: "fgo_cn", label: {en: "Road to Finale: Ordeal Call I", zh: "Road to 终章 奏章Ⅰ篇纪念"},
+    start: "2026-11-17", end: "2026-11-23", status: "confirmed",
     featured: [
       { name: "Medusa (Saber)", zh: "美杜莎(Saber)", img: "fgo/medusa-saber" },
       { name: "Duryodhana", zh: "难敌", img: "fgo/duryodhana" },
@@ -492,15 +633,15 @@ window.BANNERS = [
   },
   {
     game: "fgo_cn", label: {en: "Grand Duel: Rider & Assassin", zh: "冠位戴冠战：Rider＆Assassin"},
-    start: "2026-11-21", end: "2026-11-28", status: "projected",
+    start: "2026-11-21", end: "2026-11-28", status: "confirmed",
     featured: [
       { name: "Rider-class servants", zh: "Rider职阶从者", img: "fgo-class/rider", icon: true },
       { name: "Assassin-class servants", zh: "Assassin职阶从者", img: "fgo-class/assassin", icon: true },
     ],
   },
   {
-    game: "fgo_cn", label: {en: "Road to Finale #8", zh: "Road to 终章 第8次发布纪念"},
-    start: "2026-11-24", end: "2026-12-01", status: "projected",
+    game: "fgo_cn", label: {en: "Road to Finale: Ordeal Call II", zh: "Road to 终章 奏章Ⅱ篇纪念"},
+    start: "2026-11-24", end: "2026-11-30", status: "confirmed",
     featured: [
       { name: "The Count of Monte Cristo", zh: "岩窟王 基督山", img: "fgo/monte-cristo" },
       { name: "Alessandro di Cagliostro", zh: "亚历山德罗·迪·卡利奥斯特罗", img: "fgo/cagliostro" },
@@ -508,14 +649,14 @@ window.BANNERS = [
   },
   {
     game: "fgo_cn", label: {en: "Grand Duel: Caster", zh: "冠位戴冠战：Caster"},
-    start: "2026-11-24", end: "2026-12-10", status: "projected",
+    start: "2026-11-24", end: "2026-12-10", status: "confirmed",
     featured: [{ name: "Caster-class servants", zh: "Caster职阶从者", img: "fgo-class/caster", icon: true }],
   },
   {
     game: "fgo_cn", label: {en: "Road to Finale #9", zh: "Road to 终章 第9次发布纪念"},
-    start: "2026-12-01", end: "2026-12-08", status: "projected",
+    start: "2026-12-01", end: "2026-12-07", status: "projected",
     featured: [
-      { name: "BB Dubai", zh: "BB迪拜", img: "fgo/bb-dubai" },
+      { name: "BB Dubai", zh: "ＢＢ迪拜", img: "fgo/bb-dubai" },
       { name: "Tenochtitlan", zh: "特诺奇蒂特兰", img: "fgo/tenochtitlan" },
     ],
   },
@@ -530,11 +671,85 @@ window.BANNERS = [
   {
     game: "fgo_cn", label: {en: "Part 2 Final Chapter", zh: "「第2部 终章」开幕！"},
     start: "2026-12-10", end: "2026-12-20", status: "projected",
-    featured: [{ name: "TBA" }],
-    note: {en: "Finale launch pick-ups", zh: "英灵极点推荐召唤"},
+    featured: [
+      { name: "Morgan", zh: "摩根", img: "fgo/morgan" },
+      { name: "Lady Avalon", zh: "阿瓦隆女士", img: "fgo/lady-avalon" },
+      { name: "Space Ishtar", zh: "太空伊什塔尔", img: "fgo/space-ishtar" },
+    ],
+    note: {en: "Servant Apex pick-ups (19 servants per JP); all-servant pick-up to Dec 31", zh: "英灵极点推荐召唤（日服19骑）；从者全骑推荐召唤至12/31"},
+  },
+  {
+    game: "fgo_cn", label: {en: "New Year pick-up", zh: "新年推荐召唤"},
+    start: "2026-12-31", end: "2027-01-14", status: "projected",
+    featured: [
+      { name: "Lord Logres", img: "fgo/lord-logres", isNew: true },
+      { name: "Phantasmoon", zh: "Phantasmoon", img: "fgo/phantasmoon" },
+      { name: "Arjuna (Alter)", zh: "阿周那〔Alter〕", img: "fgo/arjuna-alter" },
+      { name: "Mélusine (Ruler)", zh: "梅柳齐娜", img: "fgo/melusine-ruler" },
+    ],
+    note: {en: "Daily rotation (15 servants) + New Year Lucky Bag", zh: "每日替换（15骑）+新年福袋"},
+  },
+  {
+    game: "fgo_cn", label: {en: "Fate/strange Fake anime", zh: "TV动画「Fate/strange Fake」播放纪念"},
+    start: "2027-01-03", end: "2027-01-16", status: "projected",
+    featured: [
+      { name: "Richard I", zh: "理查一世", img: "fgo/richard-i" },
+      { name: "Gilgamesh", zh: "吉尔伽美什", img: "fgo/gilgamesh" },
+      { name: "Enkidu", zh: "恩奇都", img: "fgo/enkidu" },
+    ],
+  },
+  {
+    game: "fgo_cn", label: {en: "Chaldea Flower Festival prerelease", zh: "「迦勒底·花神节」开幕前夕"},
+    start: "2027-01-13", end: "2027-01-27", status: "projected",
+    featured: [
+      { name: "Merlin", zh: "梅林", img: "fgo/merlin" },
+      { name: "Meltryllis", zh: "Meltryllis", img: "fgo/meltryllis" },
+      { name: "Kama", zh: "迦摩", img: "fgo/kama" },
+      { name: "Sen-no-Rikyu", zh: "千利休", img: "fgo/sen-no-rikyu" },
+    ],
+    note: {en: "Daily rotating pick-ups", zh: "每日替换"},
+  },
+  {
+    game: "fgo_cn", label: {en: "Chaldea Satellite Station 2026", zh: "「FGO 迦勒底卫星基站 2026」举办纪念"},
+    start: "2027-01-14", end: "2027-01-21", status: "projected",
+    featured: [{ name: "Dante Alighieri", zh: "但丁·阿利吉耶里", img: "fgo/dante-alighieri" }],
   },
 
   /* ───────────── FGO (NA) ───────────── */
+  {
+    game: "fgo_na", label: {en: "GUDAGUDA 2023 rerun", zh: "复刻 唠唠叨叨2023 龙马危机一发"},
+    start: "2026-10-16", end: "2026-11-05", status: "confirmed",
+    featured: [
+      { name: "Izumo-no-Okuni", zh: "出云阿国", img: "fgo/izumo-no-okuni" },
+      { name: "Sakamoto Ryouma (Lancer)", zh: "坂本龙马", img: "fgo/sakamoto-ryouma-lancer" },
+      { name: "Takasugi Shinsaku", zh: "高杉晋作", img: "fgo/takasugi" },
+    ],
+    note: {en: "Daily rotating pick-ups", zh: "每日替换"},
+  },
+  {
+    game: "fgo_na", label: {en: "GUDAGUDA rerun: Hijikata", zh: "复刻 唠唠叨叨 土方岁三推荐召唤2"},
+    start: "2026-10-18", end: "2026-10-25", status: "confirmed",
+    featured: [{ name: "Hijikata Toshizo", zh: "土方岁三", img: "fgo/hijikata" }],
+  },
+  {
+    game: "fgo_na", label: {en: "GUDAGUDA rerun FQ backup", zh: "复刻 唠唠叨叨 自由关卡支援"},
+    start: "2026-10-25", end: "2026-11-05", status: "confirmed",
+    featured: [
+      { name: "Sen-no-Rikyu", zh: "千利休", img: "fgo/sen-no-rikyu" },
+      { name: "Asagami Fujino", zh: "浅上藤乃", img: "fgo/asagami-fujino" },
+    ],
+  },
+  {
+    game: "fgo_na", label: {en: "Lostbelt 6 Clear Support", zh: "Lostbelt No.6 通关应援"},
+    start: "2026-10-31", end: "2026-11-11", status: "confirmed",
+    featured: [
+      { name: "Morgan", zh: "摩根", img: "fgo/morgan" },
+      { name: "Mélusine", zh: "妖精骑士兰斯洛特", img: "fgo/melusine" },
+      { name: "Baobhan Sith", zh: "妖精骑士崔斯坦", img: "fgo/baobhan-sith" },
+      { name: "Tam Lin Gawain", zh: "妖精骑士高文", img: "fgo/tam-lin-gawain" },
+    ],
+    note: {en: "Daily rotating pick-ups", zh: "每日替换"},
+  },
   {
     game: "fgo_na", label: {en: "Mystery House Crafters prerelease", zh: "Mystery House Crafters 开幕前夕"},
     start: "2026-11-05", end: "2026-11-14", status: "confirmed",
@@ -555,6 +770,94 @@ window.BANNERS = [
     start: "2026-11-13", end: "2026-12-03", status: "confirmed",
     featured: [{ name: "Tutankhamun", zh: "图坦卡蒙", img: "fgo/tutankhamun", isNew: true }],
     note: {en: "New event", zh: "新活动"},
+  },
+  {
+    game: "fgo_na", label: {en: "Mystery House Crafters Pick-up 2", zh: "Mystery House Crafters 推荐召唤2"},
+    start: "2026-11-14", end: "2026-11-24", status: "confirmed",
+    featured: [
+      { name: "Britomart", zh: "布里托玛特", img: "fgo/britomart" },
+      { name: "Demon King Nobunaga", zh: "织田信长", img: "fgo/demon-king-nobunaga" },
+      { name: "Nezha", zh: "莲偶", img: "fgo/nezha" },
+    ],
+    note: {en: "Daily rotating pick-ups", zh: "每日替换"},
+  },
+  {
+    game: "fgo_na", label: {en: "Thanksgiving 2026", zh: "感恩节2026"},
+    start: "2026-11-20", end: "2026-11-26", status: "confirmed",
+    featured: [
+      { name: "Ibuki-Douji (Berserker)", zh: "伊吹童子", img: "fgo/ibuki-douji-berserker" },
+      { name: "Wandjina", zh: "旺吉娜", img: "fgo/wandjina" },
+      { name: "Miss Crane", zh: "克莱恩小姐", img: "fgo/miss-crane" },
+      { name: "Uesugi Kenshin", zh: "上杉谦信", img: "fgo/uesugi-kenshin" },
+    ],
+    note: {en: "Daily rotation, 7 servants", zh: "每日替换，共7骑"},
+  },
+  {
+    game: "fgo_na", label: {en: "Interlude Campaign 21: Hai Bà Trưng", zh: "幕间物语活动21 征氏姐妹推荐召唤"},
+    start: "2026-11-20", end: "2026-11-26", status: "confirmed",
+    featured: [{ name: "Hai Bà Trưng", zh: "征氏姐妹", img: "fgo/hai-ba-trung" }],
+  },
+  {
+    game: "fgo_na", label: {en: "Part 2 Clear Backup Guaranteed Summon Vol. 2", zh: "第2部通关应援 确定召唤 Vol.2"},
+    start: "2026-11-20", end: "2026-12-19", status: "confirmed",
+    featured: [{ name: "Mélusine", zh: "妖精骑士兰斯洛特", img: "fgo/melusine" }],
+    note: {en: "Paid guaranteed limited Part 2 SSR", zh: "付费确定获得第2部限定★5"},
+  },
+  {
+    game: "fgo_na", label: {en: "Interlude Campaign 21: Durgā", zh: "幕间物语活动21 杜尔伽推荐召唤"},
+    start: "2026-11-22", end: "2026-11-29", status: "confirmed",
+    featured: [{ name: "Durgā", zh: "杜尔伽", img: "fgo/durga" }],
+  },
+  {
+    game: "fgo_na", label: {en: "Mystery House Crafters Pick-up 3", zh: "Mystery House Crafters 推荐召唤3"},
+    start: "2026-11-24", end: "2026-12-03", status: "projected",
+    featured: [
+      { name: "Super Bunyan", zh: "超级班扬", img: "fgo/super-bunyan" },
+      { name: "Van Gogh", zh: "梵高", img: "fgo/van-gogh" },
+    ],
+    note: {en: "Daily rotation; dates estimated from JP", zh: "每日替换；日期按日服推测"},
+  },
+  {
+    game: "fgo_na", label: {en: "Lostbelt 7 Clear Campaign", zh: "Lostbelt No.7 通关纪念"},
+    start: "2026-11-30", end: "2026-12-15", status: "projected",
+    featured: [
+      { name: "Tezcatlipoca", zh: "特斯卡特利波卡", img: "fgo/tezcatlipoca" },
+      { name: "Kukulcan", zh: "库库尔坎", img: "fgo/kukulcan" },
+      { name: "Tlāloc", zh: "特拉洛克", img: "fgo/tlaloc" },
+    ],
+    note: {en: "Daily rotating pick-ups", zh: "每日替换"},
+  },
+  {
+    game: "fgo_na", label: {en: "Christmas 2026: Louhi", zh: "圣诞节2026 娄希推荐召唤"},
+    start: "2026-12-10", end: "2026-12-23", status: "projected",
+    featured: [{ name: "Louhi", zh: "娄希", img: "fgo/louhi", isNew: true }],
+    note: {en: "New event (JP 2024 Christmas)", zh: "新活动（日服2024圣诞）"},
+  },
+  {
+    game: "fgo_na", label: {en: "Christmas 2026 Pick-up 2", zh: "圣诞节2026 推荐召唤2"},
+    start: "2026-12-12", end: "2026-12-19", status: "projected",
+    featured: [{ name: "Sitonai", zh: "志度内", img: "fgo/sitonai" }],
+  },
+  {
+    game: "fgo_na", label: {en: "Christmas 2026 Pick-up 3", zh: "圣诞节2026 推荐召唤3"},
+    start: "2026-12-14", end: "2026-12-21", status: "projected",
+    featured: [{ name: "Sima Yi (Reines)", zh: "莱妮丝", img: "fgo/sima-yi-reines" }],
+  },
+  {
+    game: "fgo_na", label: {en: "Another Christmas: Phantasmoon", zh: "Another Christmas Phantasmoon推荐召唤"},
+    start: "2026-12-24", end: "2026-12-30", status: "projected",
+    featured: [{ name: "Phantasmoon", zh: "Phantasmoon", img: "fgo/phantasmoon", isNew: true }],
+  },
+  {
+    game: "fgo_na", label: {en: "New Year 2027", zh: "新年2027"},
+    start: "2027-01-01", end: "2027-01-14", status: "projected",
+    featured: [
+      { name: "Richard I", zh: "理查一世", img: "fgo/richard-i" },
+      { name: "Aozaki Aoko", zh: "苍崎青子", img: "fgo/aozaki-aoko" },
+      { name: "Kuonji Alice", zh: "久远寺有珠", img: "fgo/kuonji-alice" },
+      { name: "Kyokutei Bakin", zh: "曲亭马琴", img: "fgo/kyokutei-bakin" },
+    ],
+    note: {en: "Daily rotation (15 servants) + Lucky Bag", zh: "每日替换（15骑）+福袋"},
   },
 
   /* ───────────── BanG Dream! GBP (JP) ───────────── */
