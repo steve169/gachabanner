@@ -862,6 +862,70 @@ window.BANNERS = [
 
   /* ───────────── BanG Dream! GBP (JP) ───────────── */
   {
+    game: "gbp_jp", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-10-17", end: "2026-10-19", status: "confirmed",
+    featured: [{ name: "Rinko Shirokane", zh: "白金燐子", img: "gbp/1625" }],
+  },
+  {
+    game: "gbp_jp", label: {en: "Event gacha", zh: "活动卡池"},
+    start: "2026-10-21", end: "2026-10-31", status: "confirmed",
+    featured: [
+      { name: "Himari Uehara", zh: "上原绯玛丽", img: "gbp/2542", isNew: true },
+      { name: "Tomoe Udagawa", zh: "宇田川巴", img: "gbp/2543", isNew: true },
+      { name: "Ran Mitake", zh: "美竹兰", img: "gbp/2546", isNew: true },
+    ],
+  },
+  {
+    game: "gbp_jp", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-10-23", end: "2026-10-25", status: "confirmed",
+    featured: [{ name: "Himari Uehara", zh: "上原绯玛丽", img: "gbp/1631" }],
+  },
+  {
+    game: "gbp_jp", label: {en: "Limited", zh: "限定卡池"},
+    start: "2026-10-23", end: "2026-10-31", status: "confirmed",
+    featured: [
+      { name: "Rokka Asahi", zh: "朝日六花", img: "gbp/2292" },
+      { name: "Reona Nyubara", zh: "鳰原令王那", img: "gbp/2293" },
+      { name: "Chiyu Tamade", zh: "珠手知由", img: "gbp/2296" },
+    ],
+    note: {en: "RAS IN PALLガチャ", zh: "RAS IN PALLガチャ"},
+  },
+  {
+    game: "gbp_jp", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-10-26", end: "2026-10-28", status: "confirmed",
+    featured: [{ name: "Yukina Minato", zh: "凑友希那", img: "gbp/1632" }],
+  },
+  {
+    game: "gbp_jp", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-10-27", end: "2026-10-29", status: "confirmed",
+    featured: [{ name: "Arisa Ichigaya", zh: "市谷有咲", img: "gbp/1633" }],
+  },
+  {
+    game: "gbp_jp", label: {en: "Dream Festival", zh: "Dream Festival 招募"},
+    start: "2026-10-31", end: "2026-11-04", status: "confirmed",
+    featured: [
+      { name: "Tae Hanazono", zh: "花园多惠", img: "gbp/2547", isNew: true },
+      { name: "Misaki Okusawa (Michelle)", zh: "米歇尔", img: "gbp/2548", isNew: true },
+      { name: "Tsugumi Hazawa", zh: "羽泽鸫", img: "gbp/2552", isNew: true },
+      { name: "Mashiro Kurata", zh: "仓田真白", img: "gbp/2553", isNew: true },
+    ],
+    note: {en: "ドリームフェスティバルガチャ", zh: "ドリームフェスティバルガチャ"},
+  },
+  {
+    game: "gbp_jp", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-11-03", end: "2026-11-05", status: "confirmed",
+    featured: [{ name: "Maya Yamato", zh: "大和麻弥", img: "gbp/1639" }],
+  },
+  {
+    game: "gbp_jp", label: {en: "Event gacha", zh: "活动卡池"},
+    start: "2026-11-04", end: "2026-11-10", status: "confirmed",
+    featured: [
+      { name: "Tae Hanazono", zh: "花园多惠", img: "gbp/2547" },
+      { name: "Misaki Okusawa (Michelle)", zh: "米歇尔", img: "gbp/2548" },
+      { name: "Eve Wakamiya", zh: "若宫伊芙", img: "gbp/2551" },
+    ],
+  },
+  {
     game: "gbp_jp", label: {en: "Collab Part 1", zh: "联动卡池 Part1"},
     start: "2026-11-06", end: "2026-11-18", status: "confirmed",
     featured: [
@@ -876,19 +940,159 @@ window.BANNERS = [
     featured: [
       { name: "Rokka Asahi", zh: "朝日六花", img: "gbp/2554", isNew: true },
       { name: "Rei Wakana", zh: "和奏瑞依", img: "gbp/2555", isNew: true },
-      { name: "Chiyu Tamade", zh: "珠手知由", img: "gbp/2558" },
+      { name: "Chiyu Tamade", zh: "珠手知由", img: "gbp/2558", isNew: true },
     ],
+  },
+  {
+    game: "gbp_jp", label: {en: "Collab Part 2", zh: "联动卡池 Part2"},
+    start: "2026-11-18", end: "2026-11-30", status: "confirmed",
+    featured: [
+      { name: "Lisa Imai", zh: "今井莉莎", img: "gbp/2527", isNew: true },
+      { name: "Ako Udagawa", zh: "宇田川亚子", img: "gbp/2528", isNew: true },
+      { name: "Rinko Shirokane", zh: "白金燐子", img: "gbp/2529", isNew: true },
+    ],
+    note: {en: "Magical Girl Witch Trials collab (limited)", zh: "魔法少女的魔女审判 联动（限定）"},
+  },
+  {
+    game: "gbp_jp", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-11-19", end: "2026-11-21", status: "confirmed",
+    featured: [{ name: "Rui Yashio", zh: "八潮瑠唯", img: "gbp/1991" }],
+  },
+  {
+    game: "gbp_jp", label: {en: "Event gacha", zh: "活动卡池"},
+    start: "2026-11-19", end: "2026-11-29", status: "confirmed",
+    featured: [
+      { name: "Eve Wakamiya", zh: "若宫伊芙", img: "gbp/2559", isNew: true },
+      { name: "Hina Hikawa", zh: "冰川日菜", img: "gbp/2560", isNew: true },
+      { name: "Maya Yamato", zh: "大和麻弥", img: "gbp/2563", isNew: true },
+    ],
+  },
+  {
+    game: "gbp_jp", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-11-22", end: "2026-11-24", status: "confirmed",
+    featured: [{ name: "Tomori Takamatsu", zh: "高松灯", img: "gbp/2100" }],
+  },
+  {
+    game: "gbp_jp", label: {en: "Dream Festival", zh: "Dream Festival 招募"},
+    start: "2026-11-30", end: "2026-12-04", status: "projected",
+    featured: [{ name: "TBA" }],
+    note: {en: "Monthly Dream Festival, estimated from the usual end-of-month cycle", zh: "每月 Dream Festival，按月末惯例推算"},
+  },
+  {
+    game: "gbp_jp", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-12-04", end: "2026-12-06", status: "projected",
+    featured: [{ name: "Tae Hanazono", zh: "花园多惠", img: "gbp/1654" }],
+    note: {en: "Annual birthday gacha; dates from last year's schedule", zh: "年度生日卡池，日期按往年推算"},
+  },
+  {
+    game: "gbp_jp", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-12-07", end: "2026-12-09", status: "projected",
+    featured: [{ name: "Chiyu Tamade", zh: "珠手知由", img: "gbp/1655" }],
+    note: {en: "Annual birthday gacha; dates from last year's schedule", zh: "年度生日卡池，日期按往年推算"},
+  },
+  {
+    game: "gbp_jp", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-12-16", end: "2026-12-18", status: "projected",
+    featured: [{ name: "Toko Kirigaya", zh: "桐谷透子", img: "gbp/1659" }],
+    note: {en: "Annual birthday gacha; dates from last year's schedule", zh: "年度生日卡池，日期按往年推算"},
+  },
+  {
+    game: "gbp_jp", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-12-27", end: "2026-12-29", status: "projected",
+    featured: [{ name: "Aya Maruyama", zh: "丸山彩", img: "gbp/1663" }],
+    note: {en: "Annual birthday gacha; dates from last year's schedule", zh: "年度生日卡池，日期按往年推算"},
+  },
+  {
+    game: "gbp_jp", label: {en: "Dream Festival", zh: "Dream Festival 招募"},
+    start: "2026-12-31", end: "2027-01-04", status: "projected",
+    featured: [{ name: "TBA" }],
+    note: {en: "Monthly Dream Festival, estimated from the usual end-of-month cycle", zh: "每月 Dream Festival，按月末惯例推算"},
+  },
+  {
+    game: "gbp_jp", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2027-01-07", end: "2027-01-09", status: "projected",
+    featured: [{ name: "Tsugumi Hazawa", zh: "羽泽鸫", img: "gbp/1672" }],
+    note: {en: "Annual birthday gacha; dates from last year's schedule", zh: "年度生日卡池，日期按往年推算"},
+  },
+  {
+    game: "gbp_jp", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2027-01-13", end: "2027-01-15", status: "projected",
+    featured: [{ name: "Rei Wakana", zh: "和奏瑞依", img: "gbp/1676" }],
+    note: {en: "Annual birthday gacha; dates from last year's schedule", zh: "年度生日卡池，日期按往年推算"},
   },
 
   /* ───────────── BanG Dream! GBP (EN) ───────────── */
   {
+    game: "gbp_en", label: {en: "Event gacha", zh: "活动卡池"},
+    start: "2026-10-16", end: "2026-10-25", status: "confirmed",
+    featured: [
+      { name: "Kasumi Toyama", zh: "户山香澄", img: "gbp/2388", isNew: true },
+      { name: "Arisa Ichigaya", zh: "市谷有咲", img: "gbp/2389", isNew: true },
+      { name: "Tae Hanazono", zh: "花园多惠", img: "gbp/2392", isNew: true },
+    ],
+  },
+  {
+    game: "gbp_en", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-10-17", end: "2026-10-24", status: "confirmed",
+    featured: [{ name: "Rinko Shirokane", zh: "白金燐子", img: "gbp/1625" }],
+  },
+  {
+    game: "gbp_en", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-10-23", end: "2026-10-30", status: "confirmed",
+    featured: [{ name: "Himari Uehara", zh: "上原绯玛丽", img: "gbp/1631" }],
+  },
+  {
+    game: "gbp_en", label: {en: "Limited", zh: "限定卡池"},
+    start: "2026-10-25", end: "2026-11-02", status: "confirmed",
+    featured: [
+      { name: "Tsukushi Futaba", zh: "二叶筑紫", img: "gbp/2063" },
+      { name: "Toko Kirigaya", zh: "桐谷透子", img: "gbp/2064" },
+      { name: "Nanami Hiromachi", zh: "广町七深", img: "gbp/2067" },
+    ],
+    note: {en: "Splendidly Wild Midnight Banquet", zh: "Splendidly Wild Midnight Banquet"},
+  },
+  {
+    game: "gbp_en", label: {en: "Event gacha", zh: "活动卡池"},
+    start: "2026-10-25", end: "2026-11-03", status: "confirmed",
+    featured: [
+      { name: "Lisa Imai", zh: "今井莉莎", img: "gbp/2398", isNew: true },
+      { name: "Ako Udagawa", zh: "宇田川亚子", img: "gbp/2399", isNew: true },
+      { name: "Yukina Minato", zh: "凑友希那", img: "gbp/2402", isNew: true },
+    ],
+  },
+  {
+    game: "gbp_en", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-10-26", end: "2026-11-02", status: "confirmed",
+    featured: [{ name: "Yukina Minato", zh: "凑友希那", img: "gbp/1632" }],
+  },
+  {
+    game: "gbp_en", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-10-27", end: "2026-11-03", status: "confirmed",
+    featured: [{ name: "Arisa Ichigaya", zh: "市谷有咲", img: "gbp/1633" }],
+  },
+  {
+    game: "gbp_en", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-11-03", end: "2026-11-10", status: "confirmed",
+    featured: [{ name: "Maya Yamato", zh: "大和麻弥", img: "gbp/1639" }],
+  },
+  {
+    game: "gbp_en", label: {en: "Event gacha", zh: "活动卡池"},
+    start: "2026-11-03", end: "2026-11-11", status: "confirmed",
+    featured: [
+      { name: "Chisato Shirasagi", zh: "白鹭千圣", img: "gbp/2403", isNew: true },
+      { name: "Hina Hikawa", zh: "冰川日菜", img: "gbp/2404", isNew: true },
+      { name: "Eve Wakamiya", zh: "若宫伊芙", img: "gbp/2407", isNew: true },
+    ],
+  },
+  {
     game: "gbp_en", label: {en: "Limited", zh: "限定卡池"},
     start: "2026-11-06", end: "2026-11-14", status: "confirmed",
     featured: [
-      { name: "Eve Wakamiya", zh: "若宫伊芙", img: "gbp/2010", isNew: true },
-      { name: "Kanon Matsubara", zh: "松原花音", img: "gbp/2011", isNew: true },
+      { name: "Eve Wakamiya", zh: "若宫伊芙", img: "gbp/2010" },
+      { name: "Kanon Matsubara", zh: "松原花音", img: "gbp/2011" },
       { name: "Tsukushi Futaba", zh: "二叶筑紫", img: "gbp/2014" },
     ],
+    note: {en: "Seaside Relaxation Time", zh: "Seaside Relaxation Time"},
   },
   {
     game: "gbp_en", label: {en: "Event gacha", zh: "活动卡池"},
@@ -896,8 +1100,18 @@ window.BANNERS = [
     featured: [
       { name: "Kanon Matsubara", zh: "松原花音", img: "gbp/2408", isNew: true },
       { name: "Misaki Okusawa (Michelle)", zh: "米歇尔", img: "gbp/2409", isNew: true },
-      { name: "Hagumi Kitazawa", zh: "北泽育美", img: "gbp/2412" },
+      { name: "Hagumi Kitazawa", zh: "北泽育美", img: "gbp/2412", isNew: true },
     ],
+  },
+  {
+    game: "gbp_en", label: {en: "Limited", zh: "限定卡池"},
+    start: "2026-11-19", end: "2026-11-26", status: "confirmed",
+    featured: [
+      { name: "Hagumi Kitazawa", zh: "北泽育美", img: "gbp/1993" },
+      { name: "Nanami Hiromachi", zh: "广町七深", img: "gbp/1994" },
+      { name: "Rei Wakana", zh: "和奏瑞依", img: "gbp/1997" },
+    ],
+    note: {en: "Exciting Bridal Party!", zh: "Exciting Bridal Party!"},
   },
   {
     game: "gbp_en", label: {en: "Birthday", zh: "生日卡池"},
@@ -905,20 +1119,145 @@ window.BANNERS = [
     featured: [{ name: "Rui Yashio", zh: "八潮瑠唯", img: "gbp/1991" }],
   },
   {
+    game: "gbp_en", label: {en: "Dream & Kirameki Festival", zh: "Dream & Kirameki Festival 招募"},
+    start: "2026-11-19", end: "2026-11-29", status: "confirmed",
+    featured: [
+      { name: "Tsukushi Futaba", zh: "二叶筑紫", img: "gbp/2413", isNew: true },
+      { name: "Saya Yamabuki", zh: "山吹沙绫", img: "gbp/2414", isNew: true },
+      { name: "Tomoe Udagawa", zh: "宇田川巴", img: "gbp/2415", isNew: true },
+      { name: "Maya Yamato", zh: "大和麻弥", img: "gbp/2416", isNew: true },
+      { name: "Aya Maruyama", zh: "丸山彩", img: "gbp/2421", isNew: true },
+      { name: "Chiyu Tamade", zh: "珠手知由", img: "gbp/2422", isNew: true },
+    ],
+    note: {en: "Dream & Kirameki Festival; also includes the Girls to Ladies limited cards", zh: "Dream & Kirameki Festival，同时登场 Girls to Ladies 限定卡"},
+  },
+  {
     game: "gbp_en", label: {en: "Birthday", zh: "生日卡池"},
     start: "2026-11-22", end: "2026-11-29", status: "confirmed",
     featured: [{ name: "Tomori Takamatsu", zh: "高松灯", img: "gbp/2100" }],
+  },
+  {
+    game: "gbp_en", label: {en: "Limited", zh: "限定卡池"},
+    start: "2026-11-29", end: "2026-12-04", status: "confirmed",
+    featured: [
+      { name: "Tsukushi Futaba", zh: "二叶筑紫", img: "gbp/2413" },
+      { name: "Saya Yamabuki", zh: "山吹沙绫", img: "gbp/2414" },
+      { name: "Tomoe Udagawa", zh: "宇田川巴", img: "gbp/2415" },
+      { name: "Maya Yamato", zh: "大和麻弥", img: "gbp/2416" },
+      { name: "Masuki Sato", zh: "佐藤益木", img: "gbp/2419" },
+      { name: "Ako Udagawa", zh: "宇田川亚子", img: "gbp/2420" },
+    ],
+    note: {en: "Blessed Girls to Ladies", zh: "Blessed Girls to Ladies"},
+  },
+  {
+    game: "gbp_en", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-12-04", end: "2026-12-11", status: "projected",
+    featured: [{ name: "Tae Hanazono", zh: "花园多惠", img: "gbp/1654" }],
+    note: {en: "Annual birthday gacha; dates from last year's schedule", zh: "年度生日卡池，日期按往年推算"},
+  },
+  {
+    game: "gbp_en", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-12-07", end: "2026-12-14", status: "projected",
+    featured: [{ name: "Chiyu Tamade", zh: "珠手知由", img: "gbp/1655" }],
+    note: {en: "Annual birthday gacha; dates from last year's schedule", zh: "年度生日卡池，日期按往年推算"},
+  },
+  {
+    game: "gbp_en", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-12-16", end: "2026-12-23", status: "projected",
+    featured: [{ name: "Toko Kirigaya", zh: "桐谷透子", img: "gbp/1659" }],
+    note: {en: "Annual birthday gacha; dates from last year's schedule", zh: "年度生日卡池，日期按往年推算"},
+  },
+  {
+    game: "gbp_en", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-12-27", end: "2027-01-03", status: "projected",
+    featured: [{ name: "Aya Maruyama", zh: "丸山彩", img: "gbp/1663" }],
+    note: {en: "Annual birthday gacha; dates from last year's schedule", zh: "年度生日卡池，日期按往年推算"},
+  },
+  {
+    game: "gbp_en", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2027-01-07", end: "2027-01-14", status: "projected",
+    featured: [{ name: "Tsugumi Hazawa", zh: "羽泽鸫", img: "gbp/1672" }],
+    note: {en: "Annual birthday gacha; dates from last year's schedule", zh: "年度生日卡池，日期按往年推算"},
+  },
+  {
+    game: "gbp_en", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2027-01-13", end: "2027-01-20", status: "projected",
+    featured: [{ name: "Rei Wakana", zh: "和奏瑞依", img: "gbp/1676" }],
+    note: {en: "Annual birthday gacha; dates from last year's schedule", zh: "年度生日卡池，日期按往年推算"},
   },
 
   /* ───────────── BanG Dream! GBP (CN) ───────────── */
   {
     game: "gbp_cn", label: {en: "Dream Festival", zh: "Dream Festival 招募"},
+    start: "2026-10-16", end: "2026-10-20", status: "confirmed",
+    featured: [
+      { name: "Toko Kirigaya", zh: "桐谷透子", img: "gbp/2423", isNew: true },
+      { name: "Nanami Hiromachi", zh: "广町七深", img: "gbp/2424", isNew: true },
+      { name: "Rinko Shirokane", zh: "白金燐子", img: "gbp/2428", isNew: true },
+      { name: "Rei Wakana", zh: "和奏瑞依", img: "gbp/2429", isNew: true },
+    ],
+    note: {en: "黄金周纪念·后篇Dream Festival招募", zh: "黄金周纪念·后篇Dream Festival招募"},
+  },
+  {
+    game: "gbp_cn", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-10-17", end: "2026-10-19", status: "confirmed",
+    featured: [{ name: "Rinko Shirokane", zh: "白金燐子", img: "gbp/1625" }],
+  },
+  {
+    game: "gbp_cn", label: {en: "Event gacha", zh: "活动卡池"},
+    start: "2026-10-20", end: "2026-10-26", status: "confirmed",
+    featured: [
+      { name: "Toko Kirigaya", zh: "桐谷透子", img: "gbp/2423" },
+      { name: "Nanami Hiromachi", zh: "广町七深", img: "gbp/2424" },
+      { name: "Rui Yashio", zh: "八潮瑠唯", img: "gbp/2427" },
+    ],
+  },
+  {
+    game: "gbp_cn", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-10-23", end: "2026-10-25", status: "confirmed",
+    featured: [{ name: "Himari Uehara", zh: "上原绯玛丽", img: "gbp/1631" }],
+  },
+  {
+    game: "gbp_cn", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-10-26", end: "2026-10-28", status: "confirmed",
+    featured: [{ name: "Yukina Minato", zh: "凑友希那", img: "gbp/1632" }],
+  },
+  {
+    game: "gbp_cn", label: {en: "Event gacha", zh: "活动卡池"},
+    start: "2026-10-26", end: "2026-11-05", status: "confirmed",
+    featured: [
+      { name: "Kaoru Seta", zh: "濑田薰", img: "gbp/2430", isNew: true },
+      { name: "Chisato Shirasagi", zh: "白鹭千圣", img: "gbp/2431", isNew: true },
+      { name: "Kanon Matsubara", zh: "松原花音", img: "gbp/2434", isNew: true },
+    ],
+  },
+  {
+    game: "gbp_cn", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-10-27", end: "2026-10-29", status: "confirmed",
+    featured: [{ name: "Arisa Ichigaya", zh: "市谷有咲", img: "gbp/1633" }],
+  },
+  {
+    game: "gbp_cn", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-11-03", end: "2026-11-05", status: "confirmed",
+    featured: [{ name: "Maya Yamato", zh: "大和麻弥", img: "gbp/1639" }],
+  },
+  {
+    game: "gbp_cn", label: {en: "Event gacha", zh: "活动卡池"},
+    start: "2026-11-05", end: "2026-11-13", status: "confirmed",
+    featured: [
+      { name: "Ran Mitake", zh: "美竹兰", img: "gbp/2435", isNew: true },
+      { name: "Himari Uehara", zh: "上原绯玛丽", img: "gbp/2436", isNew: true },
+      { name: "Moca Aoba", zh: "青叶摩卡", img: "gbp/2439", isNew: true },
+    ],
+  },
+  {
+    game: "gbp_cn", label: {en: "Dream Festival", zh: "Dream Festival 招募"},
     start: "2026-11-13", end: "2026-11-17", status: "confirmed",
     featured: [
-      { name: "Kanon Matsubara", zh: "松原花音", img: "gbp/2445" },
-      { name: "Tsukushi Futaba", zh: "二叶筑紫", img: "gbp/2446" },
-      { name: "Rokka Asahi", zh: "朝日六花", img: "gbp/2440" },
-      { name: "Chiyu Tamade", zh: "珠手知由", img: "gbp/2441" },
+      { name: "Rokka Asahi", zh: "朝日六花", img: "gbp/2440", isNew: true },
+      { name: "Chiyu Tamade", zh: "珠手知由", img: "gbp/2441", isNew: true },
+      { name: "Kanon Matsubara", zh: "松原花音", img: "gbp/2445", isNew: true },
+      { name: "Tsukushi Futaba", zh: "二叶筑紫", img: "gbp/2446", isNew: true },
     ],
     note: {en: "7.5th Anniversary", zh: "7.5周年纪念"},
   },
@@ -933,13 +1272,49 @@ window.BANNERS = [
   },
   {
     game: "gbp_cn", label: {en: "Birthday", zh: "生日卡池"},
-    start: "2026-11-18", end: "2026-11-21", status: "confirmed",
+    start: "2026-11-19", end: "2026-11-21", status: "confirmed",
     featured: [{ name: "Rui Yashio", zh: "八潮瑠唯", img: "gbp/1991" }],
   },
   {
     game: "gbp_cn", label: {en: "Birthday", zh: "生日卡池"},
-    start: "2026-11-21", end: "2026-11-24", status: "confirmed",
+    start: "2026-11-22", end: "2026-11-24", status: "confirmed",
     featured: [{ name: "Tomori Takamatsu", zh: "高松灯", img: "gbp/2100" }],
+  },
+  {
+    game: "gbp_cn", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-12-04", end: "2026-12-06", status: "projected",
+    featured: [{ name: "Tae Hanazono", zh: "花园多惠", img: "gbp/1654" }],
+    note: {en: "Annual birthday gacha; dates from last year's schedule", zh: "年度生日卡池，日期按往年推算"},
+  },
+  {
+    game: "gbp_cn", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-12-07", end: "2026-12-09", status: "projected",
+    featured: [{ name: "Chiyu Tamade", zh: "珠手知由", img: "gbp/1655" }],
+    note: {en: "Annual birthday gacha; dates from last year's schedule", zh: "年度生日卡池，日期按往年推算"},
+  },
+  {
+    game: "gbp_cn", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-12-16", end: "2026-12-18", status: "projected",
+    featured: [{ name: "Toko Kirigaya", zh: "桐谷透子", img: "gbp/1659" }],
+    note: {en: "Annual birthday gacha; dates from last year's schedule", zh: "年度生日卡池，日期按往年推算"},
+  },
+  {
+    game: "gbp_cn", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2026-12-27", end: "2026-12-29", status: "projected",
+    featured: [{ name: "Aya Maruyama", zh: "丸山彩", img: "gbp/1663" }],
+    note: {en: "Annual birthday gacha; dates from last year's schedule", zh: "年度生日卡池，日期按往年推算"},
+  },
+  {
+    game: "gbp_cn", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2027-01-07", end: "2027-01-09", status: "projected",
+    featured: [{ name: "Tsugumi Hazawa", zh: "羽泽鸫", img: "gbp/1386" }],
+    note: {en: "Annual birthday gacha; dates from last year's schedule", zh: "年度生日卡池，日期按往年推算"},
+  },
+  {
+    game: "gbp_cn", label: {en: "Birthday", zh: "生日卡池"},
+    start: "2027-01-13", end: "2027-01-15", status: "projected",
+    featured: [{ name: "Rei Wakana", zh: "和奏瑞依", img: "gbp/1676" }],
+    note: {en: "Annual birthday gacha; dates from last year's schedule", zh: "年度生日卡池，日期按往年推算"},
   },
 
   /* ───────────── Arknights (EN) ───────────── */
@@ -1251,6 +1626,12 @@ window.BANNERS = [
 
   /* ───────────── Project Sekai (JP) ───────────── */
   {
+    game: "pjsk_jp", label: {en: "Birthday", zh: "生日招募"},
+    start: "2026-10-23", end: "2026-10-29", status: "confirmed",
+    featured: [{ name: "Honami Mochizuki", zh: "望月穗波", img: "pjsk/1488", isNew: true }],
+    note: {en: "Honami Mochizuki Happy Birthday 2026", zh: "望月穗波 生日 2026"},
+  },
+  {
     game: "pjsk_jp", label: {en: "Event Pick-Up", zh: "活动招募"},
     start: "2026-10-31", end: "2026-11-11", status: "confirmed",
     featured: [
@@ -1280,7 +1661,7 @@ window.BANNERS = [
       { name: "Airi Momoi", zh: "桃井爱莉", img: "pjsk/1497", isNew: true },
       { name: "Rin Kagamine", zh: "镜音铃", img: "pjsk/1498", isNew: true },
     ],
-    note: {en: "Captivate YOU!", zh: "Captivate YOU!"},
+    note: {en: "Captivate YOU！", zh: "Captivate YOU！"},
   },
   {
     game: "pjsk_jp", label: {en: "Limited Rerun", zh: "限定复刻招募"},
@@ -1300,10 +1681,66 @@ window.BANNERS = [
       { name: "Emu Otori", zh: "凤笑梦", img: "pjsk/1128" },
       { name: "Rin Kagamine", zh: "镜音铃", img: "pjsk/1129" },
     ],
-    note: {en: "Eternal Combat Guardians (limited cards)", zh: "果てなき護るための戦い（期间限定卡）"},
+    note: {en: "果てなき護るための戦い (limited cards)", zh: "果てなき護るための戦い（期间限定卡）"},
+  },
+  {
+    game: "pjsk_jp", label: {en: "Birthday", zh: "生日招募"},
+    start: "2026-12-02", end: "2026-12-08", status: "projected",
+    featured: [{ name: "Shizuku Hinomori", zh: "日野森雫", isNew: true }],
+    note: {en: "Annual gacha; dates from last year's schedule", zh: "年度卡池，日期按往年推算"},
+  },
+  {
+    game: "pjsk_jp", label: {en: "Birthday", zh: "生日招募"},
+    start: "2026-12-23", end: "2026-12-29", status: "projected",
+    featured: [{ name: "Rin Kagamine", zh: "镜音铃", isNew: true }],
+    note: {en: "Annual gacha; dates from last year's schedule", zh: "年度卡池，日期按往年推算"},
+  },
+  {
+    game: "pjsk_jp", label: {en: "Birthday", zh: "生日招募"},
+    start: "2026-12-23", end: "2026-12-29", status: "projected",
+    featured: [{ name: "Len Kagamine", zh: "镜音连", isNew: true }],
+    note: {en: "Annual gacha; dates from last year's schedule", zh: "年度卡池，日期按往年推算"},
+  },
+  {
+    game: "pjsk_jp", label: {en: "Bloom Festival", zh: "Bloom Festival 招募"},
+    start: "2026-12-31", end: "2027-01-04", status: "projected",
+    featured: [{ name: "TBA" }],
+    note: {en: "New Year Bloom Festival, estimated from last year", zh: "新春 Bloom Festival，按往年推算"},
+  },
+  {
+    game: "pjsk_jp", label: {en: "Birthday", zh: "生日招募"},
+    start: "2027-01-04", end: "2027-01-10", status: "projected",
+    featured: [{ name: "Shiho Hinomori", zh: "日野森志步", isNew: true }],
+    note: {en: "Annual gacha; dates from last year's schedule", zh: "年度卡池，日期按往年推算"},
   },
 
   /* ───────────── Project Sekai (EN) ───────────── */
+  {
+    game: "pjsk_en", label: {en: "Limited Rerun", zh: "限定复刻招募"},
+    start: "2026-10-16", end: "2026-10-25", status: "confirmed",
+    featured: [
+      { name: "Kanade Yoisaki", zh: "宵崎奏", img: "pjsk/878" },
+      { name: "Ichika Hoshino", zh: "星乃一歌", img: "pjsk/879" },
+      { name: "Mafuyu Asahina", zh: "朝比奈真冬", img: "pjsk/880" },
+    ],
+    note: {en: "What Awaits After the Battle (limited cards)", zh: "What Awaits After the Battle（期间限定卡）"},
+  },
+  {
+    game: "pjsk_en", label: {en: "Event Pick-Up", zh: "活动招募"},
+    start: "2026-10-21", end: "2026-10-31", status: "confirmed",
+    featured: [
+      { name: "Shizuku Hinomori", zh: "日野森雫", img: "pjsk/1266", isNew: true },
+      { name: "Airi Momoi", zh: "桃井爱莉", img: "pjsk/1267", isNew: true },
+      { name: "MEIKO", zh: "MEIKO", img: "pjsk/1268", isNew: true },
+    ],
+    note: {en: "Flowers Reflected in Eyes", zh: "Flowers Reflected in Eyes"},
+  },
+  {
+    game: "pjsk_en", label: {en: "Birthday", zh: "生日招募"},
+    start: "2026-10-23", end: "2026-10-29", status: "confirmed",
+    featured: [{ name: "Honami Mochizuki", zh: "望月穗波", img: "pjsk/1271", isNew: true }],
+    note: {en: "Honami Mochizuki Happy Birthday 2026", zh: "望月穗波 生日 2026"},
+  },
   {
     game: "pjsk_en", label: {en: "Limited", zh: "限定招募"},
     start: "2026-10-31", end: "2026-11-10", status: "confirmed",
@@ -1316,7 +1753,7 @@ window.BANNERS = [
   },
   {
     game: "pjsk_en", label: {en: "Birthday", zh: "生日招募"},
-    start: "2026-11-01", end: "2026-11-08", status: "confirmed",
+    start: "2026-11-01", end: "2026-11-07", status: "confirmed",
     featured: [{ name: "MEIKO", zh: "MEIKO", img: "pjsk/1277", isNew: true }],
     note: {en: "MEIKO Happy Anniversary 2026", zh: "MEIKO 周年纪念 2026"},
   },
@@ -1332,7 +1769,7 @@ window.BANNERS = [
   },
   {
     game: "pjsk_en", label: {en: "Birthday", zh: "生日招募"},
-    start: "2026-11-08", end: "2026-11-15", status: "confirmed",
+    start: "2026-11-08", end: "2026-11-14", status: "confirmed",
     featured: [{ name: "Akito Shinonome", zh: "东云彰人", img: "pjsk/1278", isNew: true }],
     note: {en: "Akito Shinonome Happy Birthday 2026", zh: "东云彰人 生日 2026"},
   },
@@ -1367,6 +1804,17 @@ window.BANNERS = [
     note: {en: "Good to Go!", zh: "Good to Go!"},
   },
   {
+    game: "pjsk_en", label: {en: "Collab Rerun", zh: "联动复刻招募"},
+    start: "2026-11-23", end: "2026-12-07", status: "confirmed",
+    featured: [
+      { name: "Akito Shinonome", zh: "东云彰人", img: "pjsk/1115" },
+      { name: "Toya Aoyagi", zh: "青柳冬弥", img: "pjsk/1116" },
+      { name: "Tsukasa Tenma", zh: "天马司", img: "pjsk/1117" },
+      { name: "Rui Kamishiro", zh: "神代类", img: "pjsk/1118" },
+    ],
+    note: {en: "Connecting SEKAI with Ensemble (Ensemble Stars!! collab cards)", zh: "偶像梦幻祭2 联动卡复刻"},
+  },
+  {
     game: "pjsk_en", label: {en: "Limited", zh: "限定招募"},
     start: "2026-11-30", end: "2026-12-10", status: "confirmed",
     featured: [
@@ -1378,9 +1826,40 @@ window.BANNERS = [
   },
   {
     game: "pjsk_en", label: {en: "Birthday", zh: "生日招募"},
-    start: "2026-12-02", end: "2026-12-09", status: "confirmed",
+    start: "2026-12-02", end: "2026-12-08", status: "confirmed",
     featured: [{ name: "Shizuku Hinomori", zh: "日野森雫", img: "pjsk/1294", isNew: true }],
     note: {en: "Shizuku Hinomori Happy Birthday 2026", zh: "日野森雫 生日 2026"},
+  },
+  {
+    game: "pjsk_en", label: {en: "Bloom Festival", zh: "Bloom Festival 招募"},
+    start: "2026-12-07", end: "2026-12-11", status: "confirmed",
+    featured: [
+      { name: "Minori Hanasato", zh: "花里实乃理", img: "pjsk/1252" },
+      { name: "Akito Shinonome", zh: "东云彰人", img: "pjsk/1253" },
+      { name: "An Shiraishi", zh: "白石杏", img: "pjsk/1254" },
+      { name: "Saki Tenma", zh: "天马咲希", img: "pjsk/1255" },
+      { name: "Haruka Kiritani", zh: "桐谷遥", img: "pjsk/1256" },
+      { name: "Mizuki Akiyama", zh: "晓山瑞希", img: "pjsk/1257" },
+    ],
+    note: {en: "5th Anniversary Bloom Festival — Dream Pick-Up (rerun of earlier fes cards)", zh: "5周年 Bloom Festival 梦想甄选（往期 fes 卡复刻）"},
+  },
+  {
+    game: "pjsk_en", label: {en: "Birthday", zh: "生日招募"},
+    start: "2026-12-23", end: "2026-12-29", status: "projected",
+    featured: [{ name: "Rin Kagamine", zh: "镜音铃", img: "pjsk/1305", isNew: true }],
+    note: {en: "Follows the JP schedule from a year earlier", zh: "按日服一年前的排期推算"},
+  },
+  {
+    game: "pjsk_en", label: {en: "Birthday", zh: "生日招募"},
+    start: "2026-12-23", end: "2026-12-29", status: "projected",
+    featured: [{ name: "Len Kagamine", zh: "镜音连", img: "pjsk/1306", isNew: true }],
+    note: {en: "Follows the JP schedule from a year earlier", zh: "按日服一年前的排期推算"},
+  },
+  {
+    game: "pjsk_en", label: {en: "Birthday", zh: "生日招募"},
+    start: "2027-01-04", end: "2027-01-10", status: "projected",
+    featured: [{ name: "Shiho Hinomori", zh: "日野森志步", img: "pjsk/1314", isNew: true }],
+    note: {en: "Follows the JP schedule from a year earlier", zh: "按日服一年前的排期推算"},
   },
 
   /* ───────────── Reverse: 1999 (Global) ───────────── */
