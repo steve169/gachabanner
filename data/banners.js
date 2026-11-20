@@ -394,7 +394,23 @@ window.BANNERS = [
   {
     game: "exedra", label: {en: "Limited Kioku", zh: "限定记忆"},
     start: "2026-10-30", end: "2026-11-30", status: "confirmed",
-    featured: [{ name: "Halloween Karin", zh: "万圣节花凛", img: "exedra/karin" }],
+    featured: [{ name: "Halloween Karin", zh: "万圣节花凛", img: "exedra/karin", isNew: true }],
+    note: {en: "1.5th Anniversary after-party", zh: "1.5周年后夜祭"},
+  },
+  {
+    game: "exedra", label: {en: "Kioku Pick-up", zh: "记忆UP"},
+    start: "2026-10-30", end: "2026-11-30", status: "confirmed",
+    featured: [{ name: "Doppel Felicia", img: "exedra/doppel-felicia", isNew: true }],
+    note: {en: "New Kioku [攪拌のドッペル] Felicia Mitsuki", zh: "新记忆［攪拌のドッペル］深月菲莉希亚"},
+  },
+  {
+    game: "exedra", label: {en: "Limited Kioku", zh: "限定记忆"},
+    start: "2026-10-30", end: "2026-12-14", status: "confirmed",
+    featured: [
+      { name: "Fuuka Higure", img: "exedra/fuuka-higure" },
+      { name: "Sumire Yoake", img: "exedra/sumire-yoake" },
+    ],
+    note: {en: "Rerun banners", zh: "复刻卡池"},
   },
   {
     game: "exedra", label: {en: "Limited Kioku", zh: "限定记忆"},
@@ -407,8 +423,23 @@ window.BANNERS = [
     featured: [{ name: "Lily Candy", img: "exedra/lily-candy", isNew: true }],
     note: {en: "First 30 pulls free", zh: "首次30连免费"},
   },
+  {
+    game: "exedra", label: {en: "Limited Kioku", zh: "限定记忆"},
+    start: "2026-12-01", end: "2026-12-31", status: "projected",
+    featured: [{ name: "TBA" }],
+    note: {en: "Not announced yet; a new limited Kioku is expected after the Halloween banners end Nov 30", zh: "尚未公布；预计万圣节卡池11月30日结束后推出新限定记忆"},
+  },
 
   /* ───────────── Uma Musume (JP) ───────────── */
+  {
+    game: "uma", label: {en: "Scenario launch pick-up", zh: "新育成剧本开幕UP"},
+    start: "2026-10-26", end: "2026-11-19", status: "confirmed",
+    featured: [
+      { name: "Daiwa Scarlet (new outfit)", zh: "大和赤骥（新衣装）", img: "uma/daiwa-scarlet-new-outfit", isNew: true },
+    ],
+    weapons: [{en: "SSR Azuma", zh: "SSR 吾妻"}, {en: "SSR Mayano Top Gun", zh: "SSR 摩耶重炮"}],
+    note: {en: "★3 [陣風の花紺青] Daiwa Scarlet; launched with the new scenario 「朋、史解き ―午式駿大祭―」", zh: "★3［陣風の花紺青］大和赤骥；与新育成剧本「朋、史解き ―午式駿大祭―」同时开放"},
+  },
   {
     game: "uma", label: {en: "Pick-up", zh: "UP卡池"},
     start: "2026-11-10", end: "2026-11-19", status: "confirmed",
@@ -423,13 +454,50 @@ window.BANNERS = [
     featured: [{ name: "Daring Tact", zh: "谋勇兼备", img: "uma/daring-tact", isNew: true }],
     note: {en: "★3 [白光のレガリア] Daring Tact; ★3 rates ×1.5. Select pick-up support gacha Nov 16–30.", zh: "★3［白光のレガリア］谋勇兼备；★3出率1.5倍。自选UP支援卡卡池11月16日–30日。"},
   },
+  {
+    game: "uma", label: {en: "Pick-up", zh: "UP卡池"},
+    start: "2026-11-30", end: "2026-12-10", status: "projected",
+    featured: [{ name: "TBA" }],
+    note: {en: "Next gacha update to be revealed on Pakalive TV' #9 (Nov 29)", zh: "下期卡池将于11月29日「ぱかライブTV' #9」公布"},
+  },
+  {
+    game: "uma", label: {en: "New Year", zh: "新年卡池"},
+    start: "2027-01-01", end: "2027-01-10", status: "projected",
+    featured: [{ name: "TBA" }],
+    note: {en: "Usual New Year pick-up (not announced yet)", zh: "惯例新年卡池（尚未公布）"},
+  },
 
   /* ───────────── Uma Musume (Global) ───────────── */
+  {
+    game: "uma_gl", label: {en: "Pick-up", zh: "UP卡池"},
+    start: "2026-10-20", end: "2026-11-01", status: "confirmed",
+    featured: [
+      { name: "Kitasan Black (New Year)", zh: "北部玄驹（新年）", img: "uma/kitasan-black-new-year", isNew: true },
+      { name: "Satono Diamond (New Year)", zh: "里见光钻（新年）", img: "uma/satono-diamond-new-year", isNew: true },
+    ],
+    weapons: ["SSR Special Week", "SSR Sweep Tosho"],
+  },
+  {
+    game: "uma_gl", label: {en: "Pick-up", zh: "UP卡池"},
+    start: "2026-10-24", end: "2026-11-06", status: "confirmed",
+    featured: [{ name: "Hokko Tarumae", img: "uma/hokko-tarumae", isNew: true }],
+    weapons: ["SSR Agnes Tachyon (rerun)", "SSR Tokai Teio (rerun)"],
+  },
   {
     game: "uma_gl", label: {en: "Pick-up", zh: "UP卡池"},
     start: "2026-11-05", end: "2026-11-15", status: "confirmed",
     featured: [{ name: "Daitaku Helios", zh: "大拓太阳神", img: "uma/daitaku-helios", isNew: true }],
     weapons: ["K.S. Miracle", "Aston Machan"],
+  },
+  {
+    game: "uma_gl", label: {en: "Rerun", zh: "复刻"},
+    start: "2026-11-05", end: "2026-11-15", status: "confirmed",
+    featured: [
+      { name: "Rice Shower (Halloween)", zh: "米浴（万圣节）", img: "uma/rice-shower-halloween" },
+      { name: "Haru Urara (New Year)", zh: "春乌拉拉（新年）", img: "uma/haru-urara-new-year" },
+    ],
+    weapons: ["SSR Matikanefukukitaru", "SSR Taiki Shuttle"],
+    note: {en: "Rerun banners", zh: "复刻卡池"},
   },
   {
     game: "uma_gl", label: {en: "Pick-up", zh: "UP卡池"},
@@ -442,25 +510,100 @@ window.BANNERS = [
   },
   {
     game: "uma_gl", label: {en: "Pick-up", zh: "UP卡池"},
-    start: "2026-11-21", end: "2026-12-02", status: "projected",
+    start: "2026-11-21", end: "2026-12-02", status: "confirmed",
     featured: [{ name: "Shinko Windy", zh: "新光风", img: "uma/shinko-windy", isNew: true }],
     weapons: ["SSR Nishino Flower", "SSR Maruzensky"],
-    note: {en: "2nd Anniversary Part 1", zh: "二周年庆典 第1弹"},
+    note: {en: "Starts 22:00 UTC Nov 21", zh: "11月21日22:00（UTC）开始"},
+  },
+  {
+    game: "uma_gl", label: {en: "Pick-up", zh: "UP卡池"},
+    start: "2026-11-29", end: "2026-12-13", status: "projected",
+    featured: [
+      { name: "Twin Turbo", zh: "双涡轮", img: "uma/twin-turbo", isNew: true },
+      { name: "Mr. C.B.", zh: "千明代表", img: "uma/mr-cb", isNew: true },
+    ],
+    note: {en: "JP 2nd-anniversary lineup; likely with the next scenario. Projected from the JP release order (GameTora forecast)", zh: "日服二周年阵容，可能与新剧本同时登场；按日服实装顺序推算（GameTora预测）"},
+  },
+  {
+    game: "uma_gl", label: {en: "Pick-up", zh: "UP卡池"},
+    start: "2026-12-09", end: "2026-12-19", status: "projected",
+    featured: [{ name: "Daiichi Ruby", img: "uma/daiichi-ruby", isNew: true }],
+    note: {en: "Projected from the JP release order (GameTora forecast)", zh: "按日服实装顺序推算（GameTora预测）"},
+  },
+  {
+    game: "uma_gl", label: {en: "Pick-up", zh: "UP卡池"},
+    start: "2026-12-16", end: "2026-12-26", status: "projected",
+    featured: [{ name: "Symboli Kris S", img: "uma/symboli-kris-s", isNew: true }],
+    note: {en: "Projected from the JP release order (GameTora forecast)", zh: "按日服实装顺序推算（GameTora预测）"},
+  },
+  {
+    game: "uma_gl", label: {en: "Pick-up", zh: "UP卡池"},
+    start: "2026-12-23", end: "2027-01-04", status: "projected",
+    featured: [
+      { name: "Mejiro Ardan (Ballroom)", zh: "目白阿尔丹（舞会）", img: "uma/mejiro-ardan-ballroom", isNew: true },
+      { name: "Sakura Chiyono O (Ballroom)", zh: "樱花千代王（舞会）", img: "uma/sakura-chiyono-o-ballroom", isNew: true },
+    ],
+    note: {en: "Projected from the JP release order (GameTora forecast)", zh: "按日服实装顺序推算（GameTora预测）"},
+  },
+  {
+    game: "uma_gl", label: {en: "Pick-up", zh: "UP卡池"},
+    start: "2026-12-31", end: "2027-01-09", status: "projected",
+    featured: [{ name: "Sakura Laurel", zh: "樱花桂冠", img: "uma/sakura-laurel", isNew: true }],
+    note: {en: "Projected from the JP release order (GameTora forecast)", zh: "按日服实装顺序推算（GameTora预测）"},
+  },
+  {
+    game: "uma_gl", label: {en: "Pick-up", zh: "UP卡池"},
+    start: "2027-01-06", end: "2027-01-15", status: "projected",
+    featured: [{ name: "Neo Universe", img: "uma/neo-universe", isNew: true }],
+    note: {en: "Projected from the JP release order (GameTora forecast)", zh: "按日服实装顺序推算（GameTora预测）"},
+  },
+  {
+    game: "uma_gl", label: {en: "Pick-up", zh: "UP卡池"},
+    start: "2027-01-13", end: "2027-01-25", status: "projected",
+    featured: [
+      { name: "Sakura Bakushin O (Sports Festival)", zh: "樱花进王（运动会）", img: "uma/sakura-bakushin-o-sports-festival", isNew: true },
+      { name: "Matikanetannhauser (Sports Festival)", zh: "待兼诗歌剧（运动会）", img: "uma/matikanetannhauser-sports-festival", isNew: true },
+    ],
+    note: {en: "Projected from the JP release order (GameTora forecast)", zh: "按日服实装顺序推算（GameTora预测）"},
   },
 
   /* ───────────── Blue Archive (Global) ───────────── */
   {
     game: "bluearchive", label: {en: "Pick-Up", zh: "招募UP"},
-    start: "2026-11-10", end: "2026-11-17", status: "confirmed",
+    start: "2026-10-27", end: "2026-11-02", status: "confirmed",
+    featured: [
+      { name: "Hikari", zh: "光", img: "ba/hikari" },
+      { name: "Nozomi", zh: "望", img: "ba/nozomi" },
+      { name: "Saori (Swimsuit)", zh: "纱织（泳装）", img: "ba/saori-swimsuit" },
+      { name: "Hiyori (Swimsuit)", zh: "日和（泳装）", img: "ba/hiyori-swimsuit" },
+      { name: "Misaki (Swimsuit)", zh: "美咲（泳装）", img: "ba/misaki-swimsuit" },
+    ],
+    note: {en: "Rerun banners", zh: "复刻卡池"},
+  },
+  {
+    game: "bluearchive", label: {en: "Pick-Up", zh: "招募UP"},
+    start: "2026-11-03", end: "2026-11-09", status: "confirmed",
+    featured: [
+      { name: "Makoto", zh: "真琴", img: "ba/makoto" },
+      { name: "Ako (Dress)", zh: "亚子（礼服）", img: "ba/ako-dress" },
+      { name: "Satsuki", zh: "皋月", img: "ba/satsuki" },
+      { name: "Chiaki", zh: "千明", img: "ba/chiaki" },
+      { name: "Kanna (Swimsuit)", zh: "康娜（泳装）", img: "ba/kanna-swimsuit" },
+    ],
+    note: {en: "Rerun banners", zh: "复刻卡池"},
+  },
+  {
+    game: "bluearchive", label: {en: "Pick-Up", zh: "招募UP"},
+    start: "2026-11-10", end: "2026-11-16", status: "confirmed",
     featured: [
       { name: "Makoto (Swimsuit)", zh: "真琴（泳装）", img: "ba/makoto-swimsuit", isNew: true },
       { name: "Satsuki (Swimsuit)", zh: "皋月（泳装）", img: "ba/satsuki-swimsuit", isNew: true },
     ],
-    note: {en: "5th Anniversary", zh: "五周年"},
+    note: {en: "5th Anniversary · up to 200 free pulls", zh: "五周年 · 最多200次免费招募"},
   },
   {
     game: "bluearchive", label: {en: "Fes", zh: "Fes招募"},
-    start: "2026-11-17", end: "2026-11-24", status: "projected",
+    start: "2026-11-17", end: "2026-11-23", status: "confirmed",
     featured: [
       { name: "Iroha (Swimsuit)", zh: "伊吕波（泳装）", img: "ba/iroha-swimsuit", isNew: true },
       { name: "Ibuki (Swimsuit)", zh: "伊吹（泳装）", img: "ba/ibuki-swimsuit", isNew: true },
@@ -471,7 +614,7 @@ window.BANNERS = [
   },
   {
     game: "bluearchive", label: {en: "Pick-Up", zh: "招募UP"},
-    start: "2026-11-24", end: "2026-12-08", status: "projected",
+    start: "2026-11-24", end: "2026-12-07", status: "projected",
     featured: [
       { name: "Sena (Casual)", zh: "濑名（便服）", img: "ba/sena-casual" },
       { name: "Juri (Part-Timer)", zh: "朱莉（打工）", img: "ba/juri-part-timer" },
@@ -479,6 +622,35 @@ window.BANNERS = [
       { name: "Niya", zh: "尼娅", img: "ba/niya" },
     ],
     note: {en: "Rerun banners", zh: "复刻卡池"},
+  },
+  {
+    game: "bluearchive", label: {en: "Pick-Up", zh: "招募UP"},
+    start: "2026-12-08", end: "2026-12-21", status: "projected",
+    featured: [
+      { name: "Kokoro", img: "ba/kokoro", isNew: true },
+      { name: "Kotone", img: "ba/kotone", isNew: true },
+    ],
+    note: {en: "With the Dive Into Ocean event (JP order)", zh: "与活动「Dive Into Ocean」同期（按日服顺序）"},
+  },
+  {
+    game: "bluearchive", label: {en: "Pick-Up", zh: "招募UP"},
+    start: "2026-12-22", end: "2027-01-04", status: "projected",
+    featured: [
+      { name: "Kasumi (Swimsuit)", zh: "霞（泳装）", img: "ba/kasumi-swimsuit", isNew: true },
+      { name: "Seia (Swimsuit)", zh: "圣娅（泳装）", img: "ba/seia-swimsuit" },
+      { name: "Hasumi (Swimsuit)", zh: "莲见（泳装）", img: "ba/hasumi-swimsuit" },
+      { name: "Moe (Swimsuit)", zh: "萌绘（泳装）", img: "ba/moe-swimsuit" },
+      { name: "Fubuki (Swimsuit)", zh: "吹雪（泳装）", img: "ba/fubuki-swimsuit" },
+    ],
+    note: {en: "New: Kasumi (Swimsuit); reruns incl. limited Seia/Hasumi (Swimsuit)", zh: "新：霞（泳装）；复刻含限定圣娅/莲见（泳装）"},
+  },
+  {
+    game: "bluearchive", label: {en: "Pick-Up", zh: "招募UP"},
+    start: "2027-01-05", end: "2027-01-18", status: "projected",
+    featured: [
+      { name: "Anna", img: "ba/anna", isNew: true },
+      { name: "Erina", img: "ba/erina", isNew: true },
+    ],
   },
 
   /* ───────────── FGO (JP) ───────────── */
@@ -1988,7 +2160,30 @@ window.BANNERS = [
   /* ───────────── hololive Dreams ───────────── */
   {
     game: "holodori", label: {en: "Limited", zh: "限定卡池"},
-    start: "2026-11-06", end: "2026-11-14", status: "confirmed",
+    start: "2026-10-19", end: "2026-10-28", status: "confirmed",
+    featured: [
+      { name: "Kaela Kovalskia", img: "holodori/kaela-kovalskia", isNew: true },
+      { name: "Koseki Bijou", img: "holodori/koseki-bijou", isNew: true },
+      { name: "Tokoyami Towa", zh: "常暗永远", img: "holodori/tokoyami-towa", isNew: true },
+      { name: "Shishiro Botan", zh: "狮白牡丹", img: "holodori/shishiro-botan", isNew: true },
+    ],
+    note: {en: "Blissful Seaside Days (swimsuits, part 8)", zh: "至福のシーサイドデイズ（泳装第8弹）"},
+  },
+  {
+    game: "holodori", label: {en: "Limited", zh: "限定卡池"},
+    start: "2026-10-29", end: "2026-11-04", status: "confirmed",
+    featured: [
+      { name: "Natsuiro Matsuri", zh: "夏色祭", img: "holodori/natsuiro-matsuri", isNew: true },
+      { name: "Vestia Zeta", img: "holodori/vestia-zeta", isNew: true },
+      { name: "Nerissa Ravencroft", img: "holodori/nerissa-ravencroft", isNew: true },
+      { name: "Juufuutei Raden", img: "holodori/juufuutei-raden", isNew: true },
+      { name: "Todoroki Hajime", img: "holodori/todoroki-hajime", isNew: true },
+    ],
+    note: {en: "Cosplay Night (Halloween outfits)", zh: "変幻自在☆Cosplay Night（万圣节服装）"},
+  },
+  {
+    game: "holodori", label: {en: "Limited", zh: "限定卡池"},
+    start: "2026-11-06", end: "2026-11-13", status: "confirmed",
     featured: [
       { name: "Ayunda Risu", img: "holodori/ayunda-risu", isNew: true },
       { name: "Moona Hoshinova", img: "holodori/moona-hoshinova", isNew: true },
@@ -1998,7 +2193,7 @@ window.BANNERS = [
   },
   {
     game: "holodori", label: {en: "Limited", zh: "限定卡池"},
-    start: "2026-11-14", end: "2026-11-26", status: "confirmed",
+    start: "2026-11-14", end: "2026-11-25", status: "confirmed",
     featured: [
       { name: "IRyS", img: "holodori/irys", isNew: true },
       { name: "Usada Pekora", zh: "兔田佩克拉", img: "holodori/usada-pekora", isNew: true },
@@ -2007,6 +2202,12 @@ window.BANNERS = [
       { name: "Pavolia Reine", img: "holodori/pavolia-reine", isNew: true },
     ],
     note: {en: "Autumn Outing (autumn outfits)", zh: "うららかな秋におでかけ（秋装）"},
+  },
+  {
+    game: "holodori", label: {en: "Limited", zh: "限定卡池"},
+    start: "2026-11-26", end: "2026-12-05", status: "projected",
+    featured: [{ name: "TBA" }],
+    note: {en: "Next limited banner expected when the autumn banner ends (Nov 26 11:00)", zh: "预计秋装卡池结束后（11月26日11:00）开启下一期"},
   },
 
   /* ───────────── Azur Lane (EN) ───────────── */
@@ -2065,4 +2266,4 @@ window.BANNERS = [
 
 ];
 
-window.LAST_UPDATED = "2026-11-15";
+window.LAST_UPDATED = "2026-11-20";
